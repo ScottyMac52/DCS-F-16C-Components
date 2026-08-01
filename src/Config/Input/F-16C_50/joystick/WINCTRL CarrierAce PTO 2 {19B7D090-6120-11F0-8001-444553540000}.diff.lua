@@ -1,5 +1,21 @@
 local diff = {
 	["keyDiffs"] = {
+		["d3006pnilunilcd7vd0vpnilvunil"] = {
+			["added"] = {
+				[1] = {
+					["key"] = "JOY_BTN34",
+				},
+			},
+			["name"] = "HOOK Switch - DN",
+		},
+		["d3006pnilunilcd7vd1vpnilvunil"] = {
+			["added"] = {
+				[1] = {
+					["key"] = "JOY_BTN32",
+				},
+			},
+			["name"] = "HOOK Switch - UP",
+		},
 		["d3008pnilu3008cd11vd-1vpnilvu0"] = {
 			["added"] = {
 				[1] = {

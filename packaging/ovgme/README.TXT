@@ -4,12 +4,15 @@ DCS F-16C COMPONENTS — OVGME PACKAGE
 OVGME PACKAGE VERSION {{VERSION}}
 Target:  DCS Saved Games directory
 
-This package installs Scott's Thrustmaster Cougar MFD 1 and MFD 2 profiles to:
+This package installs Scott's GUID-qualified F-16C control profiles for the
+Cougar MFDs, Viper TQS, AVA/Warthog grip, WINCTRL CarrierAce PTO2, and
+WINCTRL ViperAce ICP to:
 
   Config\Input\F-16C_50\joystick
   KNEEBOARD\F-16C_50
 
 MFD 1 is the left MFD. MFD 2 is the right MFD. MFD 3 is not modified.
+The PTO2 controls the landing/taxi lights, arresting hook, and landing gear.
 
 Before enabling the package, back up:
 

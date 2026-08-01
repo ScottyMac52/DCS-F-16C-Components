@@ -10,3 +10,5 @@ Initial installable component release:
 - VAICOM-safe optional VoiceAttack kneeboard navigation;
 - tag-authoritative semantic versioning with automated patch/minor/major releases;
 - automated Lua, version, archive, path, mapping, and kneeboard validation.
+- GUID-qualified Viper TQS, AVA/Warthog grip, WINCTRL CarrierAce PTO2, and WINCTRL ViperAce ICP profiles;
+- PTO2 landing/taxi lights, arresting-hook UP/DOWN, and landing-gear controls.

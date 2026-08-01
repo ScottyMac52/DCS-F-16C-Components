@@ -4,11 +4,15 @@ OvGME-ready DCS F-16C Block 50 control profiles and VR-optimized OpenKneeboard r
 
 The project deliberately keeps each physical device in its own GUID-qualified DCS `diff.lua` file. That makes the package reversible, reviewable, and safe to extend one component at a time.
 
-## Current component
+## Current components
 
 - Thrustmaster Cougar MFD 1 → left MFD (LMFD), one-to-one
 - Thrustmaster Cougar MFD 2 → right MFD (RMFD), one-to-one
 - Thrustmaster Cougar MFD 3 → reserved; this package does not change it
+- Thrustmaster Viper TQS and Mission Pack → throttle, HOTAS, defense, and panel controls
+- Thrustmaster AVA base with Warthog grip → F-16 stick HOTAS controls
+- WINCTRL CarrierAce PTO2 → landing/taxi lights, arresting hook, and landing gear
+- WINCTRL ViperAce ICP → ICP, DED, FLIR, and display controls
 
 ## Install
 
@@ -33,4 +37,4 @@ Ordinary CI uses versions such as `0.0.0-ci.42`; local builds default to `0.0.0-
 
 ## Source of truth
 
-The MFD profiles in this repository preserve Scott's supplied Saved Games profile content, with only a final newline normalized for source control. Their mappings also match the DCS F-16C built-in Cougar MFD templates supplied with the same DCS installation.
+The profiles in this repository preserve Scott's supplied Saved Games device identities and mappings. Device-specific validators lock the intended controls—including both PTO2 hook positions—to their exact DCS command and physical button assignments.

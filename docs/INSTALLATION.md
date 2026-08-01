@@ -5,7 +5,7 @@
 - DCS with the `F-16C_50` input directory
 - OvGME configured to manage your DCS Saved Games directory
 - OpenKneeboard for the included VR reference pages
-- Scott's original Cougar MFD device GUIDs, or a deliberate filename update for replacement hardware
+- Scott's original device GUIDs, or a deliberate filename update for replacement hardware
 
 ## Back up first
 
@@ -25,9 +25,10 @@ If your DCS Saved Games folder is named `DCS` rather than `DCS.openbeta`, use th
 4. Enable the package.
 5. Start DCS and open **Options → Controls → F-16C Sim**.
 6. Confirm MFD 1 operates the left MFD and MFD 2 operates the right MFD.
-7. In OpenKneeboard, select the F-16C in the DCS Aircraft tab. If it is not discovered, add `KNEEBOARD\F-16C_50` as a Folder tab.
+7. Confirm the PTO2 hook switch commands HOOK UP with `JOY_BTN32` and HOOK DOWN with `JOY_BTN34`.
+8. In OpenKneeboard, select the F-16C in the DCS Aircraft tab. If it is not discovered, add `KNEEBOARD\F-16C_50` as a Folder tab.
 
-The foundational package installs the two MFD profiles and OpenKneeboard pages beneath:
+The package installs its device profiles and OpenKneeboard pages beneath:
 
 ```text
 Config\Input\F-16C_50\joystick\
