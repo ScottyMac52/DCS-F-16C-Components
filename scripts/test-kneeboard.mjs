@@ -28,8 +28,10 @@ const expectedAssets = [
   'cougar-mfd-template.png',
   'pto2-clean.png',
   'pto2-template.svg',
-  'viper-tqs-mission-pack-clean.png',
-  'viper-tqs-mission-pack-source.png',
+  'viper-panel-controls.png',
+  'viper-panel-map-source.png',
+  'viper-tqs-handle-controls.png',
+  'viper-tqs-handle-map-source.png',
   'viperace-icp-clean.png',
   'viperace-icp-template.svg',
   'warthog-grip-front.png',
@@ -105,7 +107,7 @@ const licenseNames = readdirSync(join(assetDir, 'licenses'));
 assert(licenseNames.includes('bindulator-templates-GPL-2.0-or-later.txt'), 'The Bindulator license is missing.');
 assert(licenseNames.includes('joystick-diagrams-GPL-2.0.txt'), 'The Joystick Diagrams license is missing.');
 
-const transparentAssets = ['viper-tqs-mission-pack-clean.png', 'viperace-icp-clean.png', 'warthog-grip-front.png', 'warthog-grip-rear.png'];
+const transparentAssets = ['viper-panel-controls.png', 'viper-tqs-handle-controls.png', 'viperace-icp-clean.png', 'warthog-grip-front.png', 'warthog-grip-rear.png'];
 for (const asset of transparentAssets) {
   const metadata = await sharp(join(assetDir, asset)).metadata();
   assert(metadata.hasAlpha, `${asset} must retain a transparent background.`);
