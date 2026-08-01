@@ -4,8 +4,8 @@ param([Parameter(Mandatory)][string] $Joystick)
 $ErrorActionPreference = 'Stop'
 $File = 'Ava [R] Viper {F77212B0-00A8-11f1-8001-444553540000}.diff.lua'
 $Path = Join-Path $Joystick $File
-if (-not (Test-Path $Path -PathType Leaf)) { throw "Missing profile: $File" }
-$Lua = Get-Content $Path -Raw
+if (-not (Test-Path -LiteralPath $Path -PathType Leaf)) { throw "Missing profile: $File" }
+$Lua = Get-Content -LiteralPath $Path -Raw
 $KeySection = ($Lua -split '\["keyDiffs"\]\s*=\s*\{', 2)[1]
 $Buttons = [regex]::Matches($KeySection, '\["key"\]\s*=\s*"(?<Key>JOY_BTN\d+)"') | ForEach-Object { $_.Groups['Key'].Value }
 if ($Buttons.Count -ne 14 -or ($Buttons | Sort-Object -Unique).Count -ne 14) { throw 'AVA Warthog grip must contain 14 unique button assignments.' }
