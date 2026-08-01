@@ -26,3 +26,16 @@ Both profiles explicitly remove the controller's automatically assigned Pitch, R
 
 Reserved. No MFD 3 profile is installed by this component.
 
+## WINCTRL CarrierAce PTO2 — ground and landing controls
+
+| Physical control | DCS control |
+|---|---|
+| JOY_BTN8 | Landing/taxi lights UP |
+| JOY_BTN9 | Landing/taxi lights OFF |
+| JOY_BTN12 | Landing/taxi lights TAXI (release returns OFF) |
+| JOY_BTN32 | Arresting hook UP |
+| JOY_BTN34 | Arresting hook DOWN |
+| JOY_BTN35 | Landing gear UP |
+| JOY_BTN37 | Landing gear DOWN |
+
+The physical hook switch directly follows the F-16C HOOK switch. Unlisted PTO2 controls remain intentionally unbound.

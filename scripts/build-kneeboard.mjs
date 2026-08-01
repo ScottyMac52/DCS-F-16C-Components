@@ -46,7 +46,7 @@ const pages = [
       item('MFD 3', 'Reserved • no bindings installed', 'red'),
       item('TQS', hasProfile('Viper TQS') ? 'Throttle and Mission Pack profile installed' : 'Component not installed yet'),
       item('AVA', hasProfile('Ava [R] Viper') ? 'Warthog grip profile installed' : 'Component not installed yet'),
-      item('PTO2', hasProfile('WINCTRL CarrierAce PTO 2') ? 'Ground-control profile installed' : 'Component not installed yet'),
+      item('PTO2', hasProfile('WINCTRL CarrierAce PTO 2') ? 'Ground and landing profile installed' : 'Component not installed yet'),
       item('ICP', hasProfile('WINCTRL ViperAce ICP') ? 'ViperAce ICP profile installed' : 'Component not installed yet'),
       item('PATH', 'Config\\Input\\F-16C_50\\joystick'),
       item('KNEE', 'KNEEBOARD\\F-16C_50'),
@@ -106,8 +106,9 @@ const pages = [
     file: '06-WINCTRL-PTO2', title: 'WINCTRL CARRIERACE PTO2', kicker: 'F-16 GROUND AND LANDING CONTROLS',
     items: [
       item('BTN 8', 'Landing / taxi lights switch up'), item('BTN 9', 'Landing / taxi lights off'),
-      item('BTN 12', 'Taxi else off'), item('BTN 35', 'Landing gear up', 'gold'),
-      item('BTN 37', 'Landing gear down', 'gold'), item('RESERVED', 'All other PTO2 controls intentionally unbound', 'red'),
+      item('BTN 12', 'Taxi while held; release returns off'), item('BTN 32', 'Arresting hook up', 'gold'),
+      item('BTN 34', 'Arresting hook down', 'gold'), item('BTN 35', 'Landing gear up', 'gold'),
+      item('BTN 37', 'Landing gear down', 'gold'), item('OTHER', 'All other PTO2 controls intentionally unbound', 'red'),
     ],
   },
   hasProfile('WINCTRL ViperAce ICP') && {

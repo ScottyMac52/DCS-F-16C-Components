@@ -9,3 +9,5 @@
 - Make stable Git tags authoritative for OvGME versions with automated patch/minor/major releases.
 - Generate version metadata inside the package from one resolved build version.
 - Add conditional, VR-optimized OpenKneeboard pages and VAICOM-safe VoiceAttack guidance.
+- Add the Viper TQS, AVA/Warthog grip, WINCTRL CarrierAce PTO2, and WINCTRL ViperAce ICP profiles.
+- Map the PTO2 physical hook switch to the F-16C arresting-hook UP and DOWN controls.
