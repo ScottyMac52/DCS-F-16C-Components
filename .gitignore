@@ -43,5 +43,3 @@ luac.out
 dist/
 .build/
 node_modules/
-kneeboard/F-16C_50/*.png
-kneeboard/source/*.svg

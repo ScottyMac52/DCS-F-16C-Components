@@ -2,6 +2,9 @@
 
 Scott's supplied profile is authoritative for this device. Its USB numbering differs from the generic DCS `Vipergear ICP` template.
 
+The matching OpenKneeboard page uses a local ICP control image and preserves this profile's
+device-specific numbering in every button and axis callout.
+
 ## Primary ICP controls
 
 | Buttons | DCS control |
@@ -32,4 +35,3 @@ Scott's supplied profile is authoritative for this device. Its USB numbering dif
 | JOY_RX | Raster contrast |
 
 Pitch and Roll are explicitly removed before JOY_Y and JOY_X are reassigned to ICP knobs.
-

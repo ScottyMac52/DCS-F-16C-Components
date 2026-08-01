@@ -37,7 +37,7 @@ KNEEBOARD\F-16C_50\
 
 MFD 3 is intentionally untouched.
 
-Kneeboard pages are generated conditionally. When the Viper TQS, AVA/Warthog grip, PTO2, or ViperAce ICP component profile is present, its matching reference page is added automatically to the package.
+The package contains a fixed set of eight 1200 × 1600 kneeboard pages. The six hardware pages use local control images and callouts, so OpenKneeboard does not need network access. Build validation verifies the exact page set, dimensions, offline assets, mapping coverage, and deterministic output.
 
 ## GUID note
 

@@ -78,6 +78,8 @@ jobs:
           }
       - name: Generate OpenKneeboard pages
         run: npm run build:kneeboard
+      - name: Validate OpenKneeboard pages
+        run: npm run test:kneeboard
       - name: Build package
         shell: pwsh
         run: ./scripts/Build-OvGME.ps1 -Version $env:PACKAGE_VERSION

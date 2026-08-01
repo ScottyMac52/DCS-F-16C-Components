@@ -1,5 +1,8 @@
 # WINCTRL CarrierAce PTO2
 
+The matching OpenKneeboard page places the PTO2 control image between the seven mapped-button
+callouts and explicitly marks all other controls as unbound.
+
 | Physical button | DCS F-16 control |
 |---|---|
 | JOY_BTN8 | Landing/taxi lights UP |

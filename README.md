@@ -18,16 +18,19 @@ The project deliberately keeps each physical device in its own GUID-qualified DC
 
 Download the generated `Scott-F-16C-Control-Profiles-<version>.zip` artifact or release asset, add it to OvGME, and enable it against your DCS Saved Games directory. See [docs/INSTALLATION.md](docs/INSTALLATION.md) for the exact paths and backup procedure.
 
-The package installs both the active control profiles and generated pages under `KNEEBOARD\F-16C_50`. OpenKneeboard can use its DCS Aircraft tab or that directory as a Folder tab. See [OpenKneeboard and VAICOM PRO](docs/OPENKNEEBOARD-VAICOM.md).
+The package installs both the active control profiles and eight photo-backed reference pages under `KNEEBOARD\F-16C_50`. Each hardware page places the actual control image between its mapped-button callouts. OpenKneeboard can use its DCS Aircraft tab or that directory as a Folder tab. See [OpenKneeboard and VAICOM PRO](docs/OPENKNEEBOARD-VAICOM.md) and [third-party asset provenance](docs/THIRD-PARTY-ASSETS.md).
 
 ## Build and validate
 
 ```powershell
+npm ci
+npm run build:kneeboard
+npm run test:kneeboard
 ./scripts/Build-OvGME.ps1 -Version 0.1.0
 ./scripts/Test-Package.ps1 -Version 0.1.0
 ```
 
-The GitHub workflow parses every Lua profile, tests semantic versioning, generates the kneeboard, builds the archive, validates its contents, and uploads a prerelease-numbered CI package.
+The GitHub workflow parses every Lua profile, tests semantic versioning, generates and deterministically validates all kneeboard images, builds the archive, validates its contents, and uploads a prerelease-numbered CI package.
 
 ## Tag-based releases
 
