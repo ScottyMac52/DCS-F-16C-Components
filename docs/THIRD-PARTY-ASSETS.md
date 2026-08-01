@@ -6,15 +6,18 @@ provenance and transformations for each hardware image.
 
 ## Thrustmaster Viper TQS and Mission Pack
 
-- Files: `viper-tqs-mission-pack-source.png` and `viper-tqs-mission-pack-clean.png`.
-- Source: [Thrustmaster Viper TQS Mission Pack product page](https://www.thrustmaster.com/products/viper-tqs-mission-pack/), gallery image
-  `ProductpageGallery-ViperTQS_MissionPack-1920x1080-1.png`, retrieved 2026-08-01.
+- Files: `viper-tqs-handle-map-source.png`, `viper-tqs-handle-controls.png`,
+  `viper-panel-map-source.png`, and `viper-panel-controls.png`.
+- Source: [Thrustmaster Viper TQS Mission Pack user manual](https://ts.thrustmaster.com/download/accessories/Manuals/Viper/Viper_Mission_Pack_User_Manual.pdf),
+  English mapping pages 8 and 11, retrieved 2026-08-01.
 - Copyright: Thrustmaster/Guillemot Corporation. No open-content license was stated on the
-  product page. The image is included as manufacturer-supplied product identification artwork
+  manual. The diagrams are included as manufacturer-supplied product identification artwork
   for this noncommercial compatibility reference; product names and imagery remain the
   property of their owner.
-- Transformation: the original 1920 × 1080 PNG is preserved. The clean derivative removes only
-  transparent canvas padding; it does not redraw or alter the hardware.
+- Transformation: the two manual pages were rendered locally at 220 DPI and preserved as source
+  PNGs. The handle and panel control maps were cropped from those pages, their white backgrounds
+  made transparent, and the black line art inverted for readability on the dark kneeboard. The
+  renderer uses both control maps; no product beauty shot is used.
 
 ## Thrustmaster AVA/Warthog grip
 

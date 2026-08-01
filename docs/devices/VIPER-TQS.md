@@ -2,8 +2,8 @@
 
 This component preserves Scott's supplied Viper TQS USB numbering, maintained-switch positions, and axis tuning.
 
-The matching OpenKneeboard page uses the locally committed Thrustmaster product image for the
-complete TQS and Mission Pack, with callouts covering every mapped button and axis.
+The matching OpenKneeboard page uses the locally committed Thrustmaster handle and panel control
+maps from the official user manual, with callouts covering every mapped button and axis.
 
 ## Axes
 
