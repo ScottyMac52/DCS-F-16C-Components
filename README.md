@@ -21,7 +21,7 @@ Download the generated `Scott-F-16C-Control-Profiles-<version>.zip` artifact or 
 ./scripts/Test-Package.ps1
 ```
 
-The GitHub workflow also parses every Lua profile with `luac`, builds the archive, validates its paths and mappings, and uploads the finished package.
+The GitHub workflow also parses every Lua profile with `luac`, builds the archive, validates its paths and mappings, and uploads the finished package. A matching version tag such as `v0.1.0` publishes the validated ZIP and checksum as a GitHub Release; the tag must match `VERSION.TXT`.
 
 ## Source of truth
 
