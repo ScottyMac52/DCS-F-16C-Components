@@ -1,5 +1,9 @@
 # Control mappings
 
+These mappings are also shown on the photo-backed pages installed under
+`KNEEBOARD\F-16C_50`. The generated callouts are validated against every `JOY_BTN` present in
+the corresponding device profile.
+
 ## Cougar MFD 1 — left MFD
 
 | Physical control | DCS control |

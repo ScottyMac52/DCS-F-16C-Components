@@ -13,6 +13,8 @@ WINCTRL ViperAce ICP to:
 
 MFD 1 is the left MFD. MFD 2 is the right MFD. MFD 3 is not modified.
 The PTO2 controls the landing/taxi lights, arresting hook, and landing gear.
+The eight included OpenKneeboard pages use local hardware images with mapped-control
+callouts; no network access is required.
 
 Before enabling the package, back up:
 

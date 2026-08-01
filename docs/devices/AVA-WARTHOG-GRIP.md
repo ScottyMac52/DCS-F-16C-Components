@@ -1,5 +1,8 @@
 # AVA base with F-16C/A-10C Warthog grip
 
+The matching OpenKneeboard page uses front and rear Warthog-grip control images so both the
+four-way switches and rear controls remain identifiable in VR.
+
 | Physical button | DCS F-16 control |
 |---|---|
 | JOY_BTN2 | Weapon release |
@@ -9,4 +12,3 @@
 | JOY_BTN15 / 17 / 18 / 16 | CMS forward / aft / left / right |
 
 The profile explicitly removes automatically assigned Rudder (`JOY_RZ`) and Thrust (`JOY_Z`) axes. It does not alter the AVA pitch and roll axes.
-

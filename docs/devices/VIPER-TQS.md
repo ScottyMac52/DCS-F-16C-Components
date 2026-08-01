@@ -2,6 +2,9 @@
 
 This component preserves Scott's supplied Viper TQS USB numbering, maintained-switch positions, and axis tuning.
 
+The matching OpenKneeboard page uses the locally committed Thrustmaster product image for the
+complete TQS and Mission Pack, with callouts covering every mapped button and axis.
+
 ## Axes
 
 | Physical axis | DCS control | Tuning |
@@ -47,4 +50,3 @@ Pitch, Roll, and Rudder are explicitly removed from this device profile. The sup
 | 52 / 53 / 64 | Autopilot pitch ALT HOLD / ATT HOLD / OFF |
 
 Safety note: confirm MASTER ARM, LASER ARM, stores configuration, and emergency-jettison switch positions in the DCS cockpit before flight.
-

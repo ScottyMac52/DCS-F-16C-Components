@@ -10,7 +10,9 @@ KNEEBOARD\F-16C_50
 
 Numeric prefixes preserve page order. OpenKneeboard should discover the folder through its DCS Aircraft tab. If aircraft detection does not expose it, add the directory as a Folder tab.
 
-The foundational pages cover the package overview, left MFD, right MFD, and OpenKneeboard/VAICOM operation. Device pages for the Viper TQS, AVA/Warthog grip, WINCTRL PTO2, and WINCTRL ViperAce ICP are generated only when the corresponding profile exists in the package. The PTO2 page includes its landing/taxi lights, arresting-hook UP/DOWN, and landing-gear mappings.
+The fixed eight-page set covers the package overview, both Cougar MFDs, Viper TQS and Mission Pack, AVA/Warthog grip, WINCTRL PTO2, WINCTRL ViperAce ICP, and OpenKneeboard/VAICOM operation. Each hardware page uses a local control image with mapped-button callouts; no image is downloaded while building or using the package. The PTO2 page includes its landing/taxi lights, arresting-hook UP/DOWN, and landing-gear mappings.
+
+The source image provenance, transformations, and redistribution terms are documented in [THIRD-PARTY-ASSETS.md](THIRD-PARTY-ASSETS.md).
 
 ## VAICOM PRO
 
