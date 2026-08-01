@@ -49,7 +49,7 @@ foreach ($Page in '01-CONTROL-OVERVIEW.png', '02-LEFT-MFD.png', '03-RIGHT-MFD.pn
 }
 
 foreach ($Profile in $Profiles) {
-    $Lua = Get-Content $Profile.FullName -Raw
+    $Lua = Get-Content -LiteralPath $Profile.FullName -Raw
     if ($Lua -notmatch '^local diff\s*=\s*\{' -or $Lua -notmatch 'return diff\s*$') {
         throw "$($Profile.Name) does not have the expected DCS diff.lua structure."
     }
