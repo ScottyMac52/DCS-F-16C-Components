@@ -1,7 +1,7 @@
 # Compiled Lua sources
 luac.out
 
-# luarocks build files
+# LuaRocks build files
 *.src.rock
 *.zip
 *.tar.gz
@@ -13,7 +13,7 @@ luac.out
 *.obj
 *.elf
 
-# Precompiled Headers
+# Precompiled headers
 *.gch
 *.pch
 
@@ -25,7 +25,7 @@ luac.out
 *.def
 *.exp
 
-# Shared objects (inc. Windows DLLs)
+# Shared objects (including Windows DLLs)
 *.dll
 *.so
 *.so.*
@@ -39,3 +39,6 @@ luac.out
 *.x86_64
 *.hex
 
+# Generated packages and staging
+dist/
+.build/
