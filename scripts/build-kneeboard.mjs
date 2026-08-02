@@ -17,10 +17,10 @@ mkdirSync(pngDir, { recursive: true });
 const profiles = existsSync(profileDir) ? readdirSync(profileDir) : [];
 const hasProfile = (fragment) => profiles.some((name) => name.includes(fragment));
 const esc = (value) => String(value)
-  .replaceAll('&', '&amp;')
-  .replaceAll('<', '&lt;')
-  .replaceAll('>', '&gt;')
-  .replaceAll('"', '&quot;');
+  .replaceAll('&', '&')
+  .replaceAll('<', '<')
+  .replaceAll('>', '>')
+  .replaceAll('"', '"');
 
 function wrap(text, max = 28, limit = 2) {
   const words = String(text).split(/\s+/);
@@ -222,11 +222,11 @@ const pages = [
   },
   {
     type: 'hardware', file: '02-LEFT-MFD', title: 'COUGAR MFD 1 • LEFT MFD', kicker: 'ONE-TO-ONE LEFT BEZEL',
-    images: [{ href: assets.mfd, x: 360, y: 500, width: 480, height: 590, opacity: 0.8 }], directMarkers: true, callouts: mfdCallouts('Left'),
+    images: [{ href: assets.mfd, x: 360, y: 500, width: 480, height: 590, opacity: 0.8 }], callouts: mfdCallouts('Left'),
   },
   {
     type: 'hardware', file: '03-RIGHT-MFD', title: 'COUGAR MFD 2 • RIGHT MFD', kicker: 'ONE-TO-ONE RIGHT BEZEL',
-    images: [{ href: assets.mfd, x: 360, y: 500, width: 480, height: 590, opacity: 0.8 }], directMarkers: true, callouts: mfdCallouts('Right'),
+    images: [{ href: assets.mfd, x: 360, y: 500, width: 480, height: 590, opacity: 0.8 }], callouts: mfdCallouts('Right'),
   },
   hasProfile('Viper TQS') && {
     type: 'hardware', file: '04-VIPER-TQS', title: 'VIPER TQS + MISSION PACK', kicker: 'THROTTLE, HOTAS, DEFENSE AND PANEL CONTROLS',
@@ -269,7 +269,7 @@ const pages = [
   },
   hasProfile('WINCTRL CarrierAce PTO 2') && {
     type: 'hardware', file: '06-WINCTRL-PTO2', title: 'WINCTRL CARRIERACE PTO2', kicker: 'F-16 GROUND AND LANDING CONTROLS',
-    images: [{ href: assets.pto2, x: 350, y: 390, width: 500, height: 760, opacity: 0.76 }], directMarkers: true,
+    images: [{ href: assets.pto2, x: 350, y: 390, width: 500, height: 760, opacity: 0.76 }],
     callouts: [
       callout('BTN 8', 'Landing / taxi lights switch up', 'left', [510, 690]), callout('BTN 9', 'Landing / taxi lights off', 'left', [510, 690]),
       callout('BTN 12', 'Taxi while held; release returns off', 'left', [535, 790]), callout('BTN 32', 'Arresting hook up', 'right', [710, 720], 'gold'),
