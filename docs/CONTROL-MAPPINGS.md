@@ -4,6 +4,18 @@ These mappings are also shown on the photo-backed pages installed under
 `KNEEBOARD\F-16C_50`. The generated callouts are validated against every `JOY_BTN` present in
 the corresponding device profile.
 
+## Viper TQS — VAICOM TX bridge
+
+| VAICOM TX | Physical input | VoiceAttack chord |
+|---|---|---|
+| TX1 — VHF AM | `5Joy1` / `JOY_BTN1` | `Ctrl+Alt+Shift+1` |
+| TX2 — UHF | `5Joy2` / `JOY_BTN2` | `Ctrl+Alt+Shift+2` |
+| TX3 — VHF FM | `5Joy3` / `JOY_BTN3` | `Ctrl+Alt+Shift+3` |
+| TX4 — AUTO | `5Joy4` / `JOY_BTN4` | `Ctrl+Alt+Shift+4` |
+| TX5 — Interphone | `5Joy5` / `JOY_BTN5` | `Ctrl+Alt+Shift+5` |
+
+Buttons 1–5 are reserved for `autohotkey/dcs-TQS.ahk` and intentionally have no native DCS assignments. The profile explicitly removes the former VHF, UHF, IFF OUT, and IFF IN assignments from buttons 1–4. Button 5 was already unassigned. All other Viper TQS axes and buttons remain unchanged; see [the device mapping](devices/VIPER-TQS.md).
+
 ## Cougar MFD 1 — left MFD
 
 | Physical control | DCS control |

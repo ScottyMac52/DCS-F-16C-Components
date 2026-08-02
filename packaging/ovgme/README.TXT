@@ -13,6 +13,9 @@ WINCTRL ViperAce ICP to:
 
 MFD 1 is the left MFD. MFD 2 is the right MFD. MFD 3 is not modified.
 The PTO2 controls the landing/taxi lights, arresting hook, and landing gear.
+Viper TQS JOY_BTN1 through JOY_BTN5 are deliberately unassigned in DCS
+because they are managed by the AutoHotKey/VAICOM bridge supplied in the
+complete release package.
 The eight included OpenKneeboard pages use local hardware images with mapped-control
 callouts; no network access is required.
 

@@ -216,7 +216,7 @@ const pages = [
       item('MFD 3', 'Reserved • no bindings installed', 'red'), item('TQS', hasProfile('Viper TQS') ? 'Throttle and Mission Pack profile installed' : 'Component not installed yet'),
       item('AVA', hasProfile('Ava [R] Viper') ? 'Warthog grip profile installed' : 'Component not installed yet'), item('PTO2', hasProfile('WINCTRL CarrierAce PTO 2') ? 'Ground and landing profile installed' : 'Component not installed yet'),
       item('ICP', hasProfile('WINCTRL ViperAce ICP') ? 'ViperAce ICP profile installed' : 'Component not installed yet'), item('PATH', 'Config\\Input\\F-16C_50\\joystick'),
-      item('KNEE', 'KNEEBOARD\\F-16C_50'), item('VOICE', 'VAICOM PRO remains available for radio voice commands'),
+      item('KNEE', 'KNEEBOARD\\F-16C_50'), item('VOICE', 'TQS BTN 1–5 drive VAICOM TX1–TX5 through AHK'),
       item('RULE', 'Physical controls own deterministic cockpit actions'), item('BACKUP', 'Back up F-16C_50 before enabling OvGME', 'red'),
     ],
   },
@@ -235,7 +235,7 @@ const pages = [
       { href: assets.tqsPanel, x: 365, y: 820, width: 470, height: 600, opacity: 0.96 },
     ],
     callouts: [
-      callout('BTN 1–4', 'IFF OUT • UHF • IFF IN • VHF', 'left', [555, 330]),
+      callout('BTN 1–5', 'Reserved for VAICOM AHK • TX1–TX5', 'left', [555, 330], 'red'),
       callout('BTN 6', 'UNCAGE', 'left', [675, 330]), callout('RX / RY', 'Range / antenna elevation', 'left', [710, 350], 'gold'),
       callout('BTN 9/10', 'Speed brake extend / retract', 'left', [730, 410]), callout('BTN 7/8', 'DOGFIGHT / missile override', 'left', [715, 455]),
       callout('BTN 13–16', 'DCS up / sequence / down / return', 'left', [610, 455]), callout('X / Y', 'Radar cursor X / Y', 'left', [675, 600], 'gold'),
@@ -293,13 +293,15 @@ const pages = [
     notes: [item('AXES', 'Pitch and roll are removed before the four knob assignments are applied.', 'red')],
   },
   {
-    type: 'summary', file: '08-OPENKNEEBOARD-VAICOM', title: 'OPENKNEEBOARD + VAICOM PRO', kicker: 'VR REFERENCE PAGES • OPTIONAL VOICE NAVIGATION',
+    type: 'summary', file: '08-OPENKNEEBOARD-VAICOM', title: 'OPENKNEEBOARD + VAICOM PRO', kicker: 'TQS PUSH-TO-TALK BRIDGE • VR REFERENCE PAGES',
     items: [
       item('TAB', 'DCS Aircraft tab should discover F-16C_50', 'gold'), item('FOLDER', 'Fallback: add KNEEBOARD\\F-16C_50 as Folder tab'),
-      item('VOICE', 'VAICOM PRO remains primary for radio commands'), item('PHRASES', 'Use unique phrases that do not overlap VAICOM', 'red'),
+      item('AHK', 'Run dcs-TQS.ahk with AutoHotKey v2', 'red'), item('RESERVE', 'DCS BTN 1–5 must remain unassigned', 'red'),
+      item('TX1', '5Joy1 • VHF AM • Ctrl+Alt+Shift+1'), item('TX2', '5Joy2 • UHF • Ctrl+Alt+Shift+2'),
+      item('TX3', '5Joy3 • VHF FM • Ctrl+Alt+Shift+3'), item('TX4', '5Joy4 • AUTO • Ctrl+Alt+Shift+4'),
+      item('TX5', '5Joy5 • Interphone • Ctrl+Alt+Shift+5'), item('VOICE', 'VAICOM PRO remains primary for radio commands'),
       item('NEXT', 'NEXT_PAGE.exe'), item('PREV', 'PREVIOUS_PAGE.exe'), item('NEXT TAB', 'NEXT_TAB.exe'), item('PREV TAB', 'PREVIOUS_TAB.exe'),
-      item('BRIGHT+', 'INCREASE_BRIGHTNESS.exe'), item('BRIGHT−', 'DECREASE_BRIGHTNESS.exe'), item('NIGHT', 'ENABLE_TINT.exe'), item('DAY', 'DISABLE_TINT.exe'),
-      item('UTILITIES', 'C:\\Program Files\\OpenKneeboard\\utilities'), item('ORDER', 'Numeric filenames preserve page order'),
+      item('PHRASES', 'Keep kneeboard phrases distinct from VAICOM', 'gold'), item('ORDER', 'Numeric filenames preserve page order'),
     ],
   },
 ].filter(Boolean);

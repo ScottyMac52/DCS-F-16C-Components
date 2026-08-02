@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- Add the AutoHotKey v2 Viper TQS-to-VAICOM TX1–TX5 bridge.
+- Reserve Viper TQS `JOY_BTN1` through `JOY_BTN5` and remove their native DCS transmit/IFF assignments.
+- Add a complete release bundle containing the OvGME package, bridge, documentation, and checksums.
+- Update the photo-backed kneeboard pages, documentation, and build validation for the reserved transmit controls.
+
 ## 0.1.0
 
 - Add one-to-one Thrustmaster Cougar MFD 1 and MFD 2 profiles.

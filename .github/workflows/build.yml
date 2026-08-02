@@ -44,9 +44,18 @@ jobs:
       - name: Validate package
         shell: pwsh
         run: ./scripts/Test-Package.ps1 -Version $env:PACKAGE_VERSION
+      - name: Validate AutoHotKey bridge
+        shell: pwsh
+        run: ./scripts/Test-AutoHotKey.ps1
+      - name: Build complete release bundle
+        shell: pwsh
+        run: ./scripts/Build-Release.ps1 -Version $env:PACKAGE_VERSION
+      - name: Validate complete release bundle
+        shell: pwsh
+        run: ./scripts/Test-Release.ps1 -Version $env:PACKAGE_VERSION
       - uses: actions/upload-artifact@v4
         with:
-          name: F-16C-OvGME-package
+          name: F-16C-Release
           path: |
             dist/*.zip
             dist/SHA256SUMS.txt
