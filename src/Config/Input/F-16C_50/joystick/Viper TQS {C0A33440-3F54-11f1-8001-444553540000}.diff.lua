@@ -370,7 +370,7 @@ local diff = {
 			["name"] = "RWR Indicator Control POWER Button - Depressed/Released",
 		},
 		["d3024pnilu3024cd16vd1vpnilvu0"] = {
-			["added"] = {
+			["removed"] = {
 				[1] = {
 					["key"] = "JOY_BTN4",
 				},
@@ -378,7 +378,7 @@ local diff = {
 			["name"] = "Transmit Switch - VHF (call radio menu)",
 		},
 		["d3025pnilu3025cd16vd1vpnilvu0"] = {
-			["added"] = {
+			["removed"] = {
 				[1] = {
 					["key"] = "JOY_BTN2",
 				},
@@ -386,7 +386,7 @@ local diff = {
 			["name"] = "Transmit Switch - UHF (call radio menu)",
 		},
 		["d3026pnilu3026cd16vd1vpnilvu0"] = {
-			["added"] = {
+			["removed"] = {
 				[1] = {
 					["key"] = "JOY_BTN1",
 				},
@@ -394,7 +394,7 @@ local diff = {
 			["name"] = "Transmit Switch - IFF OUT",
 		},
 		["d3027pnilu3027cd16vd1vpnilvu0"] = {
-			["added"] = {
+			["removed"] = {
 				[1] = {
 					["key"] = "JOY_BTN3",
 				},

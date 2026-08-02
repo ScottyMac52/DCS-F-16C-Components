@@ -1,6 +1,6 @@
 # Thrustmaster Viper TQS and Mission Pack
 
-This component preserves Scott's supplied Viper TQS USB numbering, maintained-switch positions, and axis tuning.
+This component preserves Scott's supplied Viper TQS USB numbering, maintained-switch positions, and axis tuning. Buttons 1–5 are reserved for the supplied AutoHotKey/VoiceAttack/VAICOM bridge.
 
 The matching OpenKneeboard page uses the locally committed Thrustmaster handle and panel control
 maps from the official user manual, with callouts covering every mapped button and axis.
@@ -21,7 +21,7 @@ Pitch, Roll, and Rudder are explicitly removed from this device profile. The sup
 
 | Buttons | DCS control |
 |---|---|
-| 1 / 2 / 3 / 4 | IFF OUT / UHF / IFF IN / VHF transmit switch positions |
+| 1–5 | No native DCS assignment; reserved for VAICOM TX1–TX5 |
 | 6 | UNCAGE |
 | 7 / 8 | DOGFIGHT / MISSILE OVERRIDE |
 | 9 / 10 | Speed brake EXTEND / RETRACT |
@@ -29,6 +29,8 @@ Pitch, Roll, and Rudder are explicitly removed from this device profile. The sup
 | 13 / 14 / 15 / 16 | ICP DCS UP / SEQ / DOWN / RET |
 | 17 | CHAFF/FLARE dispense |
 | 18 | Throttle OFF (hold) ↔ IDLE |
+
+The profile explicitly removes the former native DCS bindings from buttons 1–4. Button 5 remains unassigned. `autohotkey/dcs-TQS.ahk` maps AutoHotKey inputs `5Joy1` through `5Joy5` in order to VAICOM TX1 through TX5; see [OpenKneeboard and VAICOM PRO](../OPENKNEEBOARD-VAICOM.md).
 
 ## Mission Pack and console controls
 

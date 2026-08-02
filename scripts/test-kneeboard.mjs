@@ -124,11 +124,11 @@ const requiredText = {
   '01-CONTROL-OVERVIEW': ['MFD 3', 'KNEEBOARD\\F-16C_50', 'Back up F-16C_50'],
   '02-LEFT-MFD': ['Left MFD OSB 20', 'GAIN decrease'],
   '03-RIGHT-MFD': ['Right MFD OSB 20', 'GAIN decrease'],
-  '04-VIPER-TQS': ['Radar cursor X / Y', 'CMDS program selector', 'Autopilot roll and pitch modes'],
+  '04-VIPER-TQS': ['BTN 1–5', 'Reserved for VAICOM AHK', 'Radar cursor X / Y', 'CMDS program selector', 'Autopilot roll and pitch modes'],
   '05-AVA-WARTHOG-GRIP': ['Weapon release', 'CMS aft', 'Rudder and thrust auto-assignments'],
   '06-WINCTRL-PTO2': ['Landing gear down', 'intentionally unbound'],
   '07-WINCTRL-VIPERACE-ICP': ['ICP keypad digits 1–9 and 0', 'Raster contrast', 'Pitch and roll are removed'],
-  '08-OPENKNEEBOARD-VAICOM': ['NEXT_PAGE.exe', 'ENABLE_TINT.exe'],
+  '08-OPENKNEEBOARD-VAICOM': ['dcs-TQS.ahk', '5Joy1', 'TX1', '5Joy5', 'TX5', 'NEXT_PAGE.exe'],
 };
 for (const [page, labels] of Object.entries(requiredText)) {
   const source = readFileSync(join(svgDir, `${page}.svg`), 'utf8');
