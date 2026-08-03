@@ -9,53 +9,20 @@ on:
 permissions:
   contents: read
 
-env:
-  PACKAGE_VERSION: 0.0.0-ci.${{ github.run_number }}
-
 jobs:
   build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-      - name: Install Lua parser
-        run: sudo apt-get update && sudo apt-get install -y lua5.4
-      - name: Install build dependencies
-        run: npm ci
-      - name: Test semantic versioning
-        run: npm run test:versioning
-      - name: Parse Lua profiles
-        shell: pwsh
-        run: |
-          Get-ChildItem src -Recurse -Filter '*.lua' | ForEach-Object {
-            & luac5.4 -p $_.FullName
-            if ($LASTEXITCODE -ne 0) { throw "Invalid Lua: $($_.FullName)" }
-          }
-      - name: Generate OpenKneeboard pages
-        run: npm run build:kneeboard
-      - name: Validate OpenKneeboard pages
-        run: npm run test:kneeboard
-      - name: Build package
-        shell: pwsh
-        run: ./scripts/Build-OvGME.ps1 -Version $env:PACKAGE_VERSION
-      - name: Validate package
-        shell: pwsh
-        run: ./scripts/Test-Package.ps1 -Version $env:PACKAGE_VERSION
-      - name: Validate AutoHotKey bridge
-        shell: pwsh
-        run: ./scripts/Test-AutoHotKey.ps1
-      - name: Build complete release bundle
-        shell: pwsh
-        run: ./scripts/Build-Release.ps1 -Version $env:PACKAGE_VERSION
-      - name: Validate complete release bundle
-        shell: pwsh
-        run: ./scripts/Test-Release.ps1 -Version $env:PACKAGE_VERSION
-      - uses: actions/upload-artifact@v4
-        with:
-          name: F-16C-Release
-          path: |
-            dist/*.zip
-            dist/SHA256SUMS.txt
+    uses: ScottyMac52/DCS-Common/.github/workflows/build.yml@main
+    with:
+      package-version: 0.0.0-ci.${{ github.run_number }}
+      install-lua-parser: true
+      run-lua-parse: true
+      run-autohotkey-tests: true
+      run-release-validation: true
+      package-script: scripts/Build-OvGME.ps1
+      test-package-script: scripts/Test-Package.ps1
+      build-release-script: scripts/Build-Release.ps1
+      test-release-script: scripts/Test-Release.ps1
+      artifact-name: F-16C-Release
+      artifact-path: |
+        dist/*.zip
+        dist/SHA256SUMS.txt
