@@ -8,10 +8,7 @@ on:
         required: true
         default: minor
         type: choice
-        options:
-          - patch
-          - minor
-          - major
+        options: [patch, minor, major]
 
 permissions:
   contents: write
@@ -22,120 +19,22 @@ concurrency:
 
 jobs:
   release:
-    runs-on: ubuntu-latest
-    env:
-      BUMP: ${{ inputs.bump }}
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: main
-          fetch-depth: 0
-          # Required so the workflow can push the regenerated kneeboard commit
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-      - name: Install Lua parser
-        run: sudo apt-get update && sudo apt-get install -y lua5.4
-      - name: Install build dependencies
-        run: npm ci
-      - name: Calculate next version
-        id: version
-        shell: pwsh
-        run: |
-          $LatestTag = git tag --list 'v*' --sort=-version:refname |
-            Where-Object { $_ -match '^v(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)$' } |
-            Select-Object -First 1
-
-          if ([string]::IsNullOrWhiteSpace($LatestTag)) {
-            $LatestVersion = '0.0.0'
-          } else {
-            $LatestVersion = $LatestTag.Substring(1)
-          }
-
-          $Version = node ./scripts/version.mjs next $LatestVersion $env:BUMP
-          if ($LASTEXITCODE -ne 0) { throw 'Failed to calculate the next semantic version.' }
-          $Tag = "v$Version"
-          if (git tag --list -- $Tag) { throw "Tag $Tag already exists." }
-
-          $ReleaseSha = git rev-parse HEAD
-          if ($LatestTag -and (git rev-list -n 1 $LatestTag) -eq $ReleaseSha) {
-            throw "There are no commits on main after $LatestTag."
-          }
-
-          "PACKAGE_VERSION=$Version" >> $env:GITHUB_ENV
-          "RELEASE_TAG=$Tag" >> $env:GITHUB_ENV
-          "RELEASE_SHA=$ReleaseSha" >> $env:GITHUB_ENV
-          "tag=$Tag" >> $env:GITHUB_OUTPUT
-          Write-Host "Creating $Tag from $LatestTag with a $env:BUMP bump."
-      - name: Test semantic versioning
-        run: npm run test:versioning
-      - name: Parse Lua profiles
-        shell: pwsh
-        run: |
-          Get-ChildItem src -Recurse -Filter '*.lua' | ForEach-Object {
-            & luac5.4 -p $_.FullName
-            if ($LASTEXITCODE -ne 0) { throw "Invalid Lua: $($_.FullName)" }
-          }
-      - name: Generate OpenKneeboard pages
-        run: npm run build:kneeboard
-      - name: Validate OpenKneeboard pages
-        run: npm run test:kneeboard
-      - name: Commit regenerated kneeboard pages
-        shell: pwsh
-        run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add kneeboard/source kneeboard/F-16C_50
-
-          $status = git status --porcelain kneeboard/source kneeboard/F-16C_50
-          if ([string]::IsNullOrWhiteSpace($status)) {
-            Write-Host "Kneeboard pages are already up to date; nothing to commit."
-            return
-          }
-
-          # [skip ci] prevents the push from triggering build.yml
-          git commit -m "chore: regenerate kneeboard pages for $env:RELEASE_TAG [skip ci]"
-          git push origin HEAD:main
-
-          $NewSha = git rev-parse HEAD
-          "RELEASE_SHA=$NewSha" >> $env:GITHUB_ENV
-          Write-Host "Pushed regenerated kneeboard pages as $NewSha"
-      - name: Build package
-        shell: pwsh
-        run: ./scripts/Build-OvGME.ps1 -Version $env:PACKAGE_VERSION
-      - name: Validate package
-        shell: pwsh
-        run: ./scripts/Test-Package.ps1 -Version $env:PACKAGE_VERSION
-      - name: Validate AutoHotKey bridge
-        shell: pwsh
-        run: ./scripts/Test-AutoHotKey.ps1
-      - name: Build complete release bundle
-        shell: pwsh
-        run: ./scripts/Build-Release.ps1 -Version $env:PACKAGE_VERSION
-      - name: Validate complete release bundle
-        shell: pwsh
-        run: ./scripts/Test-Release.ps1 -Version $env:PACKAGE_VERSION
-      - uses: actions/upload-artifact@v4
-        with:
-          name: F-16C-Release-${{ steps.version.outputs.tag }}
-          path: |
-            dist/*.zip
-            dist/SHA256SUMS.txt
-      - name: Create tagged release
-        shell: pwsh
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          $Title = "DCS F-16C Components $env:PACKAGE_VERSION"
-          $Assets = Get-ChildItem dist/*.zip, dist/SHA256SUMS.txt | ForEach-Object FullName
-
-          gh release create $env:RELEASE_TAG $Assets `
-            --target $env:RELEASE_SHA `
-            --title $Title `
-            --notes-file packaging/release/RELEASE-NOTES.md `
-            --repo $env:GITHUB_REPOSITORY
-
-          if ($LASTEXITCODE -ne 0) { throw "Failed to create release $env:RELEASE_TAG." }
+    uses: ScottyMac52/DCS-Common/.github/workflows/release.yml@main
+    with:
+      bump: ${{ inputs.bump }}
+      install-lua-parser: true
+      run-lua-parse: true
+      run-autohotkey-tests: true
+      run-release-validation: true
+      package-script: scripts/Build-OvGME.ps1
+      test-package-script: scripts/Test-Package.ps1
+      build-release-script: scripts/Build-Release.ps1
+      test-release-script: scripts/Test-Release.ps1
+      artifact-name: F-16C-Release-${{ inputs.bump }}-${{ github.run_number }}
+      artifact-path: |
+        dist/*.zip
+        dist/SHA256SUMS.txt
+      release-notes-path: packaging/release/RELEASE-NOTES.md
+      kneeboard-paths: kneeboard/source kneeboard/F-16C_50
+      release-title-prefix: DCS F-16C Components
+    secrets: inherit
