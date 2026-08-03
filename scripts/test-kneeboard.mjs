@@ -131,8 +131,19 @@ for (const [page, labels] of Object.entries(requiredText)) {
 }
 
 const before = generatedHashes();
-const build = spawnSync(process.platform === 'win32' ? 'npm.cmd' : 'npm', ['run', 'build:kneeboard'], { cwd: root, encoding: 'utf8', env: process.env });
-assert(build.status === 0, `Deterministic rebuild failed:\n${build.stdout}\n${build.stderr}`);
+function runBuildStep(script) {
+  const result = spawnSync(process.execPath, [join(scriptDir, script)], {
+    cwd: root,
+    encoding: 'utf8',
+    env: process.env,
+  });
+  assert(
+    result.status === 0,
+    `Deterministic rebuild failed in ${script}:\n${result.error?.stack ?? ''}\n${result.stdout ?? ''}\n${result.stderr ?? ''}`,
+  );
+}
+runBuildStep('build-kneeboard.mjs');
+runBuildStep('apply-shared-hardware.mjs');
 const after = generatedHashes();
 assert(JSON.stringify(after) === JSON.stringify(before), 'Kneeboard output changed across identical builds.');
 
