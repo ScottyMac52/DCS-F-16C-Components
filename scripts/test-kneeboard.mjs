@@ -118,7 +118,7 @@ const requiredText = {
   '01-CONTROL-OVERVIEW': ['MFD 3', 'KNEEBOARD\\F-16C_50', 'Back up F-16C_50'],
   '02-LEFT-MFD': ['Shared DCS-Common device: tm-mfd'],
   '03-RIGHT-MFD': ['Shared DCS-Common device: tm-mfd'],
-  '04-VIPER-TQS': ['BTN 1–5', 'Reserved for VAICOM AHK', 'Radar cursor X / Y', 'CMDS program selector', 'Autopilot roll and pitch modes'],
+  '04-VIPER-TQS': ['Shared DCS-Common device: viper-tqs-mission-pack'],
   '05-AVA-WARTHOG-GRIP': ['Shared DCS-Common device: ava-base-f16c'],
   '06-WINCTRL-PTO2': ['Shared DCS-Common device: winctrl-pto2'],
   '07-WINCTRL-VIPERACE-ICP': ['Shared DCS-Common device: winctrl-icp'],
