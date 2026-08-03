@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "aircraft": "F-16C_50",
+  "profiles": {
+    "pto2": "src/Config/Input/F-16C_50/joystick/WINCTRL CarrierAce PTO 2 {19B7D090-6120-11F0-8001-444553540000}.diff.lua"
+  },
+  "pages": [
+    { "file": "02-LEFT-MFD", "deviceId": "tm-mfd", "title": "COUGAR MFD 1 • LEFT MFD", "kicker": "ONE-TO-ONE LEFT BEZEL", "labels": ["Left MFD OSB 1", "Left MFD OSB 2", "Left MFD OSB 3", "Left MFD OSB 4", "Left MFD OSB 5", "Left MFD OSB 6", "Left MFD OSB 7", "Left MFD OSB 8", "Left MFD OSB 9", "Left MFD OSB 10", "Left MFD OSB 11", "Left MFD OSB 12", "Left MFD OSB 13", "Left MFD OSB 14", "Left MFD OSB 15", "Left MFD OSB 16", "Left MFD OSB 17", "Left MFD OSB 18", "Left MFD OSB 19", "Left MFD OSB 20", "SYM increase", "SYM decrease", "CON increase", "CON decrease", "BRT increase", "BRT decrease", "GAIN increase", "GAIN decrease"] },
+    { "file": "03-RIGHT-MFD", "deviceId": "tm-mfd", "title": "COUGAR MFD 2 • RIGHT MFD", "kicker": "ONE-TO-ONE RIGHT BEZEL", "labels": ["Right MFD OSB 1", "Right MFD OSB 2", "Right MFD OSB 3", "Right MFD OSB 4", "Right MFD OSB 5", "Right MFD OSB 6", "Right MFD OSB 7", "Right MFD OSB 8", "Right MFD OSB 9", "Right MFD OSB 10", "Right MFD OSB 11", "Right MFD OSB 12", "Right MFD OSB 13", "Right MFD OSB 14", "Right MFD OSB 15", "Right MFD OSB 16", "Right MFD OSB 17", "Right MFD OSB 18", "Right MFD OSB 19", "Right MFD OSB 20", "SYM increase", "SYM decrease", "CON increase", "CON decrease", "BRT increase", "BRT decrease", "GAIN increase", "GAIN decrease"] },
+    { "file": "04-VIPER-TQS", "deviceId": "viper-tqs-mission-pack", "title": "VIPER TQS + MISSION PACK", "kicker": "THROTTLE, HOTAS, DEFENSE AND PANEL CONTROLS", "labels": ["BTN 1–5: VAICOM TX1–TX5", "BTN 6: UNCAGE", "RX / RY: Range / antenna elevation", "BTN 9/10: Speed brake", "BTN 7/8: DOGFIGHT / missile override", "BTN 13–16: DCS switch", "X / Y: Radar cursor", "BTN 12: ENABLE", "BTN 17: Chaff / flare", "BTN 18: OFF ↔ IDLE", "BTN 22: Emergency jettison", "BTN 38/57: Landing gear", "BTN 23/24: Master arm", "BTN 25–28/55: CMDS program", "BTN 29–33/56: CMDS mode", "BTN 34–37: RWR", "RZ: Zoom view", "BTN 45/59: Stores CAT", "BTN 46/47: RF", "BTN 39–41/58: Exterior lights", "BTN 48/61: Laser arm", "BTN 49/62: Jammer", "BTN 42–44: Heading set", "BTN 50–53/63–64: Autopilot modes"] },
+    { "file": "05-AVA-WARTHOG-GRIP", "deviceId": "ava-base-f16c", "title": "AVA BASE + WARTHOG GRIP", "kicker": "F-16 HOTAS STICK CONTROLS", "labels": ["BTN 2: Weapon release", "BTN 3: NWS / A-R DISC", "BTN 7–10: TMS", "BTN 11–14: DMS", "BTN 15–18: CMS"] },
+    { "file": "06-WINCTRL-PTO2", "deviceId": "winctrl-pto2", "title": "WINCTRL CARRIERACE PTO2", "kicker": "F-16 GROUND AND LANDING CONTROLS", "controls": {
+      "pto2-button-8": { "profile": "pto2", "key": "JOY_BTN8", "label": "Landing lights ON" },
+      "pto2-button-9": { "profile": "pto2", "key": "JOY_BTN9", "label": "Landing lights OFF" },
+      "pto2-button-12": { "profile": "pto2", "key": "JOY_BTN12", "label": "Taxi while held" },
+      "pto2-button-32": { "profile": "pto2", "key": "JOY_BTN32", "label": "Hook up" },
+      "pto2-button-34": { "profile": "pto2", "key": "JOY_BTN34", "label": "Hook down" },
+      "pto2-button-35": { "profile": "pto2", "key": "JOY_BTN35", "label": "Gear up" },
+      "pto2-button-37": { "profile": "pto2", "key": "JOY_BTN37", "label": "Gear down" }
+    } },
+    { "file": "07-WINCTRL-VIPERACE-ICP", "deviceId": "winctrl-icp", "title": "WINCTRL VIPERACE ICP", "kicker": "DEVICE-SPECIFIC USB NUMBERING", "labels": ["BTN 1/2: COM1 / COM2", "BTN 3/4: IFF / LIST", "BTN 5/6: A-A / A-G", "BTN 7–18: Keypad", "BTN 19/20: DED rocker", "BTN 22–25: DCS switch", "BTN 26–34: FLIR controls", "JOY axes: four knobs"] }
+  ]
+}
