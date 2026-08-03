@@ -1,3 +1,4 @@
+// The reusable workflows provide the current DCS-Common checkout through DCS_COMMON_ROOT.
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
