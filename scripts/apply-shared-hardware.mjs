@@ -15,7 +15,7 @@ mkdirSync(pngDir, { recursive: true });
 
 for (const page of config.pages) {
   const number = Number(page.file.slice(0, 2));
-  const { svg } = renderSharedHardwarePage({ ...page, commonRoot, footer: `${config.aircraft} • shared DCS-Common hardware template • ${number} / 8` });
+  const { svg } = renderSharedHardwarePage({ ...page, commonRoot, provenance: { consumer: 'DCS-F-16C-Components', page: `${number} / 8` } });
   writeFileSync(join(svgDir, `${page.file}.svg`), svg);
   await sharp(Buffer.from(svg)).png().toFile(join(pngDir, `${page.file}.png`));
 }
