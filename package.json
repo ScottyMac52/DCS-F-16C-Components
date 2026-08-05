@@ -5,7 +5,7 @@
   "description": "Build tooling for Scott's F-16C OpenKneeboard pages and OvGME package.",
   "type": "module",
   "scripts": {
-    "build:kneeboard": "node scripts/build-kneeboard.mjs && node scripts/apply-shared-hardware.mjs",
+    "build:kneeboard": "node scripts/build-kneeboard.mjs",
     "test:kneeboard": "node scripts/test-kneeboard.mjs",
     "test:versioning": "node scripts/test-versioning.mjs"
   },
