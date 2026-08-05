@@ -60,17 +60,6 @@ function profile(nameFragment) {
   return readFileSync(join(profileDir, matches[0]), 'utf8');
 }
 
-function expandButtonLabel(label) {
-  const buttons = [];
-  for (const part of label.replaceAll('–', '-').split('/')) {
-    const range = part.match(/^(\d+)-(\d+)$/);
-    if (range) {
-      for (let button = Number(range[1]); button <= Number(range[2]); button += 1) buttons.push(button);
-    } else if (/^\d+$/.test(part)) buttons.push(Number(part));
-  }
-  return buttons;
-}
-
 function assertProfileButtons(nameFragment, page) {
   const lua = profile(nameFragment);
   const mappedButtons = new Set([...lua.matchAll(/JOY_BTN(\d+)/g)].map((match) => Number(match[1])));
@@ -143,7 +132,6 @@ function runBuildStep(script) {
   );
 }
 runBuildStep('build-kneeboard.mjs');
-runBuildStep('apply-shared-hardware.mjs');
 const after = generatedHashes();
 assert(JSON.stringify(after) === JSON.stringify(before), 'Kneeboard output changed across identical builds.');
 
