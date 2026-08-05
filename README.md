@@ -34,18 +34,33 @@ The supplied AutoHotKey v2 script maps Viper TQS joystick device 5 to VoiceAttac
 
 `JOY_BTN1` through `JOY_BTN5` are reserved exclusively for this bridge. The Viper TQS profile explicitly removes the former native DCS bindings on buttons 1–4, and validation prevents any of the five positions from being assigned to DCS again.
 
+## Shared kneeboard pipeline
+
+One script builds every page: `scripts/build-kneeboard.mjs`.
+
+- Consumer-owned summary pages (overview + OpenKneeboard/VAICOM notes) are generated locally.
+- Hardware pages are rendered from `config/kneeboard.json` through DCS-Common (`shared-hardware-consumer.mjs` and `profile-driven-kneeboard.mjs`).
+
+DCS-Common is located via `DCS_COMMON_ROOT` or the CI checkout at `.dcs-common`. There is no separate `apply-shared-hardware` step.
+
 ## Build and validate
+
+Requirements: Node.js 22, PowerShell 7, and a [DCS-Common](https://github.com/ScottyMac52/DCS-Common) checkout.
 
 ```powershell
 npm ci
+$env:DCS_COMMON_ROOT = 'C:\path\to\DCS-Common'
 npm run build:kneeboard
 npm run test:kneeboard
+npm run test:versioning
 ./scripts/Build-OvGME.ps1 -Version 0.1.0
 ./scripts/Test-Package.ps1 -Version 0.1.0
 ./scripts/Test-AutoHotKey.ps1
 ./scripts/Build-Release.ps1 -Version 0.1.0
-./scripts/Test-Release.ps1 -Version 0.1.0
+./scripts/Test-Package.ps1 -Version 0.1.0
 ```
+
+`Test-Package.ps1` validates the OVGME package and, when the complete release ZIP is present, the complete release bundle. There is no `Test-Release.ps1`.
 
 The GitHub workflow parses every Lua profile, tests semantic versioning, generates and deterministically validates all kneeboard images, validates the AutoHotKey bridge, builds both archives, verifies their contents and checksums, and uploads a prerelease-numbered complete package.
 
