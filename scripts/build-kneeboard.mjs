@@ -19,10 +19,10 @@ mkdirSync(pngDir, { recursive: true });
 const profiles = existsSync(profileDir) ? readdirSync(profileDir) : [];
 const hasProfile = (fragment) => profiles.some((name) => name.includes(fragment));
 const esc = (value) => String(value)
-  .replaceAll('&', '&amp;')
-  .replaceAll('<', '&lt;')
-  .replaceAll('>', '&gt;')
-  .replaceAll('"', '&quot;');
+  .replaceAll('&', '&')
+  .replaceAll('<', '<')
+  .replaceAll('>', '>')
+  .replaceAll('"', '"');
 
 function wrap(text, max = 28, limit = 2) {
   const words = String(text).split(/\s+/);
@@ -315,4 +315,19 @@ for (let index = 0; index < pages.length; index += 1) {
   await sharp(Buffer.from(svg)).png().toFile(join(pngDir, `${page.file}.png`));
 }
 
-console.log(`Generated ${pages.length} F-16C OpenKneeboard SVG and PNG pages for package ${version}.`);
+// Shared-hardware pages from DCS-Common overwrite the local hardware placeholders.
+const { renderSharedHardwarePage } = await import(pathToFileURL(join(commonRoot, 'scripts/shared-hardware-consumer.mjs')));
+const { loadProfileDrivenConfig } = await import(pathToFileURL(join(commonRoot, 'scripts/profile-driven-kneeboard.mjs')));
+const sharedConfig = loadProfileDrivenConfig('config/kneeboard.json', { consumerRoot: root, commonRoot });
+for (const page of sharedConfig.pages) {
+  const number = Number(page.file.slice(0, 2));
+  const { svg } = renderSharedHardwarePage({
+    ...page,
+    commonRoot,
+    provenance: { consumer: 'DCS-F-16C-Components', page: `${number} / 8` },
+  });
+  writeFileSync(join(svgDir, `${page.file}.svg`), svg);
+  await sharp(Buffer.from(svg)).png().toFile(join(pngDir, `${page.file}.png`));
+}
+
+console.log(`Generated ${pages.length} F-16C OpenKneeboard pages (${sharedConfig.pages.length} shared-hardware) for package ${version}.`);
