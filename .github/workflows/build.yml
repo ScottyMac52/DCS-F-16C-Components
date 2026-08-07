@@ -6,8 +6,9 @@ on:
   pull_request:
   workflow_dispatch:
 
+# contents: write required so commit-kneeboard can push regenerated SVG/PNG to main.
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build:
@@ -22,6 +23,10 @@ jobs:
       test-package-script: scripts/Test-Package.ps1
       build-release-script: scripts/Build-Release.ps1
       test-release-script: scripts/Test-Package.ps1
+      # Keep repo kneeboard assets in lockstep with the OvGME package.
+      # Skipped on pull_request; runs on main push / workflow_dispatch.
+      commit-kneeboard: true
+      kneeboard-paths: kneeboard/source kneeboard/F-16C_50
       artifact-name: F-16C-Release
       artifact-path: |
         dist/*.zip
