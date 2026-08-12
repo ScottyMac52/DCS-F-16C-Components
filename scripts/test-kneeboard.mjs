@@ -11,6 +11,7 @@ const pngDir = join(root, 'kneeboard', 'F-16C_50');
 const svgDir = join(root, 'kneeboard', 'source');
 const assetDir = join(root, 'kneeboard', 'assets', 'source');
 const profileDir = join(root, 'src', 'Config', 'Input', 'F-16C_50', 'joystick');
+const kneeboardConfig = JSON.parse(readFileSync(join(root, 'config', 'kneeboard.json'), 'utf8'));
 
 const pages = [
   '01-CONTROL-OVERVIEW',
@@ -113,6 +114,24 @@ const requiredText = {
   '07-WINCTRL-VIPERACE-ICP': ['Shared DCS-Common device: winctrl-icp'],
   '08-OPENKNEEBOARD-VAICOM': ['dcs-TQS.ahk', '5Joy1', 'TX1', '5Joy5', 'TX5', 'NEXT_PAGE.exe'],
 };
+
+const expectedConfiguredControls = {
+  '02-LEFT-MFD': 28,
+  '03-RIGHT-MFD': 28,
+  '04-VIPER-TQS': 58,
+  '05-AVA-WARTHOG-GRIP': 14,
+  '06-WINCTRL-PTO2': 7,
+  '07-WINCTRL-VIPERACE-ICP': 37,
+};
+for (const page of kneeboardConfig.pages) {
+  assert(!Array.isArray(page.labels), `${page.file} must use ID-keyed profile controls, not positional labels.`);
+  assert(Object.keys(page.controls ?? {}).length === expectedConfiguredControls[page.file],
+    `${page.file} has the wrong configured control count.`);
+}
+const avaPage = kneeboardConfig.pages.find(({ file }) => file === '05-AVA-WARTHOG-GRIP');
+assert(avaPage?.deviceId === 'ava-base-f16c', 'AVA page must retain the ava-base-f16c alias.');
+assert(Object.keys(avaPage.controls).every((id) => id.startsWith('warthog-grip-')),
+  'AVA controls must use canonical TM Warthog Joystick IDs.');
 for (const [page, labels] of Object.entries(requiredText)) {
   const source = readFileSync(join(svgDir, `${page}.svg`), 'utf8');
   const visibleText = source.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
