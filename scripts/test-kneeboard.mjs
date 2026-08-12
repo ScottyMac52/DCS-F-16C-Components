@@ -106,13 +106,22 @@ assertProfileButtons('WINCTRL ViperAce ICP', '07-WINCTRL-VIPERACE-ICP');
 
 const requiredText = {
   '01-CONTROL-OVERVIEW': ['MFD 3', 'KNEEBOARD\\F-16C_50', 'Back up F-16C_50'],
-  '02-LEFT-MFD': ['Shared DCS-Common device: tm-mfd'],
-  '03-RIGHT-MFD': ['Shared DCS-Common device: tm-mfd'],
-  '04-VIPER-TQS': ['Shared DCS-Common device: viper-tqs-mission-pack'],
-  '05-AVA-WARTHOG-GRIP': ['Shared DCS-Common device: ava-base-f16c'],
-  '06-WINCTRL-PTO2': ['Shared DCS-Common device: winctrl-pto2'],
-  '07-WINCTRL-VIPERACE-ICP': ['Shared DCS-Common device: winctrl-icp'],
+  '02-LEFT-MFD': ['Left MFD OSB 1', 'GAIN decrease'],
+  '03-RIGHT-MFD': ['Right MFD OSB 1', 'GAIN decrease'],
+  '04-VIPER-TQS': ['UNCAGE', 'Autopilot roll and'],
+  '05-AVA-WARTHOG-GRIP': ['Weapon release', 'CMS left'],
+  '06-WINCTRL-PTO2': ['Landing / taxi lights', 'Landing gear down'],
+  '07-WINCTRL-VIPERACE-ICP': ['COM1 / COM2', 'Raster contrast'],
   '08-OPENKNEEBOARD-VAICOM': ['dcs-TQS.ahk', '5Joy1', 'TX1', '5Joy5', 'TX5', 'NEXT_PAGE.exe'],
+};
+
+const requiredEmbeddedAssets = {
+  '02-LEFT-MFD': ['cougar-mfd-clean.png'],
+  '03-RIGHT-MFD': ['cougar-mfd-clean.png'],
+  '04-VIPER-TQS': ['viper-tqs-handle-controls.png', 'viper-panel-controls.png'],
+  '05-AVA-WARTHOG-GRIP': ['warthog-grip-front.png', 'warthog-grip-rear.png'],
+  '06-WINCTRL-PTO2': ['pto2-clean.png'],
+  '07-WINCTRL-VIPERACE-ICP': ['viperace-icp-clean.png'],
 };
 
 const expectedConfiguredControls = {
@@ -136,6 +145,13 @@ for (const [page, labels] of Object.entries(requiredText)) {
   const source = readFileSync(join(svgDir, `${page}.svg`), 'utf8');
   const visibleText = source.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
   for (const label of labels) assert(visibleText.includes(label), `${page} is missing required text: ${label}`);
+}
+for (const [page, assets] of Object.entries(requiredEmbeddedAssets)) {
+  const source = readFileSync(join(svgDir, `${page}.svg`), 'utf8');
+  for (const asset of assets) {
+    const encoded = readFileSync(join(assetDir, asset)).toString('base64');
+    assert(source.includes(encoded), `${page} must embed the F-16C-specific source asset: ${asset}`);
+  }
 }
 
 const before = generatedHashes();
