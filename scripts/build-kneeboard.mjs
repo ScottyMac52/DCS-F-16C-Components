@@ -315,9 +315,19 @@ for (let index = 0; index < pages.length; index += 1) {
   await sharp(Buffer.from(svg)).png().toFile(join(pngDir, `${page.file}.png`));
 }
 
-// Resolve the profile-driven configuration for validation and provenance, but retain
-// this package's aircraft-specific hardware layouts and source artwork above.
+// Shared-hardware pages from DCS-Common overwrite the local hardware placeholders.
+const { renderSharedHardwarePage } = await import(pathToFileURL(join(commonRoot, 'scripts/shared-hardware-consumer.mjs')));
 const { loadProfileDrivenConfig } = await import(pathToFileURL(join(commonRoot, 'scripts/profile-driven-kneeboard.mjs')));
 const sharedConfig = loadProfileDrivenConfig('config/kneeboard.json', { consumerRoot: root, commonRoot });
+for (const page of sharedConfig.pages) {
+  const number = Number(page.file.slice(0, 2));
+  const { svg } = renderSharedHardwarePage({
+    ...page,
+    commonRoot,
+    provenance: { consumer: 'DCS-F-16C-Components', page: `${number} / 8` },
+  });
+  writeFileSync(join(svgDir, `${page.file}.svg`), svg);
+  await sharp(Buffer.from(svg)).png().toFile(join(pngDir, `${page.file}.png`));
+}
 
-console.log(`Generated ${pages.length} F-16C OpenKneeboard pages (${sharedConfig.pages.length} profile-validated hardware) for package ${version}.`);
+console.log(`Generated ${pages.length} F-16C OpenKneeboard pages (${sharedConfig.pages.length} shared-hardware) for package ${version}.`);
