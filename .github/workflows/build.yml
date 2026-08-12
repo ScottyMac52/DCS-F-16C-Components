@@ -12,8 +12,9 @@ permissions:
 
 jobs:
   build:
-    uses: ScottyMac52/DCS-Common/.github/workflows/build.yml@main
+    uses: ScottyMac52/DCS-Common/.github/workflows/build.yml@7145b9361a3adfe2a4eb0ec4e5ef9baa161b159d
     with:
+      dcs-common-ref: 24fda14dda1b9f4a7a7b2594667c22c881fe0d53
       package-version: 0.0.0-ci.${{ github.run_number }}
       install-lua-parser: true
       run-lua-parse: true
