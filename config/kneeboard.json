@@ -743,6 +743,34 @@
       "deviceId": "ava-base-f16c",
       "title": "AVA BASE + WARTHOG GRIP",
       "kicker": "F-16 HOTAS STICK CONTROLS",
+      "labels": {
+        "warthog-grip-rear-sw1": "ROLL",
+        "warthog-grip-rear-sw2": "PITCH",
+
+        "warthog-grip-trim-up": "TRIM UP",
+        "warthog-grip-trim-down": "TRIM DOWN",
+        "warthog-grip-trim-left": "TRIM LEFT",
+        "warthog-grip-trim-right": "TRIM RIGHT",
+        
+        "warthog-grip-pinky": "NWS / A-R DISC / MSL STEP",
+        "warthog-grip-btn-red": "WEAPON RELEASE",
+      
+        "warthog-grip-tms-up": "TMS UP",
+        "warthog-grip-tms-down": "TMS DOWN",
+        "warthog-grip-tms-left": "TMS LEFT",
+        "warthog-grip-tms-right": "TMS RIGHT",
+      
+        "warthog-grip-dms-up": "DMS UP",
+        "warthog-grip-dms-down": "DMS DOWN",
+        "warthog-grip-dms-left": "DMS LEFT",
+        "warthog-grip-dms-right": "DMS RIGHT",
+      
+        "warthog-grip-cms-forward": "CMS FORWARD",
+        "warthog-grip-cms-aft": "CMS AFT",
+        "warthog-grip-cms-left": "CMS LEFT",
+        "warthog-grip-cms-right": "CMS RIGHT"
+        "warthog-grip-cms-push": "CMS PUSH"
+      },
       "controls": {
         "warthog-grip-pinky": {
           "profile": "ava",
@@ -813,7 +841,42 @@
           "profile": "ava",
           "key": "JOY_BTN2",
           "command": "d3022pnilu3022cd16vd1vpnilvu0"
-        }
+        },
+        "warthog-grip-rear-sw1": {
+          "profile": "ava",
+          "key": "JOY_X",
+          "command": "a2002cdnil"
+        },
+        "warthog-grip-rear-sw2": {
+          "profile": "ava",
+          "key": "JOY_Y",
+          "command": "a2001cdnil"
+        },
+        "warthog-grip-trim-up": {
+          "profile": "ava",
+          "key": "JOY_POV1_U",
+          "command": "d3002pnilu3002cd16vd1vpnilvu0"
+        },
+        "warthog-grip-trim-down": {
+          "profile": "ava",
+          "key": "JOY_POV1_D",
+          "command": "d3003pnilu3003cd16vd-1vpnilvu0"
+        },
+        "warthog-grip-trim-left": {
+          "profile": "ava",
+          "key": "JOY_POV1_L",
+          "command": "d3004pnilu3004cd16vd-1vpnilvu0"
+        },
+        "warthog-grip-trim-right": {
+          "profile": "ava",
+          "key": "JOY_POV1_R",
+          "command": "d3005pnilu3005cd16vd1vpnilvu0"
+        },
+        "warthog-grip-cms-push": {
+          "profile": "ava",
+          "key": "JOY_BTN19",
+          "command": "d3018pnilu3018cd16vd1vpnilvu0"
+        }        
       }
     },
     {
@@ -863,7 +926,52 @@
       "file": "07-WINCTRL-VIPERACE-ICP",
       "deviceId": "winctrl-icp",
       "title": "WINCTRL VIPERACE ICP",
-      "kicker": "DEVICE-SPECIFIC USB NUMBERING",
+      "kicker": "F-16C ICP PANEL",
+      "labels": {
+        "winctrl-icp-btn-18": "ICP 1",
+        "winctrl-icp-btn-07": "ICP 2",
+        "winctrl-icp-btn-08": "ICP 3",
+        "winctrl-icp-btn-09": "ICP 4",
+        "winctrl-icp-btn-11": "ICP 5",
+        "winctrl-icp-btn-12": "ICP 6",
+        "winctrl-icp-btn-13": "ICP 7",
+        "winctrl-icp-btn-15": "ICP 8",
+        "winctrl-icp-btn-16": "ICP 9",
+        "winctrl-icp-btn-17": "ICP 0",
+      
+        "winctrl-icp-btn-01": "COM 1",
+        "winctrl-icp-btn-02": "COM 2",
+        "winctrl-icp-btn-03": "IFF",
+        "winctrl-icp-btn-04": "LIST",
+        "winctrl-icp-btn-14": "ENTER",
+        "winctrl-icp-btn-10": "RECALL",
+        "winctrl-icp-btn-05": "A-A",
+        "winctrl-icp-btn-06": "A-G",
+      
+        "winctrl-icp-btn-19": "DED INCREASE",
+        "winctrl-icp-btn-20": "DED DECREASE",
+      
+        "winctrl-icp-btn-22": "DCS UP",
+        "winctrl-icp-btn-23": "DCS SEQ",
+        "winctrl-icp-btn-24": "DCS DOWN",
+        "winctrl-icp-btn-25": "DCS RETURN",
+      
+        "winctrl-icp-btn-26": "DRIFT NORM",
+        "winctrl-icp-btn-27": "DRIFT CUTOFF",
+        "winctrl-icp-btn-28": "WARN RESET",
+      
+        "winctrl-icp-btn-29": "FLIR POLARITY",
+        "winctrl-icp-btn-30": "FLIR INCREASE",
+        "winctrl-icp-btn-31": "FLIR DECREASE",
+        "winctrl-icp-btn-32": "FLIR GAIN",
+        "winctrl-icp-btn-33": "FLIR LEVEL",
+        "winctrl-icp-btn-34": "FLIR AUTO",
+      
+        "winctrl-icp-axis-y": "HUD INTENSITY",
+        "winctrl-icp-axis-x": "RETICLE DEPRESSION",
+        "winctrl-icp-axis-ry": "RASTER INTENSITY",
+        "winctrl-icp-axis-rx": "RASTER CONTRAST"
+      },
       "controls": {
         "winctrl-icp-btn-18": {
           "profile": "icp",
