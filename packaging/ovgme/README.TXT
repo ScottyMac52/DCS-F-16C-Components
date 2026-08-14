@@ -1,5 +1,18 @@
-DCS-F-16C-50-Components OVGME package version {{VERSION}}
+SCOTT'S F-16C CONTROL PROFILES
+OVGME PACKAGE VERSION {{VERSION}}
 
-Install relative to your DCS Saved Games root.
-Input module: F-16C_50
-Kneeboard: F-16C_50
+This package installs Scott's F-16C control profiles and OpenKneeboard
+pages into:
+
+  C:\Users\vyper\Saved Games\DCS.openbeta
+
+Installed paths:
+
+  Config\Input\F-16C_50\joystick
+  KNEEBOARD\F-16C_50
+
+Configure OVGME with the DCS.openbeta Saved Games directory as its root.
+Close DCS before enabling or disabling this package.
+
+OpenKneeboard should discover KNEEBOARD\F-16C_50 through the DCS Aircraft
+tab. If not, add that directory as a Folder tab.
