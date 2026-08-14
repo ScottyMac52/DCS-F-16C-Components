@@ -1,21 +1,5 @@
 local diff = {
 	["axisDiffs"] = {
-		["a2001cdnil"] = {
-			["added"] = {
-				[1] = {
-					["key"] = "JOY_Y",
-				},
-			},
-			["name"] = "Pitch",
-		},
-		["a2002cdnil"] = {
-			["added"] = {
-				[1] = {
-					["key"] = "JOY_X",
-				},
-			},
-			["name"] = "Roll",
-		},
 		["a2003cdnil"] = {
 			["name"] = "Rudder",
 			["removed"] = {
@@ -34,46 +18,6 @@ local diff = {
 		},
 	},
 	["keyDiffs"] = {
-		["d3002pnilu3002cd16vd1vpnilvu0"] = {
-			["added"] = {
-				[1] = {
-					["key"] = "JOY_POV1_U",
-				},
-			},
-			["name"] = "TRIM Switch - UP",
-		},
-		["d3003pnilu3003cd16vd-1vpnilvu0"] = {
-			["added"] = {
-				[1] = {
-					["key"] = "JOY_POV1_D",
-				},
-			},
-			["name"] = "TRIM Switch - DOWN",
-		},
-		["d3004pnilu3004cd16vd-1vpnilvu0"] = {
-			["added"] = {
-				[1] = {
-					["key"] = "JOY_POV1_L",
-				},
-			},
-			["name"] = "TRIM Switch - LEFT",
-		},
-		["d3005pnilu3005cd16vd1vpnilvu0"] = {
-			["added"] = {
-				[1] = {
-					["key"] = "JOY_POV1_R",
-				},
-			},
-			["name"] = "TRIM Switch - RIGHT",
-		},
-		["d3018pnilu3018cd16vd1vpnilvu0"] = {
-			["added"] = {
-				[1] = {
-					["key"] = "JOY_BTN19",
-				},
-			},
-			["name"] = "Countermeasures Management Switch - Depress",
-		},		
 		["d3001pnilu3001cd16vd1vpnilvu0"] = {
 			["added"] = {
 				[1] = {
@@ -177,6 +121,30 @@ local diff = {
 				},
 			},
 			["name"] = "Countermeasures Management Switch - Right",
+		},
+		["d3018pnilu3018cd16vd1vpnilvu0"] = {
+			["added"] = {
+				[1] = {
+					["key"] = "JOY_BTN19",
+				},
+			},
+			["name"] = "Expand/FOV Button - Depress",
+		},
+		["d3020pnilu3020cd16vd1vpnilvu0"] = {
+			["added"] = {
+				[1] = {
+					["key"] = "JOY_BTN1",
+				},
+			},
+			["name"] = "CAMERA/GUN Trigger - FIRST DETENT",
+		},
+		["d3021pnilu3021cd16vd1vpnilvu0"] = {
+			["added"] = {
+				[1] = {
+					["key"] = "JOY_BTN6",
+				},
+			},
+			["name"] = "CAMERA/GUN Trigger - SECOND DETENT",
 		},
 		["d3022pnilu3022cd16vd1vpnilvu0"] = {
 			["added"] = {

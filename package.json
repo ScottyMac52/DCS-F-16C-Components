@@ -1,8 +1,6 @@
 {
-  "name": "dcs-f-16c-components",
-  "version": "0.0.0",
+  "name": "DCS-F-16C-50-Components",
   "private": true,
-  "description": "Build tooling for Scott's F-16C OpenKneeboard pages and OvGME package.",
   "type": "module",
   "scripts": {
     "build:kneeboard": "node scripts/build-kneeboard.mjs",

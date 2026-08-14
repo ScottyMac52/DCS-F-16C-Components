@@ -1,12 +1,11 @@
-name: Create tagged OvGME release
-
+name: Create tagged OVGME release
 on:
   workflow_dispatch:
     inputs:
       bump:
         description: Semantic version component to increment
         required: true
-        default: minor
+        default: patch
         type: choice
         options: [patch, minor, major]
 
@@ -19,23 +18,21 @@ concurrency:
 
 jobs:
   release:
-    uses: ScottyMac52/DCS-Common/.github/workflows/release.yml@7145b9361a3adfe2a4eb0ec4e5ef9baa161b159d
+    uses: ScottyMac52/DCS-Common/.github/workflows/release.yml@main
     with:
-      dcs-common-ref: 24fda14dda1b9f4a7a7b2594667c22c881fe0d53
       bump: ${{ inputs.bump }}
       install-lua-parser: true
       run-lua-parse: true
-      run-autohotkey-tests: true
       run-release-validation: true
       package-script: scripts/Build-OvGME.ps1
       test-package-script: scripts/Test-Package.ps1
       build-release-script: scripts/Build-Release.ps1
       test-release-script: scripts/Test-Package.ps1
-      artifact-name: F-16C-Release-${{ inputs.bump }}-${{ github.run_number }}
+      artifact-name: F-16C-50-Release-${{ inputs.bump }}-${{ github.run_number }}
       artifact-path: |
         dist/*.zip
         dist/SHA256SUMS.txt
       release-notes-path: packaging/release/RELEASE-NOTES.md
       kneeboard-paths: kneeboard/source kneeboard/F-16C_50
-      release-title-prefix: DCS F-16C Components
+      release-title-prefix: DCS-F-16C-50-Components
     secrets: inherit

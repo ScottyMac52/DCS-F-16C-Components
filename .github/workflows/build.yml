@@ -1,34 +1,32 @@
-name: Build OvGME package
-
+name: Build OVGME package
 on:
   push:
     branches: [main]
   pull_request:
   workflow_dispatch:
 
-# contents: write required so commit-kneeboard can push regenerated SVG/PNG to main.
+# contents: write is required when commit-kneeboard is true so the
+# reusable workflow can push regenerated SVG/PNG back to main.
 permissions:
   contents: write
 
 jobs:
   build:
-    uses: ScottyMac52/DCS-Common/.github/workflows/build.yml@7145b9361a3adfe2a4eb0ec4e5ef9baa161b159d
+    uses: ScottyMac52/DCS-Common/.github/workflows/build.yml@main
     with:
-      dcs-common-ref: 24fda14dda1b9f4a7a7b2594667c22c881fe0d53
       package-version: 0.0.0-ci.${{ github.run_number }}
       install-lua-parser: true
       run-lua-parse: true
-      run-autohotkey-tests: true
       run-release-validation: true
       package-script: scripts/Build-OvGME.ps1
       test-package-script: scripts/Test-Package.ps1
       build-release-script: scripts/Build-Release.ps1
       test-release-script: scripts/Test-Package.ps1
       # Keep repo kneeboard assets in lockstep with the OvGME package.
-      # Skipped on pull_request; runs on main push / workflow_dispatch.
+      # Skipped automatically on pull_request; runs on main push / workflow_dispatch.
       commit-kneeboard: true
       kneeboard-paths: kneeboard/source kneeboard/F-16C_50
-      artifact-name: F-16C-Release
+      artifact-name: F-16C-50-Release
       artifact-path: |
         dist/*.zip
         dist/SHA256SUMS.txt

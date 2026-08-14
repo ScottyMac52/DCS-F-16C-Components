@@ -11,7 +11,9 @@ export function resolvePackageVersion(version) {
 
 export function getNextVersion(currentVersion, bump) {
   const match = stableVersionPattern.exec(String(currentVersion ?? '').trim());
-  if (!match) throw new Error(`Invalid current version '${currentVersion}'. Expected MAJOR.MINOR.PATCH.`);
+  if (!match) {
+    throw new Error(`Invalid current version '${currentVersion}'. Expected MAJOR.MINOR.PATCH.`);
+  }
   if (!['patch', 'minor', 'major'].includes(bump)) {
     throw new Error(`Invalid version bump '${bump}'. Expected patch, minor, or major.`);
   }
@@ -19,9 +21,11 @@ export function getNextVersion(currentVersion, bump) {
   let major = Number(match.groups.major);
   let minor = Number(match.groups.minor);
   let patch = Number(match.groups.patch);
+
   if (bump === 'patch') patch += 1;
   if (bump === 'minor') { minor += 1; patch = 0; }
   if (bump === 'major') { major += 1; minor = 0; patch = 0; }
+
   return `${major}.${minor}.${patch}`;
 }
 

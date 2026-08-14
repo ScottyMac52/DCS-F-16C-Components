@@ -1,5 +1,5 @@
-import { mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
-import { basename, dirname, join, resolve } from 'node:path';
+import { mkdirSync, rmSync, writeFileSync, readFileSync } from 'node:fs';
+import { dirname, join, resolve, basename } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import sharp from 'sharp';
 
@@ -20,7 +20,7 @@ const { renderKneeboard } = await import(
 const rawConfig = JSON.parse(readFileSync(join(root, 'config/kneeboard.json'), 'utf8'));
 const config = loadProfileDrivenConfig('config/kneeboard.json', { consumerRoot: root, commonRoot });
 
-const aircraftFolder = config.aircraft;
+const aircraftFolder = config.aircraft.replace(/[^a-zA-Z0-9-]/g, '');
 const svgDir = join(root, 'kneeboard', 'source');
 const pngDir = join(root, 'kneeboard', aircraftFolder);
 
@@ -30,7 +30,7 @@ mkdirSync(svgDir, { recursive: true });
 mkdirSync(pngDir, { recursive: true });
 
 const allPages = [
-  ...(rawConfig.summaryPages ?? []),
+  ...(rawConfig.summaryPages || []),
   ...config.pages,
 ].sort((a, b) => a.file.localeCompare(b.file));
 
@@ -54,18 +54,18 @@ for (const [index, page] of allPages.entries()) {
       await sharp(Buffer.from(svgContent)).png().toFile(join(pngDir, `${page.file}.png`));
     }
   } else if (page.deviceId) {
-    const { svg } = renderSharedHardwarePage({
+    const hardwareRender = renderSharedHardwarePage({
       ...page,
       commonRoot,
       provenance: {
-        consumer: 'DCS-F-16C-Components',
+        consumer: `DCS-${aircraftFolder}-Components`,
         page: `${index + 1} / ${totalPages}`,
       },
     });
 
-    writeFileSync(join(svgDir, `${page.file}.svg`), svg, 'utf8');
-    await sharp(Buffer.from(svg)).png().toFile(join(pngDir, `${page.file}.png`));
+    writeFileSync(join(svgDir, `${page.file}.svg`), hardwareRender.svg, 'utf8');
+    await sharp(Buffer.from(hardwareRender.svg)).png().toFile(join(pngDir, `${page.file}.png`));
   }
 }
 
-console.log(`Successfully generated ${totalPages} F-16C kneeboard pages.`);
+console.log(`Successfully generated ${totalPages} pages.`);
