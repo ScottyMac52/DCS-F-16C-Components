@@ -9,6 +9,144 @@
     "pto2": "src/Config/Input/F-16C_50/joystick/WINCTRL CarrierAce PTO 2 {19B7D090-6120-11F0-8001-444553540000}.diff.lua",
     "icp": "src/Config/Input/F-16C_50/joystick/WINCTRL ViperAce ICP {3731E2E0-4D98-11F1-8001-444553540000}.diff.lua"
   },
+  "summaryPages": [
+    {
+      "type": "summary",
+      "file": "01-CONTROL-OVERVIEW",
+      "title": "F-16C COCKPIT CONTROL OVERVIEW",
+      "kicker": "ONE-TO-ONE HARDWARE • GUID-QUALIFIED PROFILES • VR READY",
+      "items": [
+        {
+          "key": "MFD 1",
+          "text": "Left MFD • OSB 1–20 and four rockers",
+          "accent": "gold"
+        },
+        {
+          "key": "MFD 2",
+          "text": "Right MFD • OSB 1–20 and four rockers",
+          "accent": "gold"
+        },
+        {
+          "key": "MFD 3",
+          "text": "Reserved • no bindings installed",
+          "accent": "red"
+        },
+        {
+          "key": "TQS",
+          "text": "Throttle and Mission Pack profile installed"
+        },
+        {
+          "key": "AVA",
+          "text": "Warthog grip profile installed"
+        },
+        {
+          "key": "PTO2",
+          "text": "Ground and landing profile installed"
+        },
+        {
+          "key": "ICP",
+          "text": "ViperAce ICP profile installed"
+        },
+        {
+          "key": "PATH",
+          "text": "Config\\Input\\F-16C_50\\joystick"
+        },
+        {
+          "key": "KNEE",
+          "text": "KNEEBOARD\\F-16C_50"
+        },
+        {
+          "key": "VOICE",
+          "text": "TQS BTN 1–5 drive VAICOM TX1–TX5 through AHK"
+        },
+        {
+          "key": "RULE",
+          "text": "Physical controls own deterministic cockpit actions"
+        },
+        {
+          "key": "BACKUP",
+          "text": "Back up F-16C_50 before enabling OvGME",
+          "accent": "red"
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "file": "08-OPENKNEEBOARD-VAICOM",
+      "title": "OPENKNEEBOARD + VAICOM PRO",
+      "kicker": "TQS PUSH-TO-TALK BRIDGE • VR REFERENCE PAGES",
+      "items": [
+        {
+          "key": "TAB",
+          "text": "DCS Aircraft tab should discover F-16C_50",
+          "accent": "gold"
+        },
+        {
+          "key": "FOLDER",
+          "text": "Fallback: add KNEEBOARD\\F-16C_50 as Folder tab"
+        },
+        {
+          "key": "AHK",
+          "text": "Run dcs-TQS.ahk with AutoHotKey v2",
+          "accent": "red"
+        },
+        {
+          "key": "RESERVE",
+          "text": "DCS BTN 1–5 must remain unassigned",
+          "accent": "red"
+        },
+        {
+          "key": "TX1",
+          "text": "5Joy1 • VHF AM • Ctrl+Alt+Shift+1"
+        },
+        {
+          "key": "TX2",
+          "text": "5Joy2 • UHF • Ctrl+Alt+Shift+2"
+        },
+        {
+          "key": "TX3",
+          "text": "5Joy3 • VHF FM • Ctrl+Alt+Shift+3"
+        },
+        {
+          "key": "TX4",
+          "text": "5Joy4 • AUTO • Ctrl+Alt+Shift+4"
+        },
+        {
+          "key": "TX5",
+          "text": "5Joy5 • Interphone • Ctrl+Alt+Shift+5"
+        },
+        {
+          "key": "VOICE",
+          "text": "VAICOM PRO remains primary for radio commands"
+        },
+        {
+          "key": "NEXT",
+          "text": "NEXT_PAGE.exe"
+        },
+        {
+          "key": "PREV",
+          "text": "PREVIOUS_PAGE.exe"
+        },
+        {
+          "key": "NEXT TAB",
+          "text": "NEXT_TAB.exe"
+        },
+        {
+          "key": "PREV TAB",
+          "text": "PREVIOUS_TAB.exe"
+        },
+        {
+          "key": "PHRASES",
+          "text": "Keep kneeboard phrases distinct from VAICOM",
+          "accent": "gold"
+        },
+        {
+          "key": "ORDER",
+          "text": "Numeric filenames preserve page order"
+        }
+      ]
+    }
+  ],
   "pages": [
     {
       "file": "02-LEFT-MFD",
