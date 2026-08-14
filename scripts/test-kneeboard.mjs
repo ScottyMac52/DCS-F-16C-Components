@@ -119,7 +119,7 @@ const expectedConfiguredControls = {
   '02-LEFT-MFD': 28,
   '03-RIGHT-MFD': 28,
   '04-VIPER-TQS': 58,
-  '05-AVA-WARTHOG-GRIP': 14,
+  '05-AVA-WARTHOG-GRIP': 21,
   '06-WINCTRL-PTO2': 7,
   '07-WINCTRL-VIPERACE-ICP': 37,
 };
@@ -132,6 +132,21 @@ const avaPage = kneeboardConfig.pages.find(({ file }) => file === '05-AVA-WARTHO
 assert(avaPage?.deviceId === 'ava-base-f16c', 'AVA page must retain the ava-base-f16c alias.');
 assert(Object.keys(avaPage.controls).every((id) => id.startsWith('warthog-grip-')),
   'AVA controls must use canonical TM Warthog Joystick IDs.');
+
+const expectedAvaControls = {
+  'warthog-grip-rear-sw1': ['JOY_X', 'a2002cdnil', 'ROLL'],
+  'warthog-grip-rear-sw2': ['JOY_Y', 'a2001cdnil', 'PITCH'],
+  'warthog-grip-trim-up': ['JOY_POV1_U', 'd3002pnilu3002cd16vd1vpnilvu0', 'TRIM UP'],
+  'warthog-grip-trim-down': ['JOY_POV1_D', 'd3003pnilu3003cd16vd-1vpnilvu0', 'TRIM DOWN'],
+  'warthog-grip-trim-left': ['JOY_POV1_L', 'd3004pnilu3004cd16vd-1vpnilvu0', 'TRIM LEFT'],
+  'warthog-grip-trim-right': ['JOY_POV1_R', 'd3005pnilu3005cd16vd1vpnilvu0', 'TRIM RIGHT'],
+  'warthog-grip-cms-push': ['JOY_BTN19', 'd3018pnilu3018cd16vd1vpnilvu0', 'CMS PUSH'],
+};
+for (const [id, [key, command, label]] of Object.entries(expectedAvaControls)) {
+  assert(avaPage.controls[id]?.key === key, `AVA ${id} must use ${key}.`);
+  assert(avaPage.controls[id]?.command === command, `AVA ${id} must use ${command}.`);
+  assert(avaPage.labels[id] === label, `AVA ${id} must use the shortened label ${label}.`);
+}
 for (const [page, labels] of Object.entries(requiredText)) {
   const source = readFileSync(join(svgDir, `${page}.svg`), 'utf8');
   const visibleText = source.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
