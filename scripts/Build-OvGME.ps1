@@ -5,6 +5,9 @@ param(
 
 $ErrorActionPreference = 'Stop'
 $RepoRoot = Split-Path -Parent $PSScriptRoot
+$CommonRoot = if ($env:DCS_COMMON_ROOT) { $env:DCS_COMMON_ROOT } else { Join-Path $RepoRoot '.dcs-common' }
+$UiLayerPackager = Join-Path $CommonRoot 'scripts/package-ui-layer-input.mjs'
+if (-not (Test-Path $UiLayerPackager)) { throw "Missing shared UI Layer packager: $UiLayerPackager" }
 $Version = node (Join-Path $PSScriptRoot 'version.mjs') resolve $Version
 if ($LASTEXITCODE -ne 0) { throw 'Failed to resolve the OVGME package version.' }
 $PackageName = "Scott-F-16C-50-Control-Profiles-$Version"
@@ -25,6 +28,9 @@ $Modifiers = Join-Path $RepoRoot 'src/Config/Input/F-16C_50/modifiers.lua'
 if (Test-Path $Modifiers -PathType Leaf) {
     Copy-Item $Modifiers (Join-Path $Container 'Config/Input/F-16C_50/modifiers.lua')
 }
+$UiLayerDestination = Join-Path $Container 'Config/Input/UiLayer'
+& node $UiLayerPackager $CommonRoot (Join-Path $RepoRoot 'src/Config/Input/F-16C_50/joystick') $UiLayerDestination
+if ($LASTEXITCODE -ne 0) { throw "Shared UI Layer packaging failed with exit code $LASTEXITCODE." }
 Copy-Item (Join-Path $RepoRoot 'kneeboard/F-16C_50/*') (Join-Path $Container 'KNEEBOARD/F-16C_50')
 Copy-Item (Join-Path $RepoRoot 'docs/THIRD-PARTY-ASSETS.md') (Join-Path $StageRoot 'THIRD-PARTY-ASSETS.md')
 Copy-Item (Join-Path $RepoRoot 'kneeboard/assets/source/licenses/*') (Join-Path $StageRoot 'LICENSES')
