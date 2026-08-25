@@ -17,11 +17,16 @@ Expand-Archive $Archive $VerifyRoot
 
 $Container = Join-Path $VerifyRoot $PackageName
 $Joystick = Join-Path $Container 'Config/Input/F-16C_50/joystick'
+$UiLayerJoystick = Join-Path $Container 'Config/Input/UiLayer/joystick'
+$UiLayerModifiers = Join-Path $Container 'Config/Input/UiLayer/modifiers.lua'
 $Kneeboard = Join-Path $Container 'KNEEBOARD/F-16C_50'
 
 if (-not (Test-Path $Joystick)) { throw 'Missing F-16C_50 joystick directory.' }
+if (-not (Test-Path $UiLayerJoystick)) { throw 'Missing tailored UI Layer joystick directory.' }
+if (-not (Test-Path $UiLayerModifiers -PathType Leaf)) { throw 'Missing tailored UI Layer modifiers.lua.' }
 if (-not (Test-Path $Kneeboard)) { throw 'Missing F-16C_50 kneeboard directory.' }
 if ((Get-ChildItem $Joystick -Filter '*.diff.lua').Count -ne 9) { throw 'Expected 9 control profiles.' }
+if ((Get-ChildItem $UiLayerJoystick -Filter '*.diff.lua').Count -eq 0) { throw 'Expected at least one tailored UI Layer control profile.' }
 
 $ExpectedKneeboardPages = @(
     '01-CONTROL-OVERVIEW.png',
