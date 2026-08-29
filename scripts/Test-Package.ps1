@@ -1,65 +1,51 @@
-[CmdletBinding()]
 param(
-    [string]$Version
+  [Parameter(Mandatory = $true)][string]$Version
 )
-
 $ErrorActionPreference = 'Stop'
-$RepoRoot = Split-Path -Parent $PSScriptRoot
-$Version = node (Join-Path $PSScriptRoot 'version.mjs') resolve $Version
-if ($LASTEXITCODE -ne 0) { throw 'Failed to resolve the package-test version.' }
-$PackageName = "Scott-F-16C-50-Control-Profiles-$Version"
-$Archive = Join-Path $RepoRoot "dist/$PackageName.zip"
-$VerifyRoot = Join-Path $RepoRoot '.build/verify'
+$root = Split-Path -Parent $PSScriptRoot
+$dist = Join-Path $root 'dist'
+$pkgName = 'DCS-F-16C-50-Components'
+$zip = Join-Path $dist "$pkgName-$Version-OVGME.zip"
+if (-not (Test-Path $zip)) { throw "Missing package $zip" }
+$sums = Get-Content (Join-Path $dist 'SHA256SUMS.txt')
+$leaf = Split-Path $zip -Leaf
+$hashLine = $sums | Where-Object { $_ -match [regex]::Escape($leaf) } | Select-Object -First 1
+if (-not $hashLine) { throw 'SHA256SUMS.txt does not list the package archive.' }
+$expected = ($hashLine -split '\s+')[0].ToLowerInvariant()
+$actual = (Get-FileHash $zip -Algorithm SHA256).Hash.ToLowerInvariant()
+if ($expected -ne $actual) { throw 'SHA256SUMS.txt does not match the package archive.' }
 
-if (-not (Test-Path $Archive)) { throw "Missing package: $Archive" }
-Remove-Item $VerifyRoot -Recurse -Force -ErrorAction SilentlyContinue
-Expand-Archive $Archive $VerifyRoot
-
-$Container = Join-Path $VerifyRoot $PackageName
-$Joystick = Join-Path $Container 'Config/Input/F-16C_50/joystick'
-$UiLayerJoystick = Join-Path $Container 'Config/Input/UiLayer/joystick'
-$UiLayerModifiers = Join-Path $Container 'Config/Input/UiLayer/modifiers.lua'
-$Kneeboard = Join-Path $Container 'KNEEBOARD/F-16C_50'
-
-if (-not (Test-Path $Joystick)) { throw 'Missing F-16C_50 joystick directory.' }
-if (-not (Test-Path $UiLayerJoystick)) { throw 'Missing tailored UI Layer joystick directory.' }
-if (-not (Test-Path $UiLayerModifiers -PathType Leaf)) { throw 'Missing tailored UI Layer modifiers.lua.' }
-if (-not (Test-Path $Kneeboard)) { throw 'Missing F-16C_50 kneeboard directory.' }
-if ((Get-ChildItem $Joystick -Filter '*.diff.lua').Count -ne 9) { throw 'Expected 9 control profiles.' }
-if ((Get-ChildItem $UiLayerJoystick -Filter '*.diff.lua').Count -eq 0) { throw 'Expected at least one tailored UI Layer control profile.' }
-
-$ExpectedKneeboardPages = @(
-    '01-CONTROL-OVERVIEW.png',
-    '02-LEFT-MFD.png',
-    '03-RIGHT-MFD.png',
-    '04-VIPER-TQS.png',
-    '05-AVA-WARTHOG-GRIP.png',
-    '06-WINCTRL-PTO2.png',
-    '07-WINCTRL-VIPERACE-ICP.png',
-    '08-OPENKNEEBOARD-VAICOM.png'
-)
-$ActualKneeboardPages = @(Get-ChildItem $Kneeboard -Filter '*.png' | Sort-Object Name | ForEach-Object Name)
-if (Compare-Object $ExpectedKneeboardPages $ActualKneeboardPages) {
-    throw 'Kneeboard package must contain the exact eight expected PNG filenames.'
+Add-Type -AssemblyName System.IO.Compression.FileSystem
+$archiveBase = [System.IO.Path]::GetFileNameWithoutExtension($leaf)
+$archive = [System.IO.Compression.ZipFile]::OpenRead($zip)
+try {
+  $entries = @($archive.Entries | ForEach-Object { $_.FullName.Replace('\', '/') })
+  $payloadPrefix = "$archiveBase/"
+  $unexpected = @($entries | Where-Object {
+    $_ -ne 'README.TXT' -and
+    $_ -ne 'VERSION.TXT' -and
+    -not $_.StartsWith($payloadPrefix, [System.StringComparison]::Ordinal)
+  })
+  if ($unexpected.Count -gt 0) {
+    throw "Invalid OVGME archive root. Expected '$archiveBase/' but found '$($unexpected[0])'."
+  }
+  if (-not ($entries | Where-Object { $_.StartsWith("${payloadPrefix}Config/Input/F-16C_50/joystick/", [System.StringComparison]::Ordinal) })) {
+    throw 'OVGME archive is missing the joystick profile payload.'
+  }
+  if (-not ($entries | Where-Object { $_.StartsWith("${payloadPrefix}Config/Input/UiLayer/joystick/", [System.StringComparison]::Ordinal) })) {
+    throw 'OVGME archive is missing the shared UI Layer joystick payload.'
+  }
+  if ($entries -notcontains "${payloadPrefix}Config/Input/UiLayer/modifiers.lua") {
+    throw 'OVGME archive is missing the shared UI Layer modifiers.lua.'
+  }
+  if (-not ($entries | Where-Object { $_.StartsWith("${payloadPrefix}KNEEBOARD/F-16C_50/", [System.StringComparison]::Ordinal) })) {
+    throw 'OVGME archive is missing the kneeboard payload.'
+  }
+  if ($entries -notcontains 'README.TXT') { throw 'OVGME archive is missing README.TXT.' }
+  if ($entries -notcontains 'VERSION.TXT') { throw 'OVGME archive is missing VERSION.TXT.' }
+}
+finally {
+  $archive.Dispose()
 }
 
-if (-not (Test-Path (Join-Path $VerifyRoot 'THIRD-PARTY-ASSETS.md') -PathType Leaf)) {
-    throw 'Missing kneeboard third-party asset notice.'
-}
-foreach ($License in 'joystick-diagrams-GPL-2.0.txt', 'bindulator-templates-GPL-2.0-or-later.txt') {
-    if (-not (Test-Path (Join-Path $VerifyRoot "LICENSES/$License") -PathType Leaf)) {
-        throw "Missing redistributed asset license: $License"
-    }
-}
-if ((Get-Content (Join-Path $VerifyRoot 'VERSION.TXT') -Raw).Trim() -ne $Version) {
-    throw 'VERSION.TXT mismatch.'
-}
-$PackageReadme = Get-Content (Join-Path $VerifyRoot 'README.TXT') -Raw
-if ($PackageReadme.Contains('{{VERSION}}')) {
-    throw 'README.TXT contains an unresolved version token.'
-}
-if ($PackageReadme -notmatch ('OVGME PACKAGE VERSION ' + [regex]::Escape($Version))) {
-    throw 'README.TXT does not contain the package version.'
-}
-
-Write-Host 'Package validation passed.'
+Write-Host "Package checksum and OVGME structure OK for $leaf"

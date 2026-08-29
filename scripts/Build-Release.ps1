@@ -1,57 +1,51 @@
-[CmdletBinding()]
 param(
-    [string]$Version
+  [Parameter(Mandatory = $true)][string]$Version
 )
-
 $ErrorActionPreference = 'Stop'
-$RepoRoot = Split-Path -Parent $PSScriptRoot
-$Version = node (Join-Path $PSScriptRoot 'version.mjs') resolve $Version
-if ($LASTEXITCODE -ne 0) { throw 'Failed to resolve the release package version.' }
-$OvgmeName = "Scott-F-16C-50-Control-Profiles-$Version.zip"
-$BundleName = "Scott-F-16C-50-Complete-Package-$Version"
-$Dist = Join-Path $RepoRoot 'dist'
-$OvgmeArchive = Join-Path $Dist $OvgmeName
-$BuildRoot = Join-Path $RepoRoot '.build/release'
-$BundleRoot = Join-Path $BuildRoot $BundleName
-$BundleArchive = Join-Path $Dist "$BundleName.zip"
+$root = Split-Path -Parent $PSScriptRoot
+$dist = Join-Path $root 'dist'
+$pkgName = 'DCS-F-16C-50-Components'
+$ovgme = Join-Path $dist "$pkgName-$Version-OVGME.zip"
+if (-not (Test-Path $ovgme -PathType Leaf)) { throw "Missing OVGME zip $ovgme" }
 
-if (-not (Test-Path $OvgmeArchive -PathType Leaf)) {
-    throw "Missing OVGME archive: $OvgmeArchive. Run Build-OvGME.ps1 first."
+$bundleName = "$pkgName-$Version-Complete"
+$buildRoot = Join-Path $dist "release-stage-$Version"
+$bundleRoot = Join-Path $buildRoot $bundleName
+$zip = Join-Path $dist "$bundleName.zip"
+
+if (Test-Path $buildRoot) { Remove-Item $buildRoot -Recurse -Force }
+New-Item -ItemType Directory -Force -Path (Join-Path $bundleRoot 'OVGME') | Out-Null
+New-Item -ItemType Directory -Force -Path (Join-Path $bundleRoot 'Documentation') | Out-Null
+
+Copy-Item $ovgme (Join-Path $bundleRoot 'OVGME')
+Copy-Item (Join-Path $root 'README.md') (Join-Path $bundleRoot 'Documentation/README.md') -ErrorAction SilentlyContinue
+Copy-Item (Join-Path $root 'packaging/release/RELEASE-NOTES.md') (Join-Path $bundleRoot 'Documentation/RELEASE-NOTES.md') -ErrorAction SilentlyContinue
+
+$docs = Join-Path $root 'docs'
+if (Test-Path $docs -PathType Container) {
+  Copy-Item (Join-Path $docs '*') (Join-Path $bundleRoot 'Documentation') -Recurse -Force
 }
 
-Remove-Item $BuildRoot -Recurse -Force -ErrorAction SilentlyContinue
-New-Item (Join-Path $BundleRoot 'OVGME') -ItemType Directory -Force | Out-Null
-New-Item (Join-Path $BundleRoot 'AutoHotKey') -ItemType Directory -Force | Out-Null
-New-Item (Join-Path $BundleRoot 'Documentation') -ItemType Directory -Force | Out-Null
-
-Copy-Item $OvgmeArchive (Join-Path $BundleRoot 'OVGME')
-Copy-Item (Join-Path $RepoRoot 'autohotkey/dcs-TQS.ahk') (Join-Path $BundleRoot 'AutoHotKey')
-Copy-Item (Join-Path $RepoRoot 'README.md') (Join-Path $BundleRoot 'Documentation/README.md')
-Copy-Item (Join-Path $RepoRoot 'CHANGELOG.md') (Join-Path $BundleRoot 'Documentation/CHANGELOG.md')
-Copy-Item (Join-Path $RepoRoot 'docs/INSTALLATION.md') (Join-Path $BundleRoot 'Documentation')
-Copy-Item (Join-Path $RepoRoot 'docs/CONTROL-MAPPINGS.md') (Join-Path $BundleRoot 'Documentation')
-Copy-Item (Join-Path $RepoRoot 'docs/OPENKNEEBOARD-VAICOM.md') (Join-Path $BundleRoot 'Documentation')
-Copy-Item (Join-Path $RepoRoot 'docs/THIRD-PARTY-ASSETS.md') (Join-Path $BundleRoot 'Documentation')
-
-$BundleChecksumTargets = @(
-    (Join-Path $BundleRoot "OVGME/$OvgmeName"),
-    (Join-Path $BundleRoot 'AutoHotKey/dcs-TQS.ahk')
-)
-$BundleChecksums = foreach ($File in $BundleChecksumTargets) {
-    $Hash = Get-FileHash $File -Algorithm SHA256
-    $RelativePath = [IO.Path]::GetRelativePath($BundleRoot, $File).Replace('\', '/')
-    "$($Hash.Hash.ToLowerInvariant())  $RelativePath"
+$autoHotKey = Join-Path $root 'autohotkey'
+if (Test-Path $autoHotKey -PathType Container) {
+  New-Item -ItemType Directory -Force -Path (Join-Path $bundleRoot 'AutoHotKey') | Out-Null
+  Copy-Item (Join-Path $autoHotKey '*') (Join-Path $bundleRoot 'AutoHotKey') -Recurse -Force
 }
-$BundleChecksums | Set-Content (Join-Path $BundleRoot 'SHA256SUMS.txt') -Encoding utf8
 
-Remove-Item $BundleArchive -Force -ErrorAction SilentlyContinue
-Compress-Archive -Path $BundleRoot -DestinationPath $BundleArchive -CompressionLevel Optimal
-
-$ReleaseChecksums = Get-ChildItem (Join-Path $Dist '*.zip') | Sort-Object Name | ForEach-Object {
-    $Hash = Get-FileHash $_.FullName -Algorithm SHA256
-    "$($Hash.Hash.ToLowerInvariant())  $($_.Name)"
+Set-Content -Path (Join-Path $bundleRoot 'VERSION.TXT') -Value $Version -NoNewline
+$bundleChecksums = Get-ChildItem $bundleRoot -Recurse -File | Sort-Object FullName | ForEach-Object {
+  $hash = Get-FileHash $_.FullName -Algorithm SHA256
+  $relativePath = [IO.Path]::GetRelativePath($bundleRoot, $_.FullName).Replace('\', '/')
+  "$($hash.Hash.ToLowerInvariant())  $relativePath"
 }
-$ReleaseChecksums | Set-Content (Join-Path $Dist 'SHA256SUMS.txt') -Encoding utf8
+$bundleChecksums | Set-Content (Join-Path $bundleRoot 'SHA256SUMS.txt') -Encoding utf8
 
-Write-Host "Created $BundleArchive"
-Write-Host "Created $(Join-Path $Dist 'SHA256SUMS.txt')"
+if (Test-Path $zip) { Remove-Item $zip -Force }
+Compress-Archive -Path $bundleRoot -DestinationPath $zip -CompressionLevel Optimal
+
+$releaseChecksums = Get-ChildItem (Join-Path $dist '*.zip') | Sort-Object Name | ForEach-Object {
+  $hash = Get-FileHash $_.FullName -Algorithm SHA256
+  "$($hash.Hash.ToLowerInvariant())  $($_.Name)"
+}
+$releaseChecksums | Set-Content (Join-Path $dist 'SHA256SUMS.txt') -Encoding utf8
+Write-Host "Wrote $zip"
