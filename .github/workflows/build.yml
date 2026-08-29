@@ -30,3 +30,25 @@ jobs:
       artifact-path: |
         dist/*.zip
         dist/SHA256SUMS.txt
+
+  report-packaged-kneeboards:
+    name: Report packaged kneeboard revision
+    needs: build
+    if: ${{ always() && needs.build.outputs['generated-commit-url'] != '' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publish generated commit provenance
+        env:
+          GENERATED_SHA: ${{ needs.build.outputs['generated-commit-sha'] }}
+          GENERATED_URL: ${{ needs.build.outputs['generated-commit-url'] }}
+          TRIGGER_SHA: ${{ github.sha }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          echo '## Packaged kneeboard revision' >> "$GITHUB_STEP_SUMMARY"
+          echo '' >> "$GITHUB_STEP_SUMMARY"
+          echo '| Revision | Commit |' >> "$GITHUB_STEP_SUMMARY"
+          echo '| --- | --- |' >> "$GITHUB_STEP_SUMMARY"
+          echo "| Workflow trigger | [${TRIGGER_SHA:0:7}](https://github.com/$REPOSITORY/commit/$TRIGGER_SHA) |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Packaged kneeboards | [${GENERATED_SHA:0:7}]($GENERATED_URL) |" >> "$GITHUB_STEP_SUMMARY"
+          echo '' >> "$GITHUB_STEP_SUMMARY"
+          echo '> Inspect the **Packaged kneeboards** commit for the generated SVG/PNG files used by this run.' >> "$GITHUB_STEP_SUMMARY"
