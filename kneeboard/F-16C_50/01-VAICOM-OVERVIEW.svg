@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600">
+  <rect width="1200" height="1600" fill="#07111d"/>
+  <rect x="48" y="48" width="1104" height="1504" rx="28" fill="#0a1629" stroke="#2c4566" stroke-width="3"/>
+  <rect x="48" y="48" width="1104" height="120" rx="28" fill="#12253d"/>
+  <text x="96" y="118" font-family="Segoe UI, Arial, sans-serif" font-size="38" font-weight="800" fill="#f4f8fb">VAICOM PRO + VIPER TQS PTT</text>
+  <text x="96" y="154" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="1.3" fill="#63d7ff">AUTOHOTKEY V2 • VOICEATTACK / VAICOM PRO</text>
+  <g>
+      <rect x="96" y="220" width="420" height="130" rx="16" fill="#142b52" stroke="#579dff" stroke-width="2"/>
+      <rect x="112" y="234" width="86" height="102" rx="12" fill="#07111d" stroke="#579dff" stroke-width="2"/>
+      <text x="155" y="285" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="800" fill="#579dff">TX1</text>
+      <text x="218" y="262" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#f5f9ff">Viper TQS 5Joy1 -&gt; VHF AM -&gt;</text>
+      <text x="218" y="290" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="500" fill="#dbe7f4">Left Ctrl + Left Alt + Left…</text>
+      
+    </g><g>
+      <rect x="576" y="220" width="420" height="130" rx="16" fill="#142b52" stroke="#579dff" stroke-width="2"/>
+      <rect x="592" y="234" width="86" height="102" rx="12" fill="#07111d" stroke="#579dff" stroke-width="2"/>
+      <text x="635" y="285" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="800" fill="#579dff">TX2</text>
+      <text x="698" y="262" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#f5f9ff">Viper TQS 5Joy2 -&gt; UHF -&gt;</text>
+      <text x="698" y="290" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="500" fill="#dbe7f4">Left Ctrl + Left Alt + Left…</text>
+      
+    </g><g>
+      <rect x="96" y="390" width="420" height="130" rx="16" fill="#142b52" stroke="#579dff" stroke-width="2"/>
+      <rect x="112" y="404" width="86" height="102" rx="12" fill="#07111d" stroke="#579dff" stroke-width="2"/>
+      <text x="155" y="455" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="800" fill="#579dff">TX3</text>
+      <text x="218" y="432" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#f5f9ff">Viper TQS 5Joy3 -&gt; VHF FM -&gt;</text>
+      <text x="218" y="460" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="500" fill="#dbe7f4">Left Ctrl + Left Alt + Left…</text>
+      
+    </g><g>
+      <rect x="576" y="390" width="420" height="130" rx="16" fill="#142b52" stroke="#579dff" stroke-width="2"/>
+      <rect x="592" y="404" width="86" height="102" rx="12" fill="#07111d" stroke="#579dff" stroke-width="2"/>
+      <text x="635" y="455" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="800" fill="#579dff">TX4</text>
+      <text x="698" y="432" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#f5f9ff">Viper TQS 5Joy4 -&gt; AUTO -&gt;</text>
+      <text x="698" y="460" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="500" fill="#dbe7f4">Left Ctrl + Left Alt + Left…</text>
+      
+    </g><g>
+      <rect x="96" y="560" width="420" height="130" rx="16" fill="#142b52" stroke="#579dff" stroke-width="2"/>
+      <rect x="112" y="574" width="86" height="102" rx="12" fill="#07111d" stroke="#579dff" stroke-width="2"/>
+      <text x="155" y="625" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="800" fill="#579dff">TX5</text>
+      <text x="218" y="602" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#f5f9ff">Viper TQS 5Joy5 -&gt;</text>
+      <text x="218" y="630" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="500" fill="#dbe7f4">Interphone -&gt; Left Ctrl +…</text>
+      
+    </g>
+  <text x="96" y="1520" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#88a3ba">DCS-Common shared kneeboard renderer</text>
+  <text x="1104" y="1520" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#88a3ba">1 / 1</text>
+</svg>

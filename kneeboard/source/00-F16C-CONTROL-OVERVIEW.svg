@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600">
+  <rect width="1200" height="1600" fill="#07111d"/>
+  <rect x="48" y="48" width="1104" height="1504" rx="28" fill="#0a1629" stroke="#2c4566" stroke-width="3"/>
+  <rect x="48" y="48" width="1104" height="120" rx="28" fill="#12253d"/>
+  <text x="96" y="118" font-family="Segoe UI, Arial, sans-serif" font-size="38" font-weight="800" fill="#f4f8fb">F-16C USED DEVICES</text>
+  <text x="96" y="154" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="1.3" fill="#63d7ff">PHYSICAL CONTROLLERS USED BY THIS CONFIGURATION</text>
+  <g>
+      <rect x="96" y="220" width="420" height="130" rx="16" fill="#142b52" stroke="#579dff" stroke-width="2"/>
+      <rect x="112" y="234" width="86" height="102" rx="12" fill="#07111d" stroke="#579dff" stroke-width="2"/>
+      <text x="155" y="285" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="800" fill="#579dff">STICK</text>
+      <text x="218" y="262" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#f5f9ff">AVA Viper • HOTAS •</text>
+      <text x="218" y="290" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="500" fill="#dbe7f4">DMS/TMS/CMS • NWS/shift •…</text>
+      
+    </g><g>
+      <rect x="576" y="220" width="420" height="130" rx="16" fill="#142b52" stroke="#579dff" stroke-width="2"/>
+      <rect x="592" y="234" width="86" height="102" rx="12" fill="#07111d" stroke="#579dff" stroke-width="2"/>
+      <text x="635" y="285" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="800" fill="#579dff">MFD 1</text>
+      <text x="698" y="262" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#f5f9ff">Left MFD • OSBs • gain/level</text>
+      <text x="698" y="290" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="500" fill="#dbe7f4">• symbology • display…</text>
+      
+    </g><g>
+      <rect x="96" y="390" width="420" height="130" rx="16" fill="#142b52" stroke="#579dff" stroke-width="2"/>
+      <rect x="112" y="404" width="86" height="102" rx="12" fill="#07111d" stroke="#579dff" stroke-width="2"/>
+      <text x="155" y="455" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="800" fill="#579dff">MFD 2</text>
+      <text x="218" y="432" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#f5f9ff">Right MFD • OSBs •</text>
+      <text x="218" y="460" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="500" fill="#dbe7f4">gain/level • symbology •…</text>
+      
+    </g><g>
+      <rect x="576" y="390" width="420" height="130" rx="16" fill="#142b52" stroke="#579dff" stroke-width="2"/>
+      <rect x="592" y="404" width="86" height="102" rx="12" fill="#07111d" stroke="#579dff" stroke-width="2"/>
+      <text x="635" y="455" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="800" fill="#579dff">PEDALS</text>
+      <text x="698" y="432" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#f5f9ff">TPR • rudder • left/right</text>
+      <text x="698" y="460" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="500" fill="#dbe7f4">toe brakes</text>
+      
+    </g><g>
+      <rect x="96" y="560" width="420" height="130" rx="16" fill="#142b52" stroke="#579dff" stroke-width="2"/>
+      <rect x="112" y="574" width="86" height="102" rx="12" fill="#07111d" stroke="#579dff" stroke-width="2"/>
+      <text x="155" y="625" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="800" fill="#579dff">THROTTLE</text>
+      <text x="218" y="602" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#f5f9ff">Viper TQS • engine • weapons</text>
+      <text x="218" y="630" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="500" fill="#dbe7f4">• dogfight • CMDS/RWR •…</text>
+      
+    </g><g>
+      <rect x="576" y="560" width="420" height="130" rx="16" fill="#15314e" stroke="#46d8ff" stroke-width="2"/>
+      <rect x="592" y="574" width="86" height="102" rx="12" fill="#07111d" stroke="#46d8ff" stroke-width="2"/>
+      <text x="635" y="625" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="800" fill="#46d8ff">PTO2</text>
+      <text x="698" y="602" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#f5f9ff">CarrierAce • landing gear •</text>
+      <text x="698" y="630" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="500" fill="#dbe7f4">taxi/landing lights • field…</text>
+      
+    </g><g>
+      <rect x="96" y="730" width="420" height="130" rx="16" fill="#15314e" stroke="#46d8ff" stroke-width="2"/>
+      <rect x="112" y="744" width="86" height="102" rx="12" fill="#07111d" stroke="#46d8ff" stroke-width="2"/>
+      <text x="155" y="795" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="800" fill="#46d8ff">ICP</text>
+      <text x="218" y="772" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#f5f9ff">ViperAce • keypad • COM/IFF</text>
+      <text x="218" y="800" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="500" fill="#dbe7f4">• DED • A-A/A-G • HUD/FLIR</text>
+      
+    </g>
+  <text x="96" y="1520" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#88a3ba">DCS-Common shared kneeboard renderer</text>
+  <text x="1104" y="1520" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#88a3ba">1 / 9</text>
+</svg>
