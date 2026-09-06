@@ -2,6 +2,84 @@
   "schemaVersion": 1,
   "aircraft": "F-16C_50",
   "includeUiLayer": true,
+  "summaryPages": [
+    {
+      "type": "summary",
+      "file": "00-F16C-CONTROL-OVERVIEW",
+      "title": "F-16C USED DEVICES",
+      "kicker": "PHYSICAL CONTROLLERS USED BY THIS CONFIGURATION",
+      "items": [
+        {
+          "key": "STICK",
+          "text": "AVA Viper • HOTAS • DMS/TMS/CMS • NWS/shift • weapons",
+          "accent": "blue"
+        },
+        {
+          "key": "MFD 1",
+          "text": "Left MFD • OSBs • gain/level • symbology • display controls",
+          "accent": "blue"
+        },
+        {
+          "key": "MFD 2",
+          "text": "Right MFD • OSBs • gain/level • symbology • display controls",
+          "accent": "blue"
+        },
+        {
+          "key": "PEDALS",
+          "text": "TPR • rudder • left/right toe brakes",
+          "accent": "blue"
+        },
+        {
+          "key": "THROTTLE",
+          "text": "Viper TQS • engine • weapons • dogfight • CMDS/RWR • autopilot",
+          "accent": "blue"
+        },
+        {
+          "key": "PTO2",
+          "text": "CarrierAce • landing gear • taxi/landing lights • field bypass",
+          "accent": "cyan"
+        },
+        {
+          "key": "ICP",
+          "text": "ViperAce • keypad • COM/IFF • DED • A-A/A-G • HUD/FLIR",
+          "accent": "cyan"
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "file": "01-VAICOM-OVERVIEW",
+      "title": "VAICOM PRO + VIPER TQS PTT",
+      "kicker": "AUTOHOTKEY V2 • VOICEATTACK / VAICOM PRO",
+      "items": [
+        {
+          "key": "TX1",
+          "text": "Viper TQS 5Joy1 -> VHF AM -> Left Ctrl + Left Alt + Left Shift + 1",
+          "accent": "blue"
+        },
+        {
+          "key": "TX2",
+          "text": "Viper TQS 5Joy2 -> UHF -> Left Ctrl + Left Alt + Left Shift + 2",
+          "accent": "blue"
+        },
+        {
+          "key": "TX3",
+          "text": "Viper TQS 5Joy3 -> VHF FM -> Left Ctrl + Left Alt + Left Shift + 3",
+          "accent": "blue"
+        },
+        {
+          "key": "TX4",
+          "text": "Viper TQS 5Joy4 -> AUTO -> Left Ctrl + Left Alt + Left Shift + 4",
+          "accent": "blue"
+        },
+        {
+          "key": "TX5",
+          "text": "Viper TQS 5Joy5 -> Interphone -> Left Ctrl + Left Alt + Left Shift + 5",
+          "accent": "blue"
+        }
+      ]
+    }
+  ],
   "profiles": {
     "ava-base-f16c": "src/Config/Input/F-16C_50/joystick/Ava [R] Viper {F77212B0-00A8-11f1-8001-444553540000}.diff.lua",
     "tm-mfd-1": "src/Config/Input/F-16C_50/joystick/F16 MFD 1 {51FA60C0-CB32-11ed-800B-444553540000}.diff.lua",
