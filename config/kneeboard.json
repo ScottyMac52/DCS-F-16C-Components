@@ -2,6 +2,56 @@
   "schemaVersion": 1,
   "aircraft": "F-16C_50",
   "includeUiLayer": true,
+  "summaryPages": [
+    {
+      "type": "summary",
+      "file": "00-F16C-CONTROL-OVERVIEW",
+      "title": "F-16C USED DEVICES",
+      "kicker": "PHYSICAL CONTROLLERS USED BY THIS CONFIGURATION",
+      "items": [
+        {
+          "key": "STICK",
+          "text": "AVA Viper • HOTAS • DMS/TMS/CMS • NWS/shift • weapons",
+          "accent": "blue"
+        },
+        {
+          "key": "MFD 1",
+          "text": "Left MFD • OSBs • gain/level • symbology • display controls",
+          "accent": "blue"
+        },
+        {
+          "key": "MFD 2",
+          "text": "Right MFD • OSBs • gain/level • symbology • display controls",
+          "accent": "blue"
+        },
+        {
+          "key": "PDCP",
+          "text": "OnYourTwelve • shared UI Layer controls • retained device profile",
+          "accent": "purple"
+        },
+        {
+          "key": "PEDALS",
+          "text": "TPR • rudder • left/right toe brakes",
+          "accent": "blue"
+        },
+        {
+          "key": "THROTTLE",
+          "text": "Viper TQS • engine • weapons • dogfight • CMDS/RWR • autopilot",
+          "accent": "blue"
+        },
+        {
+          "key": "PTO2",
+          "text": "CarrierAce • landing gear • taxi/landing lights • field bypass",
+          "accent": "cyan"
+        },
+        {
+          "key": "ICP",
+          "text": "ViperAce • keypad • COM/IFF • DED • A-A/A-G • HUD/FLIR",
+          "accent": "cyan"
+        }
+      ]
+    }
+  ],
   "profiles": {
     "ava-base-f16c": "src/Config/Input/F-16C_50/joystick/Ava [R] Viper {F77212B0-00A8-11f1-8001-444553540000}.diff.lua",
     "tm-mfd-1": "src/Config/Input/F-16C_50/joystick/F16 MFD 1 {51FA60C0-CB32-11ed-800B-444553540000}.diff.lua",
