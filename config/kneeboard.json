@@ -563,19 +563,7 @@
       }
     },
     {
-      "file": "04-ONYOURTWELVE-PDCP",
-      "profile": "onyourtwelve-pdcp",
-      "includeUiLayer": true,
-      "deviceId": "onyourtwelve-pdcp",
-      "deviceInstance": null,
-      "title": "OnYourTwelve F-14 PDCP",
-      "kicker": "SCAFFOLD DRAFT",
-      "_comment": "binding labels are stored once in the root labels dictionary; page labels are reserved for non-binding callouts. keep callout IDs in sync with controls.",
-      "modifierCallouts": {},
-      "controls": {}
-    },
-    {
-      "file": "05-TM-TPR",
+      "file": "04-TM-TPR",
       "profile": "tm-tpr",
       "includeUiLayer": true,
       "deviceId": "tm-tpr",
@@ -606,7 +594,7 @@
       }
     },
     {
-      "file": "06-VIPER-TQS-MISSION-PACK",
+      "file": "05-VIPER-TQS-MISSION-PACK",
       "profile": "viper-tqs-mission-pack",
       "includeUiLayer": true,
       "deviceId": "viper-tqs-mission-pack",
@@ -991,7 +979,7 @@
       }
     },
     {
-      "file": "07-WINCTRL-PTO2",
+      "file": "06-WINCTRL-PTO2",
       "profile": "winctrl-pto2",
       "includeUiLayer": true,
       "deviceId": "winctrl-pto2",
@@ -1034,7 +1022,7 @@
       }
     },
     {
-      "file": "08-WINCTRL-ICP",
+      "file": "07-WINCTRL-ICP",
       "profile": "winctrl-icp",
       "includeUiLayer": true,
       "deviceId": "winctrl-icp",
@@ -1267,6 +1255,18 @@
           "labelId": "binding-b92acdec57e49608"
         }
       }
+    },
+    {
+      "file": "04-ONYOURTWELVE-PDCP",
+      "profile": "onyourtwelve-pdcp",
+      "includeUiLayer": true,
+      "deviceId": "onyourtwelve-pdcp",
+      "deviceInstance": null,
+      "title": "OnYourTwelve F-14 PDCP",
+      "kicker": "SCAFFOLD DRAFT",
+      "_comment": "binding labels are stored once in the root labels dictionary; page labels are reserved for non-binding callouts. keep callout IDs in sync with controls.",
+      "modifierCallouts": {},
+      "controls": {}
     }
   ],
   "semanticModifiers": {},
@@ -1377,12 +1377,12 @@
     "binding-69e8615baa8d2a60": "AP ROLL ATT HOLD",
     "binding-567b85e495b50569": "AP ROLL HDG SEL",
     "binding-f96a65c330d62d68": "RWR POWER",
-    "binding-81dbe2f1c3c9c18f": "Button 4 — MIC VHF (AutoHotkey)",
+    "binding-81dbe2f1c3c9c18f": "MIC VHF (AutoHotkey)",
     "binding-389e7fdc07137e1c": "UHF",
     "binding-5605d4863a2e384a": "IFF OUT",
     "binding-9b778ee41af724d1": "IFF IN",
     "binding-3b58b3f055b260d4": "UNCAGE",
-    "binding-8cf6b869d6053766": "Button 8 — MISSILE OVERRIDE",
+    "binding-8cf6b869d6053766": "MISSILE OVRD",
     "binding-0fe6c488590f65a0": "DGFGHT ",
     "binding-e663f1f3eb3b1014": "SPD BRK AFT",
     "binding-b89fca210cefd021": "AP PITCH ATT HOLD",
@@ -1429,7 +1429,7 @@
     "binding-7999a454120a3adc": "RCL",
     "binding-1e09ba0ff4eee8a4": "A-A",
     "binding-4ad75808ea7e9b9b": "A-G",
-    "binding-228acbb7c2d88b3d": "ICP FLIR Polarity Button",
+    "binding-228acbb7c2d88b3d": "FLIR Polarity",
     "binding-a542b82de3c1aec3": "FLIR Inc",
     "binding-32ab1da08703777a": "FLIR Dec",
     "binding-611fc5401a6d2095": "AUTO",
@@ -1437,7 +1437,7 @@
     "binding-382916dcec3da4b6": "GAIN",
     "binding-d4712936d5e1413e": "NORM",
     "binding-fad5d504dd81f77a": "DRIFT C/O",
-    "binding-4a3ba3e2a3065c3d": "ICP DRIFT CUTOUT/WARN RESET 3-pos Switch: WARN RESET <>NORM",
+    "binding-4a3ba3e2a3065c3d": "WARN/RESET",
     "binding-232a0ca734787d55": "DED Incr",
     "binding-47d670c4251f53eb": "DED Decr",
     "binding-0f07b50406b20e87": "RET",
@@ -1447,6 +1447,6 @@
     "binding-60a32b4a504f90a2": "HUD Sym Int",
     "binding-ee787646909a0c56": "Ret Depr ",
     "binding-38002a1150b2962a": "Raster Int",
-    "binding-b92acdec57e49608": "Raster Contrast Knob"
+    "binding-b92acdec57e49608": "Raster Cont"
   }
 }

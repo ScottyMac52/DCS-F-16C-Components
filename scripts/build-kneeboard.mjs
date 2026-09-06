@@ -20,7 +20,7 @@ const { renderKneeboard } = await import(
 const rawConfig = JSON.parse(readFileSync(join(root, 'config/kneeboard.json'), 'utf8'));
 const config = loadProfileDrivenConfig('config/kneeboard.json', { consumerRoot: root, commonRoot });
 
-const aircraftFolder = config.aircraft.replace(/[^a-zA-Z0-9_-]/g, '');
+const aircraftFolder = config.aircraft.replace(/[^a-zA-Z0-9-]/g, '');
 const svgDir = join(root, 'kneeboard', 'source');
 const pngDir = join(root, 'kneeboard', aircraftFolder);
 
