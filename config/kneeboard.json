@@ -45,6 +45,39 @@
           "accent": "cyan"
         }
       ]
+    },
+    {
+      "type": "summary",
+      "file": "01-VAICOM-OVERVIEW",
+      "title": "VAICOM PRO + VIPER TQS PTT",
+      "kicker": "AUTOHOTKEY V2 • VOICEATTACK / VAICOM PRO",
+      "items": [
+        {
+          "key": "TX1",
+          "text": "Viper TQS 5Joy1 -> VHF AM -> Left Ctrl + Left Alt + Left Shift + 1",
+          "accent": "blue"
+        },
+        {
+          "key": "TX2",
+          "text": "Viper TQS 5Joy2 -> UHF -> Left Ctrl + Left Alt + Left Shift + 2",
+          "accent": "blue"
+        },
+        {
+          "key": "TX3",
+          "text": "Viper TQS 5Joy3 -> VHF FM -> Left Ctrl + Left Alt + Left Shift + 3",
+          "accent": "blue"
+        },
+        {
+          "key": "TX4",
+          "text": "Viper TQS 5Joy4 -> AUTO -> Left Ctrl + Left Alt + Left Shift + 4",
+          "accent": "blue"
+        },
+        {
+          "key": "TX5",
+          "text": "Viper TQS 5Joy5 -> Interphone -> Left Ctrl + Left Alt + Left Shift + 5",
+          "accent": "blue"
+        }
+      ]
     }
   ],
   "profiles": {
