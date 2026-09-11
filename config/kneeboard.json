@@ -185,6 +185,72 @@
           "key": "JOY_BTN2",
           "command": "d3022pnilu3022cd16vd1vpnilvu0",
           "labelId": "binding-1b8c7d3424105799"
+        },
+        "warthog-grip-stage1": {
+          "profile": "ava-base-f16c",
+          "key": "JOY_BTN1",
+          "command": "d3020pnilu3020cd16vd1vpnilvu0",
+          "labelId": "binding-d4aa306eead560c7"
+        },
+        "warthog-grip-stage2": {
+          "profile": "ava-base-f16c",
+          "key": "JOY_BTN6",
+          "command": "d3021pnilu3021cd16vd1vpnilvu0",
+          "labelId": "binding-e34dcbd61d209093"
+        },
+        "warthog-grip-pinky": {
+          "profile": "ava-base-f16c",
+          "key": "JOY_BTN4",
+          "command": "d3019pnilu3019cd16vd1vpnilvu0",
+          "labelId": "binding-f8b22d6b42ff1c64"
+        },
+        "warthog-grip-trim-down": {
+          "profile": "ava-base-f16c",
+          "key": "JOY_POV1_D",
+          "command": "dnilp96u215cdnilvdnilvpnilvunil",
+          "labelId": "binding-922f4e522e5c99a5"
+        },
+        "warthog-grip-trim-up": {
+          "profile": "ava-base-f16c",
+          "key": "JOY_POV1_U",
+          "command": "dnilp95u215cdnilvdnilvpnilvunil",
+          "labelId": "binding-f67f4475d0edd70f"
+        },
+        "warthog-grip-trim-left": {
+          "profile": "ava-base-f16c",
+          "key": "JOY_POV1_L",
+          "command": "dnilp93u215cdnilvdnilvpnilvunil",
+          "labelId": "binding-f62f35026b47ca13"
+        },
+        "warthog-grip-trim-right": {
+          "profile": "ava-base-f16c",
+          "key": "JOY_POV1_R",
+          "command": "dnilp94u215cdnilvdnilvpnilvunil",
+          "labelId": "binding-0091c20808d0017e"
+        },
+        "warthog-grip-rear-btn": {
+          "profile": "ava-base-f16c",
+          "key": "JOY_BTN5",
+          "command": "d3001pnilu3001cd28vd1vpnilvu0",
+          "labelId": "binding-da6fdd50318de828"
+        },
+        "warthog-grip-cms-push": {
+          "profile": "ava-base-f16c",
+          "key": "JOY_BTN19",
+          "command": "d3018pnilu3018cd16vd1vpnilvu0",
+          "labelId": "binding-3bbac698985d5d9b"
+        },
+        "warthog-grip-rear-sw2": {
+          "profile": "ava-base-f16c",
+          "key": "JOY_Y",
+          "command": "a2001cdnil",
+          "labelId": "binding-9e2a06b12724bacc"
+        },
+        "warthog-grip-rear-sw1": {
+          "profile": "ava-base-f16c",
+          "key": "JOY_X",
+          "command": "a2002cdnil",
+          "labelId": "binding-1e53c29d8bf25fff"
         }
       }
     },
@@ -802,30 +868,6 @@
           "command": "d3017pnilunilcd33vd1vpnilvunil",
           "labelId": "binding-f96a65c330d62d68"
         },
-        "viper-tqs-button-04": {
-          "profile": "viper-tqs-mission-pack",
-          "key": "JOY_BTN4",
-          "command": "d3024pnilu3024cd16vd1vpnilvu0",
-          "labelId": "binding-81dbe2f1c3c9c18f"
-        },
-        "viper-tqs-button-02": {
-          "profile": "viper-tqs-mission-pack",
-          "key": "JOY_BTN2",
-          "command": "d3025pnilu3025cd16vd1vpnilvu0",
-          "labelId": "binding-389e7fdc07137e1c"
-        },
-        "viper-tqs-button-01": {
-          "profile": "viper-tqs-mission-pack",
-          "key": "JOY_BTN1",
-          "command": "d3026pnilu3026cd16vd1vpnilvu0",
-          "labelId": "binding-5605d4863a2e384a"
-        },
-        "viper-tqs-button-03": {
-          "profile": "viper-tqs-mission-pack",
-          "key": "JOY_BTN3",
-          "command": "d3027pnilu3027cd16vd1vpnilvu0",
-          "labelId": "binding-9b778ee41af724d1"
-        },
         "viper-tqs-button-06": {
           "profile": "viper-tqs-mission-pack",
           "key": "JOY_BTN6",
@@ -946,6 +988,30 @@
           "command": "dnilp3002unilcd28vdnilvp0.01vunil",
           "labelId": "binding-223a362bd86d9c1e"
         },
+        "viper-tqs-button-19": {
+          "profile": "viper-tqs-mission-pack",
+          "key": "JOY_BTN19",
+          "command": "d3018pnilunilcd2vd1vpnilvunil",
+          "labelId": "binding-1e1fe6185dfe2a4b"
+        },
+        "viper-tqs-button-54": {
+          "profile": "viper-tqs-mission-pack",
+          "key": "JOY_BTN54",
+          "command": "d3002pnilunilcd19vd0vpnilvunil",
+          "labelId": "binding-296152f5d7569311"
+        },
+        "viper-tqs-button-60": {
+          "profile": "viper-tqs-mission-pack",
+          "key": "JOY_BTN60",
+          "command": "d3038pnilunilcd17vd0vpnilvunil",
+          "labelId": "binding-7cbb49b5232d69d6"
+        },
+        "viper-tqs-button-11": {
+          "profile": "viper-tqs-mission-pack",
+          "key": "JOY_BTN11",
+          "command": "d3018pnilu3018cd16vd1vpnilvu0",
+          "labelId": "binding-e7945c8a025fad5a"
+        },
         "viper-tqs-axis-rz": {
           "profile": "viper-tqs-mission-pack",
           "key": "JOY_RZ",
@@ -975,6 +1041,12 @@
           "key": "JOY_X",
           "command": "a3047cd16",
           "labelId": "binding-bd517ee21bd90118"
+        },
+        "viper-tqs-axis-z": {
+          "profile": "viper-tqs-mission-pack",
+          "key": "JOY_Z",
+          "command": "a2004cdnil",
+          "labelId": "binding-ac71f5c696835751"
         }
       }
     },
@@ -995,18 +1067,6 @@
           "command": "d3008pnilu3008cd11vd-1vpnilvu0",
           "labelId": "binding-aa7a7ff24c5a3c0e"
         },
-        "pto2-button-9": {
-          "profile": "winctrl-pto2",
-          "key": "JOY_BTN9",
-          "command": "d3008pnilunilcd11vd0vpnilvunil",
-          "labelId": "binding-f4dd2ac6f4339336"
-        },
-        "pto2-button-8": {
-          "profile": "winctrl-pto2",
-          "key": "JOY_BTN8",
-          "command": "d3018pnilunilcd11vd1vpnilvunil",
-          "labelId": "binding-b31ea5b06215a8fc"
-        },
         "pto2-button-35": {
           "profile": "winctrl-pto2",
           "key": "JOY_BTN35",
@@ -1018,6 +1078,108 @@
           "key": "JOY_BTN37",
           "command": "d431pnilunilcdnilvdnilvpnilvunil",
           "labelId": "binding-39f2876fb1a9e4bc"
+        },
+        "pto2-button-5": {
+          "profile": "winctrl-pto2",
+          "key": "JOY_BTN5",
+          "command": "d3005pnilunilcd2vd0vpnilvunil",
+          "labelId": "binding-7ce2e2c0537a02a2"
+        },
+        "pto2-button-6": {
+          "profile": "winctrl-pto2",
+          "key": "JOY_BTN6",
+          "command": "d3002pnilunilcd2vd1vpnilvunil",
+          "labelId": "binding-a26fd2ab2c8e41f5"
+        },
+        "pto2-button-7": {
+          "profile": "winctrl-pto2",
+          "key": "JOY_BTN7",
+          "command": "d3005pnilunilcd2vd1vpnilvunil",
+          "labelId": "binding-194b637c3cd12ae7"
+        },
+        "pto2-button-8": {
+          "profile": "winctrl-pto2",
+          "key": "JOY_BTN8",
+          "command": "d3008pnilunilcd11vd1vpnilvunil",
+          "labelId": "binding-a330297e8a41ff0b"
+        },
+        "pto2-button-9": {
+          "profile": "winctrl-pto2",
+          "key": "JOY_BTN9",
+          "command": "d3008pnilunilcd11vd-1vpnilvunil",
+          "labelId": "binding-9a66f8369cdfe776"
+        },
+        "pto2-button-10": {
+          "profile": "winctrl-pto2",
+          "key": "JOY_BTN10",
+          "command": "d3003pnilu3003cd7vd1vpnilvu0",
+          "labelId": "binding-0399491337c48eb0"
+        },
+        "pto2-button-11": {
+          "profile": "winctrl-pto2",
+          "key": "JOY_BTN11",
+          "command": "d3010pnilunilcd7vd-1vpnilvunil",
+          "labelId": "binding-cca77c81fe550645"
+        },
+        "pto2-button-14": {
+          "profile": "winctrl-pto2",
+          "key": "JOY_BTN14",
+          "command": "d3008pnilunilcd4vd1vpnilvunil",
+          "labelId": "binding-87d8588189b5f127"
+        },
+        "pto2-button-15": {
+          "profile": "winctrl-pto2",
+          "key": "JOY_BTN15",
+          "command": "d3008pnilunilcd4vd0vpnilvunil",
+          "labelId": "binding-b1a2638ac5030d10"
+        },
+        "pto2-button-2": {
+          "profile": "winctrl-pto2",
+          "key": "JOY_BTN2",
+          "command": "d3001pnilu3001cd12vd1vpnilvu0",
+          "labelId": "binding-43cc60bda6bf833f"
+        },
+        "pto2-button-38": {
+          "profile": "winctrl-pto2",
+          "key": "JOY_BTN38",
+          "command": "d74pnilu75cdnilvdnilvpnilvunil",
+          "labelId": "binding-0b883f22a7f79186"
+        },
+        "pto2-button-1": {
+          "profile": "winctrl-pto2",
+          "key": "JOY_BTN1",
+          "command": "d3003pnilu3003cd19vd1vpnilvu0",
+          "labelId": "binding-a7d2c7c18ec67ddc"
+        },
+        "pto2-button-18": {
+          "profile": "winctrl-pto2",
+          "key": "JOY_BTN18",
+          "command": "d3004pnilunilcd32vd0vpnilvunil",
+          "labelId": "binding-9ba59be637be9151"
+        },
+        "pto2-button-17": {
+          "profile": "winctrl-pto2",
+          "key": "JOY_BTN17",
+          "command": "d3004pnilunilcd19vd1vpnilvunil",
+          "labelId": "binding-c8c979d9c3652c03"
+        },
+        "pto2-button-22": {
+          "profile": "winctrl-pto2",
+          "key": "JOY_BTN22",
+          "command": "d3004pnilunilcd32vd1vpnilvunil",
+          "labelId": "binding-08f5043983b2a1e8"
+        },
+        "pto2-button-32": {
+          "profile": "winctrl-pto2",
+          "key": "JOY_BTN32",
+          "command": "d3006pnilunilcd7vd1vpnilvunil",
+          "labelId": "binding-e8a23c4a61844e6a"
+        },
+        "pto2-button-34": {
+          "profile": "winctrl-pto2",
+          "key": "JOY_BTN34",
+          "command": "d3006pnilunilcd7vd0vpnilvunil",
+          "labelId": "binding-ce8e9a9325a7afe3"
         }
       }
     },
@@ -1285,6 +1447,17 @@
     "binding-e36e39c9af3e386e": "CMS LFT",
     "binding-d70edeee8f87f12f": "CMS RGHT",
     "binding-1b8c7d3424105799": "Pickle",
+    "binding-d4aa306eead560c7": "Camera",
+    "binding-e34dcbd61d209093": "Shoot",
+    "binding-f8b22d6b42ff1c64": "Paddle",
+    "binding-922f4e522e5c99a5": "Up",
+    "binding-f67f4475d0edd70f": "Down",
+    "binding-f62f35026b47ca13": "Left",
+    "binding-0091c20808d0017e": "Right",
+    "binding-da6fdd50318de828": "Mode",
+    "binding-3bbac698985d5d9b": "FOV",
+    "binding-9e2a06b12724bacc": "Pitch",
+    "binding-1e53c29d8bf25fff": "Roll",
     "binding-33abe52143410e9c": "01",
     "binding-f5fdb5ec05f31e91": "02",
     "binding-556262a477b08cc5": "03",
@@ -1305,14 +1478,14 @@
     "binding-36a6fdb3ee2ce47f": "18",
     "binding-0ca1532fc04168aa": "19",
     "binding-67e558cf311ae2d1": "20",
-    "binding-72b792b61122388d": "GAIN up",
-    "binding-2c94c926b8b093fc": "LVL down",
-    "binding-62fab5e34c67a356": "SYM up",
-    "binding-9b27f0074b15d8b4": "INT down",
-    "binding-3195562c108227d2": "CON up",
-    "binding-5b1d3b66c0204f1d": "CON down",
-    "binding-ad70f2180b405ff1": "BRT up",
-    "binding-99add717fbcc9fe5": "BRT down",
+    "binding-72b792b61122388d": "GAIN+",
+    "binding-2c94c926b8b093fc": "GAIN-",
+    "binding-62fab5e34c67a356": "SYM+",
+    "binding-9b27f0074b15d8b4": "SYM-",
+    "binding-3195562c108227d2": "CON+",
+    "binding-5b1d3b66c0204f1d": "CON-",
+    "binding-ad70f2180b405ff1": "BRT+",
+    "binding-99add717fbcc9fe5": "BRT-",
     "binding-dafd434616898e99": "01",
     "binding-c4d0e88b1c88b080": "02",
     "binding-17283e42545c0859": "03",
@@ -1333,21 +1506,21 @@
     "binding-10be2d605392e0e6": "18",
     "binding-b497559751fc5dd3": "19",
     "binding-1003a433f177caef": "20",
-    "binding-38d3d7ec74e0aed5": "GAIN up",
-    "binding-15a262a638bcd648": "LVL down",
-    "binding-13741dc52a2cca68": "SYM up",
-    "binding-8b1297cec345f1ad": "INT down",
-    "binding-7a8163ce2ea8ca1c": "CON up",
-    "binding-f55949395534230f": "CON down",
-    "binding-23b6d8ab7299e620": "BRT up",
-    "binding-f1032d4e019dc802": "BRT down",
+    "binding-38d3d7ec74e0aed5": "GAIN+",
+    "binding-15a262a638bcd648": "GAIN-",
+    "binding-13741dc52a2cca68": "SYM+",
+    "binding-8b1297cec345f1ad": "SYM-",
+    "binding-7a8163ce2ea8ca1c": "CON+",
+    "binding-f55949395534230f": "CON-",
+    "binding-23b6d8ab7299e620": "BRT+",
+    "binding-f1032d4e019dc802": "BRT-",
     "binding-104d7ccea9dc5a5d": "Rudder",
-    "binding-9b5b8b6344e58be4": "Left toe brake",
-    "binding-317f2235cfc027ca": "Right toe",
+    "binding-9b5b8b6344e58be4": "Left brake",
+    "binding-317f2235cfc027ca": "Right brake",
     "binding-6571fbc1f0cff2f0": "SIM",
     "binding-d0315f68b6a93a96": "MASTER ARM",
     "binding-c244560002a52a70": "JMR OFF",
-    "binding-2772b5b32fd50127": "EStores JETT",
+    "binding-2772b5b32fd50127": "EMER Jett",
     "binding-7315d2c3c8ca2db9": "HDG DEPRESS",
     "binding-8f614d07e4fc5532": "LASER OFF",
     "binding-eda7e92ccfa9b3ab": "LASER ARM",
@@ -1377,10 +1550,6 @@
     "binding-69e8615baa8d2a60": "AP ROLL ATT HOLD",
     "binding-567b85e495b50569": "AP ROLL HDG SEL",
     "binding-f96a65c330d62d68": "RWR POWER",
-    "binding-81dbe2f1c3c9c18f": "MIC VHF (AutoHotkey)",
-    "binding-389e7fdc07137e1c": "UHF",
-    "binding-5605d4863a2e384a": "IFF OUT",
-    "binding-9b778ee41af724d1": "IFF IN",
     "binding-3b58b3f055b260d4": "UNCAGE",
     "binding-8cf6b869d6053766": "MISSILE OVRD",
     "binding-0fe6c488590f65a0": "DGFGHT ",
@@ -1401,16 +1570,36 @@
     "binding-75fa3113e3725810": "LNDG GEAR DWN",
     "binding-d5ffa0d92544dbfa": "HDG CCW",
     "binding-223a362bd86d9c1e": "HDG CW",
+    "binding-1e1fe6185dfe2a4b": "Afterburner",
+    "binding-296152f5d7569311": "OFF",
+    "binding-7cbb49b5232d69d6": "RF QUIET",
+    "binding-e7945c8a025fad5a": "FOV",
     "binding-49d4bfd206309226": "ZOOM VIEW",
     "binding-4866e244546d07c0": "MAN RNG",
     "binding-0a4d22d05ba38bc6": "ANT ELEV",
     "binding-92e3f1b102634c19": "RDR Y",
     "binding-bd517ee21bd90118": "RDR X",
+    "binding-ac71f5c696835751": "Thrust",
     "binding-aa7a7ff24c5a3c0e": "bypass field",
-    "binding-f4dd2ac6f4339336": "TAXI Lghts OFF",
-    "binding-b31ea5b06215a8fc": "LNDG TAXI LGHTS Up",
     "binding-2189464f0b8df445": "LNDG GEAR UP",
     "binding-39f2876fb1a9e4bc": "LNDG GEAR DWN",
+    "binding-7ce2e2c0537a02a2": "LE FLAPS Switch - AUTO",
+    "binding-a26fd2ab2c8e41f5": "ALT FLAPS Switch - EXTEND",
+    "binding-194b637c3cd12ae7": "LE FLAPS Switch - LOCK",
+    "binding-a330297e8a41ff0b": "LANDING",
+    "binding-9a66f8369cdfe776": "TAXI",
+    "binding-0399491337c48eb0": "Anti-Skid",
+    "binding-cca77c81fe550645": "OFF",
+    "binding-87d8588189b5f127": "REFUEL OPEN",
+    "binding-b1a2638ac5030d10": "REFUEL CLOSE",
+    "binding-43cc60bda6bf833f": "Master Caution Button",
+    "binding-0b883f22a7f79186": "Wheel Brake",
+    "binding-a7d2c7c18ec67ddc": "EMER Jett",
+    "binding-9ba59be637be9151": "JETT OFF",
+    "binding-c8c979d9c3652c03": "GND JETT ENABLE",
+    "binding-08f5043983b2a1e8": "JETT",
+    "binding-e8a23c4a61844e6a": "HOOK UP",
+    "binding-ce8e9a9325a7afe3": "HOOK DN",
     "binding-257efcfeed1148bc": "0(M-SEL)",
     "binding-7ea9b9df955ca2e1": "1(T-ILS)",
     "binding-ef45a80977890020": "2/N(ALOW)",
