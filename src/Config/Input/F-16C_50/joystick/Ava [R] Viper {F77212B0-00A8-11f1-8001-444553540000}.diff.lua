@@ -1,10 +1,22 @@
 local diff = {
   ["keyDiffs"] = {
-    ["d3001pnilu3001cd16vd1vpnilvu0"] = {
-      ["removed"] = {
-        [1] = { ["key"] = "JOY_BTN3" },
+    ["d10pnilunilcdnilvdnilvpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN14", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
       },
-      ["name"] = "NWS A/R DISC MSL STEP Button",
+      ["name"] = "F7 Ground unit view",
+    },
+    ["d149pnilunilcdnilvdnilvpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN12", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "F6 Released weapon view",
+    },
+    ["d14pnilunilcdnilvdnilvpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN11", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "F5 nearest AC view",
     },
     ["d3001pnilu3001cd28vd1vpnilvu0"] = {
       ["added"] = {
@@ -114,6 +126,18 @@ local diff = {
       },
       ["name"] = "WPN REL Button - Depress",
     },
+    ["d432pnilunilcdnilvdnilvpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN13", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "F10 Map. Jump to view over current point",
+    },
+    ["d7pnilunilcdnilvdnilvpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN5", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "F1 Cockpit view",
+    },
     ["dnilp210u214cdnilvdnilvpnilvunil"] = {
       ["removed"] = {
         [1] = { ["key"] = "JOY_BTN_POV1_UR" },
@@ -202,35 +226,11 @@ local diff = {
       },
       ["name"] = "TRIM Button - NOSE UP",
     },
-    ["d7pnilunilcdnilvdnilvpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN5", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+    ["d3001pnilu3001cd16vd1vpnilvu0"] = {
+      ["removed"] = {
+        [1] = { ["key"] = "JOY_BTN3" },
       },
-      ["name"] = "F1 Cockpit view",
-    },
-    ["d432pnilunilcdnilvdnilvpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN13", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "F10 Map. Jump to view over current point",
-    },
-    ["d14pnilunilcdnilvdnilvpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN11", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "F5 nearest AC view",
-    },
-    ["d149pnilunilcdnilvdnilvpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN12", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "F6 Released weapon view",
-    },
-    ["d10pnilunilcdnilvdnilvpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN14", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "F7 Ground unit view",
+      ["name"] = "NWS A/R DISC MSL STEP Button",
     },
   },
   ["axisDiffs"] = {

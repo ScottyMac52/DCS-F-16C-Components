@@ -1,16 +1,100 @@
 local diff = {
   ["keyDiffs"] = {
+    ["d1587pnilunilcdnilvdnilvpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN21", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "Kneeboard ON/OFF",
+    },
+    ["d2620pnilunilcdnilvd0vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN7", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "Kneeboard Jump To Shortcut 1",
+    },
+    ["d2620pnilunilcdnilvd1vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN8", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "Kneeboard Jump To Shortcut 2",
+    },
+    ["d2620pnilunilcdnilvd2vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN9", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "Kneeboard Jump To Shortcut 3",
+    },
+    ["d2620pnilunilcdnilvd3vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN11", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "Kneeboard Jump To Shortcut 4",
+    },
+    ["d2620pnilunilcdnilvd4vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN12", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "Kneeboard Jump To Shortcut 5",
+    },
+    ["d2620pnilunilcdnilvd5vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN13", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "Kneeboard Jump To Shortcut 6",
+    },
+    ["d2620pnilunilcdnilvd6vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN15", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "Kneeboard Jump To Shortcut 7",
+    },
+    ["d2620pnilunilcdnilvd7vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN16", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "Kneeboard Jump To Shortcut 8",
+    },
+    ["d2620pnilunilcdnilvd8vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN17", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "Kneeboard Jump To Shortcut 9",
+    },
+    ["d2620pnilunilcdnilvd9vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN18", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "Kneeboard Jump To Shortcut 10",
+    },
+    ["d3001pnilunilcd54vd1vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN24", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "Kneeboard Next Page",
+    },
     ["d3002pnilu3002cd17vd1vpnilvu0"] = {
       ["added"] = {
         [1] = { ["key"] = "JOY_BTN18" },
       },
       ["name"] = "ICP Priority Function Button - 0(M-SEL)",
     },
+    ["d3002pnilunilcd54vd1vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN22", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "Kneeboard Previous Page",
+    },
     ["d3003pnilu3003cd17vd1vpnilvu0"] = {
       ["added"] = {
         [1] = { ["key"] = "JOY_BTN7" },
       },
       ["name"] = "ICP Priority Function Button - 1(T-ILS)",
+    },
+    ["d3003pnilunilcd54vd1vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN14", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "Kneeboard current position mark point",
     },
     ["d3004pnilu3004cd17vd1vpnilvu0"] = {
       ["added"] = {
@@ -23,6 +107,18 @@ local diff = {
         [1] = { ["key"] = "JOY_BTN9" },
       },
       ["name"] = "ICP Priority Function Button - 3",
+    },
+    ["d3005pnilunilcd54vd-1vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN25", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "Kneeboard Previous Shortcut",
+    },
+    ["d3005pnilunilcd54vd1vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN23", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "Kneeboard Next Shortcut",
     },
     ["d3006pnilu3006cd17vd1vpnilvu0"] = {
       ["added"] = {
@@ -197,102 +293,6 @@ local diff = {
         [1] = { ["key"] = "JOY_BTN24" },
       },
       ["name"] = "ICP Data Control Switch - DOWN",
-    },
-    ["d2620pnilunilcdnilvd0vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN7", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "Kneeboard Jump To Shortcut 1",
-    },
-    ["d2620pnilunilcdnilvd1vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN8", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "Kneeboard Jump To Shortcut 2",
-    },
-    ["d2620pnilunilcdnilvd2vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN9", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "Kneeboard Jump To Shortcut 3",
-    },
-    ["d2620pnilunilcdnilvd3vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN11", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "Kneeboard Jump To Shortcut 4",
-    },
-    ["d2620pnilunilcdnilvd4vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN12", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "Kneeboard Jump To Shortcut 5",
-    },
-    ["d2620pnilunilcdnilvd5vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN13", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "Kneeboard Jump To Shortcut 6",
-    },
-    ["d3003pnilunilcd54vd1vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN14", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "Kneeboard current position mark point",
-    },
-    ["d2620pnilunilcdnilvd6vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN15", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "Kneeboard Jump To Shortcut 7",
-    },
-    ["d2620pnilunilcdnilvd7vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN16", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "Kneeboard Jump To Shortcut 8",
-    },
-    ["d2620pnilunilcdnilvd8vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN17", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "Kneeboard Jump To Shortcut 9",
-    },
-    ["d2620pnilunilcdnilvd9vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN18", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "Kneeboard Jump To Shortcut 10",
-    },
-    ["d3005pnilunilcd54vd-1vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN25", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "Kneeboard Previous Shortcut",
-    },
-    ["d3005pnilunilcd54vd1vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN23", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "Kneeboard Next Shortcut",
-    },
-    ["d1587pnilunilcdnilvdnilvpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN21", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "Kneeboard ON/OFF",
-    },
-    ["d3002pnilunilcd54vd1vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN22", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "Kneeboard Previous Page",
-    },
-    ["d3001pnilunilcd54vd1vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN24", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "Kneeboard Next Page",
     },
   },
   ["axisDiffs"] = {
