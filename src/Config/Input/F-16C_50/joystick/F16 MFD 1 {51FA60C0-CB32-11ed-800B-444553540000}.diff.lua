@@ -168,6 +168,138 @@ local diff = {
       },
       ["name"] = "Left MFD BRT Rocker Switch - Down/Decrease",
     },
+    ["dnilp1216unilcdnilvdnilvpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN28", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "UHF VOL Knob - CCW/Decrease",
+    },
+    ["dnilp1217unilcdnilvdnilvpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN27", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "UHF VOL Knob - CW/Increase",
+    },
+    ["dnilp3009unilcd42vdnilvp-0.5vunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN22", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "KY-58 VOLUME Knob - CCW/Decrease",
+    },
+    ["dnilp3009unilcd42vdnilvp0.5vunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN21", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "KY-58 VOLUME Knob - CW/Increase",
+    },
+    ["d3001pnilunilcd65vd1vpnilvu0"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN3", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "Open DTC Interface",
+    },
+    ["dnilp3013unilcd33vdnilvp-0.3vunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN26", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "RWR Intensity Knob - CCW/Decrease",
+    },
+    ["dnilp3013unilcd33vdnilvp0.3vunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN25", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "RWR Intensity Knob - CW/Increase",
+    },
+    ["dnilp3037unilcd39vdnilvp-0.3vunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN24", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "INTERCOM Knob - CCW/Decrease",
+    },
+    ["dnilp3037unilcd39vdnilvp0.3vunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN23", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "INTERCOM Knob - CW/Increase",
+    },
+    ["d118pnilunilcdnilvdnilvpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN15", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "Attack My Target",
+    },
+    ["d119pnilunilcdnilvdnilvpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN14", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "Cover Me",
+    },
+    ["d522pnilunilcdnilvdnilvpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN13", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "Flight - Attack air defenses",
+    },
+    ["d523pnilunilcdnilvdnilvpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN12", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "Flight - Attack ground targets",
+    },
+    ["d115pnilunilcdnilvdnilvpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN11", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "Flight - Complete mission and rejoin",
+    },
+    ["d1684pnilunilcdnilvdnilvpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN20", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "Flight - Engage Bandits",
+    },
+    ["d117pnilunilcdnilvdnilvpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN6", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "Join Up Formation",
+    },
+    ["d269pnilunilcdnilvdnilvpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN19", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "Request AWACS Bogey Dope",
+    },
+    ["d267pnilunilcdnilvdnilvpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN18", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "Request AWACS Home Airbase",
+    },
+    ["d1560pnilunilcdnilvdnilvpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN1", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "Rearming and Refueling Window",
+    },
+    ["d360pnilunilcdnilvdnilvpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN2", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "Score window",
+    },
+    ["d851pnilunilcdnilvdnilvpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN4", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "Show controls indicator",
+    },
+    ["d1536pnilunilcdnilvdnilvpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN5", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "View briefing on/off",
+    },
   },
   ["axisDiffs"] = {
     ["a2001cdnil"] = {

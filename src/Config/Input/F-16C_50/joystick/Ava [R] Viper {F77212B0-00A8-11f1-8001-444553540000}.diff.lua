@@ -1,10 +1,16 @@
 local diff = {
   ["keyDiffs"] = {
     ["d3001pnilu3001cd16vd1vpnilvu0"] = {
-      ["added"] = {
+      ["removed"] = {
         [1] = { ["key"] = "JOY_BTN3" },
       },
       ["name"] = "NWS A/R DISC MSL STEP Button",
+    },
+    ["d3001pnilu3001cd28vd1vpnilvu0"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN5" },
+      },
+      ["name"] = "Mode (M) Button - Depress",
     },
     ["d3006pnilu3006cd16vd1vpnilvu0"] = {
       ["added"] = {
@@ -78,11 +84,17 @@ local diff = {
       },
       ["name"] = "Countermeasures Management Switch - Right",
     },
-    ["d3022pnilu3022cd16vd1vpnilvu0"] = {
+    ["d3018pnilu3018cd16vd1vpnilvu0"] = {
       ["added"] = {
-        [1] = { ["key"] = "JOY_BTN2" },
+        [1] = { ["key"] = "JOY_BTN19" },
       },
-      ["name"] = "WPN REL Button - Depress",
+      ["name"] = "Expand/FOV Button - Depress",
+    },
+    ["d3019pnilu3019cd16vd1vpnilvu0"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN4" },
+      },
+      ["name"] = "Paddle Switch - Depress",
     },
     ["d3020pnilu3020cd16vd1vpnilvu0"] = {
       ["added"] = {
@@ -96,47 +108,129 @@ local diff = {
       },
       ["name"] = "CAMERA/GUN Trigger - SECOND DETENT",
     },
-    ["d3019pnilu3019cd16vd1vpnilvu0"] = {
+    ["d3022pnilu3022cd16vd1vpnilvu0"] = {
       ["added"] = {
-        [1] = { ["key"] = "JOY_BTN4" },
+        [1] = { ["key"] = "JOY_BTN2" },
       },
-      ["name"] = "Paddle Switch - Depress",
+      ["name"] = "WPN REL Button - Depress",
     },
-    ["dnilp96u215cdnilvdnilvpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_POV1_D" },
+    ["dnilp210u214cdnilvdnilvpnilvunil"] = {
+      ["removed"] = {
+        [1] = { ["key"] = "JOY_BTN_POV1_UR" },
       },
-      ["name"] = "TRIM Button - NOSE UP",
+      ["name"] = "View Up Right slow",
     },
-    ["dnilp95u215cdnilvdnilvpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_POV1_U" },
+    ["dnilp211u214cdnilvdnilvpnilvunil"] = {
+      ["removed"] = {
+        [1] = { ["key"] = "JOY_BTN_POV1_DR" },
       },
-      ["name"] = "TRIM Button - NOSE DOWN",
+      ["name"] = "View Down Right slow",
+    },
+    ["dnilp212u214cdnilvdnilvpnilvunil"] = {
+      ["removed"] = {
+        [1] = { ["key"] = "JOY_BTN_POV1_DL" },
+      },
+      ["name"] = "View Down Left slow",
+    },
+    ["dnilp213u214cdnilvdnilvpnilvunil"] = {
+      ["removed"] = {
+        [1] = { ["key"] = "JOY_BTN_POV1_UL" },
+      },
+      ["name"] = "View Up Left slow",
+    },
+    ["dnilp32u214cdnilvdnilvpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN10", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["removed"] = {
+        [1] = { ["key"] = "JOY_BTN_POV1_L" },
+      },
+      ["name"] = "View Left slow",
+    },
+    ["dnilp33u214cdnilvdnilvpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN8", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["removed"] = {
+        [1] = { ["key"] = "JOY_BTN_POV1_R" },
+      },
+      ["name"] = "View Right slow",
+    },
+    ["dnilp34u214cdnilvdnilvpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN7", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["removed"] = {
+        [1] = { ["key"] = "JOY_BTN_POV1_U" },
+      },
+      ["name"] = "View Up slow",
+    },
+    ["dnilp35u214cdnilvdnilvpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN9", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["removed"] = {
+        [1] = { ["key"] = "JOY_BTN_POV1_D" },
+      },
+      ["name"] = "View Down slow",
     },
     ["dnilp93u215cdnilvdnilvpnilvunil"] = {
       ["added"] = {
-        [1] = { ["key"] = "JOY_POV1_L" },
+        [1] = { ["key"] = "JOY_BTN_POV1_L" },
+        [2] = { ["key"] = "JOY_POV1_L" },
       },
       ["name"] = "TRIM Button - LEFT WING DOWN",
     },
     ["dnilp94u215cdnilvdnilvpnilvunil"] = {
       ["added"] = {
-        [1] = { ["key"] = "JOY_POV1_R" },
+        [1] = { ["key"] = "JOY_BTN_POV1_R" },
+        [2] = { ["key"] = "JOY_POV1_R" },
       },
       ["name"] = "TRIM Button - RIGHT WING DOWN",
     },
-    ["d3001pnilu3001cd28vd1vpnilvu0"] = {
+    ["dnilp95u215cdnilvdnilvpnilvunil"] = {
       ["added"] = {
-        [1] = { ["key"] = "JOY_BTN5" },
+        [1] = { ["key"] = "JOY_BTN_POV1_U" },
+        [2] = { ["key"] = "JOY_POV1_U" },
       },
-      ["name"] = "Mode (M) Button - Depress",
+      ["name"] = "TRIM Button - NOSE DOWN",
     },
-    ["d3018pnilu3018cd16vd1vpnilvu0"] = {
+    ["dnilp96u215cdnilvdnilvpnilvunil"] = {
       ["added"] = {
-        [1] = { ["key"] = "JOY_BTN19" },
+        [1] = { ["key"] = "JOY_BTN_POV1_D" },
+        [2] = { ["key"] = "JOY_POV1_D" },
       },
-      ["name"] = "Expand/FOV Button - Depress",
+      ["name"] = "TRIM Button - NOSE UP",
+    },
+    ["d7pnilunilcdnilvdnilvpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN5", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "F1 Cockpit view",
+    },
+    ["d432pnilunilcdnilvdnilvpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN13", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "F10 Map. Jump to view over current point",
+    },
+    ["d14pnilunilcdnilvdnilvpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN11", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "F5 nearest AC view",
+    },
+    ["d149pnilunilcdnilvdnilvpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN12", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "F6 Released weapon view",
+    },
+    ["d10pnilunilcdnilvdnilvpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN14", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "F7 Ground unit view",
     },
   },
   ["axisDiffs"] = {
@@ -163,6 +257,18 @@ local diff = {
         [1] = { ["key"] = "JOY_X" },
       },
       ["name"] = "Roll",
+    },
+    ["a2031cdnil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_X", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "TDC Slew Horizontal (mouse)",
+    },
+    ["a2032cdnil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_Y", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "TDC Slew Vertical (mouse)",
     },
   },
 }

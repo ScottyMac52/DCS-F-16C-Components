@@ -12,6 +12,12 @@ local diff = {
       },
       ["name"] = "MASTER ARM 3-pos Switch: MASTER ARM<>OFF",
     },
+    ["d3002pnilunilcd19vd0vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN54" },
+      },
+      ["name"] = "MASTER ARM Switch - OFF",
+    },
     ["d3002pnilunilcd32vd0vpnilvunil"] = {
       ["added"] = {
         [1] = { ["key"] = "JOY_BTN62" },
@@ -198,29 +204,17 @@ local diff = {
       },
       ["name"] = "RWR Indicator Control POWER Button - Depressed/Released",
     },
-    ["d3024pnilu3024cd16vd1vpnilvu0"] = {
-      ["removed"] = {
-        [1] = { ["key"] = "JOY_BTN4" },
+    ["d3018pnilu3018cd16vd1vpnilvu0"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN11" },
       },
-      ["name"] = "Transmit Switch - VHF (call radio menu)",
+      ["name"] = "Expand/FOV Button - Depress",
     },
-    ["d3025pnilu3025cd16vd1vpnilvu0"] = {
-      ["removed"] = {
-        [1] = { ["key"] = "JOY_BTN2" },
+    ["d3018pnilunilcd2vd1vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN19" },
       },
-      ["name"] = "Transmit Switch - UHF (call radio menu)",
-    },
-    ["d3026pnilu3026cd16vd1vpnilvu0"] = {
-      ["removed"] = {
-        [1] = { ["key"] = "JOY_BTN1" },
-      },
-      ["name"] = "Transmit Switch - IFF OUT",
-    },
-    ["d3027pnilu3027cd16vd1vpnilvu0"] = {
-      ["removed"] = {
-        [1] = { ["key"] = "JOY_BTN3" },
-      },
-      ["name"] = "Transmit Switch - IFF IN",
+      ["name"] = "Cycle Afterburner Detent - ON/OFF",
     },
     ["d3029pnilu3029cd16vd1vpnilvu0"] = {
       ["added"] = {
@@ -306,6 +300,12 @@ local diff = {
       },
       ["name"] = "RF Switch: NORM<>QUIET",
     },
+    ["d3038pnilunilcd17vd0vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN60" },
+      },
+      ["name"] = "RF Switch - QUIET",
+    },
     ["d3039pnilu3039cd16vd1vpnilvu0"] = {
       ["added"] = {
         [1] = { ["key"] = "JOY_BTN12" },
@@ -342,29 +342,29 @@ local diff = {
       },
       ["name"] = "HDG Set Knob - CW/Increase",
     },
-    ["d3018pnilunilcd2vd1vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN19" },
+    ["d3024pnilu3024cd16vd1vpnilvu0"] = {
+      ["removed"] = {
+        [1] = { ["key"] = "JOY_BTN4" },
       },
-      ["name"] = "Cycle Afterburner Detent - ON/OFF",
+      ["name"] = "Transmit Switch - VHF (call radio menu)",
     },
-    ["d3002pnilunilcd19vd0vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN54" },
+    ["d3025pnilu3025cd16vd1vpnilvu0"] = {
+      ["removed"] = {
+        [1] = { ["key"] = "JOY_BTN2" },
       },
-      ["name"] = "MASTER ARM Switch - OFF",
+      ["name"] = "Transmit Switch - UHF (call radio menu)",
     },
-    ["d3038pnilunilcd17vd0vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN60" },
+    ["d3026pnilu3026cd16vd1vpnilvu0"] = {
+      ["removed"] = {
+        [1] = { ["key"] = "JOY_BTN1" },
       },
-      ["name"] = "RF Switch - QUIET",
+      ["name"] = "Transmit Switch - IFF OUT",
     },
-    ["d3018pnilu3018cd16vd1vpnilvu0"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN11" },
+    ["d3027pnilu3027cd16vd1vpnilvu0"] = {
+      ["removed"] = {
+        [1] = { ["key"] = "JOY_BTN3" },
       },
-      ["name"] = "Expand/FOV Button - Depress",
+      ["name"] = "Transmit Switch - IFF IN",
     },
   },
   ["axisDiffs"] = {

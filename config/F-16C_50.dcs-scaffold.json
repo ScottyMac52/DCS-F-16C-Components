@@ -4,6 +4,7 @@
   "import": {
     "target": "consumer",
     "profilesDirectory": "C:\\Users\\vyper\\Saved Games\\DCS.openbeta\\Config\\Input\\F-16C_50\\joystick",
+    "modifiersPath": "C:\\Users\\vyper\\Saved Games\\DCS.openbeta\\Config\\Input\\F-16C_50\\modifiers.lua",
     "mozaGrip": "standalone",
     "commonRoot": "C:\\Users\\vyper\\Source\\repos\\DCS-Common",
     "outputDirectory": "C:\\Users\\vyper\\Source\\repos\\DCS-F-16C-Components",
@@ -13,7 +14,17 @@
   },
   "decisions": {
     "instanceRoles": {},
-    "semanticModifiers": {},
+    "semanticModifiers": {
+      "AVA_BASE_MODIFIER_BTN3": "AVA_BASE_MODIFIER_BTN3",
+      "LAlt": "LAlt",
+      "LCtrl": "LCtrl",
+      "LShift": "LShift",
+      "LWin": "LWin",
+      "RAlt": "RAlt",
+      "RCtrl": "RCtrl",
+      "RShift": "RShift",
+      "RWin": "RWin"
+    },
     "removedProfiles": []
   }
 }
