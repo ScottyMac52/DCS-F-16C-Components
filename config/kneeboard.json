@@ -2514,7 +2514,10 @@
     "binding-60a32b4a504f90a2": "HUD Sym Int",
     "binding-ee787646909a0c56": "Ret Depr ",
     "binding-38002a1150b2962a": "Raster Int",
-    "binding-b92acdec57e49608": "Raster Cont"
+    "binding-b92acdec57e49608": "Raster Cont",
+    "binding-104d7ccea9dc5a5d": "Rudder",
+    "binding-9b5b8b6344e58be4": "Left Wheel Brake",
+    "binding-317f2235cfc027ca": "Right Wheel Brake"
   },
   "modifiersFile": "src/Config/Input/F-16C_50/modifiers.lua",
   "modifiers": {
