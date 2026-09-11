@@ -52,7 +52,7 @@
       <rect x="112" y="744" width="86" height="102" rx="12" fill="#07111d" stroke="#46d8ff" stroke-width="2"/>
       <text x="155" y="795" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="800" fill="#46d8ff">ICP</text>
       <text x="218" y="772" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#f5f9ff">ViperAce • keypad • COM/IFF</text>
-      <text x="218" y="800" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="500" fill="#dbe7f4">• DED • A-A/A-G • HUD/FLIR</text>
+      <text x="218" y="800" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="500" fill="#dbe7f4">• DED • A-A/A-G • HUD/FLIR •…</text>
       
     </g>
   <text x="96" y="1520" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#88a3ba">DCS-Common shared kneeboard renderer</text>
