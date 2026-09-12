@@ -227,6 +227,9 @@ local diff = {
       ["name"] = "TRIM Button - NOSE UP",
     },
     ["d3001pnilu3001cd16vd1vpnilvu0"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN2", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
       ["removed"] = {
         [1] = { ["key"] = "JOY_BTN3" },
       },

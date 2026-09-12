@@ -345,6 +345,15 @@
                 "AVA_BASE_MODIFIER_BTN3"
               ]
             },
+            "warthog-grip-btn-red": {
+              "profile": "ava-base-f16c",
+              "key": "JOY_BTN2",
+              "command": "d3001pnilu3001cd16vd1vpnilvu0",
+              "labelId": "binding-ed2e95ecb3ba4025",
+              "modifiers": [
+                "AVA_BASE_MODIFIER_BTN3"
+              ]
+            },
             "warthog-grip-rear-sw1": {
               "profile": "ava-base-f16c",
               "key": "JOY_X",
@@ -2275,6 +2284,7 @@
     "binding-f67f4475d0edd70f": "Trim up",
     "binding-2b4cf5c2798069fd": "TRIM Up",
     "binding-922f4e522e5c99a5": "Trim down",
+    "binding-ed2e95ecb3ba4025": "NWS",
     "binding-9e2a06b12724bacc": "Pitch",
     "binding-1e53c29d8bf25fff": "Roll",
     "binding-7f4ee7c41a127ea6": "TDC X",
