@@ -1,10 +1,22 @@
 local diff = {
   ["keyDiffs"] = {
+    ["d114pnilunilcdnilvdnilvpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN17", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "Flight - Complete mission and RTB",
+    },
     ["d115pnilunilcdnilvdnilvpnilvunil"] = {
       ["added"] = {
         [1] = { ["key"] = "JOY_BTN11", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
       },
       ["name"] = "Flight - Complete mission and rejoin",
+    },
+    ["d116pnilunilcdnilvdnilvpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN9", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "Toggle Formation",
     },
     ["d117pnilunilcdnilvdnilvpnilvunil"] = {
       ["added"] = {
@@ -44,6 +56,12 @@ local diff = {
         [1] = { ["key"] = "JOY_BTN20", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
       },
       ["name"] = "Flight - Engage Bandits",
+    },
+    ["d1760pnilunilcdnilvdnilvpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN16", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "A/A refueling - \"Ready for precontact\" radio call",
     },
     ["d267pnilunilcdnilvdnilvpnilvunil"] = {
       ["added"] = {
@@ -302,24 +320,6 @@ local diff = {
         [1] = { ["key"] = "JOY_BTN23", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
       },
       ["name"] = "INTERCOM Knob - CW/Increase",
-    },
-    ["d1760pnilunilcdnilvdnilvpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN16", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "A/A refueling - \"Ready for precontact\" radio call",
-    },
-    ["d114pnilunilcdnilvdnilvpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN17", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "Flight - Complete mission and RTB",
-    },
-    ["d116pnilunilcdnilvdnilvpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN9", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "Toggle Formation",
     },
   },
   ["axisDiffs"] = {

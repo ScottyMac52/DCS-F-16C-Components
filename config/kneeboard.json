@@ -565,11 +565,29 @@
             "AVA_BASE_MODIFIER_BTN3"
           ],
           "controls": {
+            "mfd-osb-l4-shifted": {
+              "profile": "tm-mfd-1",
+              "key": "JOY_BTN17",
+              "command": "d114pnilunilcdnilvdnilvpnilvunil",
+              "labelId": "binding-da63326f640ffb2a",
+              "modifiers": [
+                "AVA_BASE_MODIFIER_BTN3"
+              ]
+            },
             "mfd-osb-b5-shifted": {
               "profile": "tm-mfd-1",
               "key": "JOY_BTN11",
               "command": "d115pnilunilcdnilvdnilvpnilvunil",
               "labelId": "binding-09cecbfc569d5380",
+              "modifiers": [
+                "AVA_BASE_MODIFIER_BTN3"
+              ]
+            },
+            "mfd-osb-r4-shifted": {
+              "profile": "tm-mfd-1",
+              "key": "JOY_BTN9",
+              "command": "d116pnilunilcdnilvdnilvpnilvunil",
+              "labelId": "binding-6e2932b6cc608a80",
               "modifiers": [
                 "AVA_BASE_MODIFIER_BTN3"
               ]
@@ -624,6 +642,15 @@
               "key": "JOY_BTN20",
               "command": "d1684pnilunilcdnilvdnilvpnilvunil",
               "labelId": "binding-7647eff3562d22ee",
+              "modifiers": [
+                "AVA_BASE_MODIFIER_BTN3"
+              ]
+            },
+            "mfd-osb-l5-shifted": {
+              "profile": "tm-mfd-1",
+              "key": "JOY_BTN16",
+              "command": "d1760pnilunilcdnilvdnilvpnilvunil",
+              "labelId": "binding-7471bd43018dc61e",
               "modifiers": [
                 "AVA_BASE_MODIFIER_BTN3"
               ]
@@ -759,33 +786,6 @@
               "key": "JOY_BTN23",
               "command": "dnilp3037unilcd39vdnilvp0.3vunil",
               "labelId": "binding-f7425552e5031ea0",
-              "modifiers": [
-                "AVA_BASE_MODIFIER_BTN3"
-              ]
-            },
-            "mfd-osb-l5-shifted": {
-              "profile": "tm-mfd-1",
-              "key": "JOY_BTN16",
-              "command": "d1760pnilunilcdnilvdnilvpnilvunil",
-              "labelId": "binding-7471bd43018dc61e",
-              "modifiers": [
-                "AVA_BASE_MODIFIER_BTN3"
-              ]
-            },
-            "mfd-osb-l4-shifted": {
-              "profile": "tm-mfd-1",
-              "key": "JOY_BTN17",
-              "command": "d114pnilunilcdnilvdnilvpnilvunil",
-              "labelId": "binding-da63326f640ffb2a",
-              "modifiers": [
-                "AVA_BASE_MODIFIER_BTN3"
-              ]
-            },
-            "mfd-osb-r4-shifted": {
-              "profile": "tm-mfd-1",
-              "key": "JOY_BTN9",
-              "command": "d116pnilunilcdnilvdnilvpnilvunil",
-              "labelId": "binding-6e2932b6cc608a80",
               "modifiers": [
                 "AVA_BASE_MODIFIER_BTN3"
               ]
@@ -992,11 +992,38 @@
             "AVA_BASE_MODIFIER_BTN3"
           ],
           "controls": {
+            "mfd-rocker-int": {
+              "profile": "tm-mfd-2",
+              "key": "JOY_BTN22",
+              "command": "d3001pnilunilcd32vd0vpnilvunil",
+              "labelId": "binding-529099a07c4ff8af",
+              "modifiers": [
+                "AVA_BASE_MODIFIER_BTN3"
+              ]
+            },
+            "mfd-rocker-sym": {
+              "profile": "tm-mfd-2",
+              "key": "JOY_BTN21",
+              "command": "d3001pnilunilcd32vd1vpnilvunil",
+              "labelId": "binding-c4b16c140fc93a98",
+              "modifiers": [
+                "AVA_BASE_MODIFIER_BTN3"
+              ]
+            },
             "mfd-osb-t1-shifted": {
               "profile": "tm-mfd-2",
               "key": "JOY_BTN1",
               "command": "d3002pnilu3002cd33vd1vpnilvu0",
               "labelId": "binding-772072f7ee175956",
+              "modifiers": [
+                "AVA_BASE_MODIFIER_BTN3"
+              ]
+            },
+            "mfd-osb-r5-shifted": {
+              "profile": "tm-mfd-2",
+              "key": "JOY_BTN10",
+              "command": "d3002pnilunilcd32vd1vpnilvunil",
+              "labelId": "binding-142e4b722fe9ce41",
               "modifiers": [
                 "AVA_BASE_MODIFIER_BTN3"
               ]
@@ -1010,11 +1037,56 @@
                 "AVA_BASE_MODIFIER_BTN3"
               ]
             },
+            "mfd-osb-r2-shifted": {
+              "profile": "tm-mfd-2",
+              "key": "JOY_BTN7",
+              "command": "d3003pnilunilcd32vd0vpnilvunil",
+              "labelId": "binding-f35da661aa46ecbc",
+              "modifiers": [
+                "AVA_BASE_MODIFIER_BTN3"
+              ]
+            },
+            "mfd-osb-r1-shifted": {
+              "profile": "tm-mfd-2",
+              "key": "JOY_BTN6",
+              "command": "d3003pnilunilcd32vd1vpnilvunil",
+              "labelId": "binding-a1c627d09f78020b",
+              "modifiers": [
+                "AVA_BASE_MODIFIER_BTN3"
+              ]
+            },
             "mfd-osb-t3-shifted": {
               "profile": "tm-mfd-2",
               "key": "JOY_BTN3",
               "command": "d3004pnilu3004cd33vd1vpnilvu0",
               "labelId": "binding-cb9460b71b3c001d",
+              "modifiers": [
+                "AVA_BASE_MODIFIER_BTN3"
+              ]
+            },
+            "mfd-osb-l1-shifted": {
+              "profile": "tm-mfd-2",
+              "key": "JOY_BTN20",
+              "command": "d3005pnilu3005cd33vd1vpnilvu0",
+              "labelId": "binding-c31dad39f3d45b1b",
+              "modifiers": [
+                "AVA_BASE_MODIFIER_BTN3"
+              ]
+            },
+            "mfd-rocker-brt-down": {
+              "profile": "tm-mfd-2",
+              "key": "JOY_BTN26",
+              "command": "d3005pnilunilcd32vd0vpnilvunil",
+              "labelId": "binding-2f793d4fe4feea6c",
+              "modifiers": [
+                "AVA_BASE_MODIFIER_BTN3"
+              ]
+            },
+            "mfd-rocker-brt-up": {
+              "profile": "tm-mfd-2",
+              "key": "JOY_BTN25",
+              "command": "d3005pnilunilcd32vd1vpnilvunil",
+              "labelId": "binding-6a13d2be24c814cd",
               "modifiers": [
                 "AVA_BASE_MODIFIER_BTN3"
               ]
@@ -1028,6 +1100,24 @@
                 "AVA_BASE_MODIFIER_BTN3"
               ]
             },
+            "mfd-rocker-con-down": {
+              "profile": "tm-mfd-2",
+              "key": "JOY_BTN24",
+              "command": "d3006pnilunilcd32vd0vpnilvunil",
+              "labelId": "binding-48931480ddefbfe0",
+              "modifiers": [
+                "AVA_BASE_MODIFIER_BTN3"
+              ]
+            },
+            "mfd-rocker-con-up": {
+              "profile": "tm-mfd-2",
+              "key": "JOY_BTN23",
+              "command": "d3006pnilunilcd32vd1vpnilvunil",
+              "labelId": "binding-801161979a23b72b",
+              "modifiers": [
+                "AVA_BASE_MODIFIER_BTN3"
+              ]
+            },
             "mfd-osb-t5-shifted": {
               "profile": "tm-mfd-2",
               "key": "JOY_BTN5",
@@ -1037,11 +1127,38 @@
                 "AVA_BASE_MODIFIER_BTN3"
               ]
             },
-            "mfd-osb-l1-shifted": {
+            "mfd-osb-l5-shifted": {
               "profile": "tm-mfd-2",
-              "key": "JOY_BTN20",
-              "command": "d3005pnilu3005cd33vd1vpnilvu0",
-              "labelId": "binding-c31dad39f3d45b1b",
+              "key": "JOY_BTN16",
+              "command": "d3007pnilunilcd32vd0vpnilvunil",
+              "labelId": "binding-0cbd5e8e72ad39ce",
+              "modifiers": [
+                "AVA_BASE_MODIFIER_BTN3"
+              ]
+            },
+            "mfd-osb-l4-shifted": {
+              "profile": "tm-mfd-2",
+              "key": "JOY_BTN17",
+              "command": "d3007pnilunilcd32vd1vpnilvunil",
+              "labelId": "binding-86a2b0d28a9f0eaa",
+              "modifiers": [
+                "AVA_BASE_MODIFIER_BTN3"
+              ]
+            },
+            "mfd-osb-l3-shifted": {
+              "profile": "tm-mfd-2",
+              "key": "JOY_BTN18",
+              "command": "d3008pnilunilcd32vd0vpnilvunil",
+              "labelId": "binding-d137ea9b6646cc98",
+              "modifiers": [
+                "AVA_BASE_MODIFIER_BTN3"
+              ]
+            },
+            "mfd-osb-l2-shifted": {
+              "profile": "tm-mfd-2",
+              "key": "JOY_BTN19",
+              "command": "d3008pnilunilcd32vd1vpnilvunil",
+              "labelId": "binding-02a4509cb7eb922e",
               "modifiers": [
                 "AVA_BASE_MODIFIER_BTN3"
               ]
@@ -1064,78 +1181,6 @@
                 "AVA_BASE_MODIFIER_BTN3"
               ]
             },
-            "mfd-rocker-sym": {
-              "profile": "tm-mfd-2",
-              "key": "JOY_BTN21",
-              "command": "d3001pnilunilcd32vd1vpnilvunil",
-              "labelId": "binding-c4b16c140fc93a98",
-              "modifiers": [
-                "AVA_BASE_MODIFIER_BTN3"
-              ]
-            },
-            "mfd-rocker-int": {
-              "profile": "tm-mfd-2",
-              "key": "JOY_BTN22",
-              "command": "d3001pnilunilcd32vd0vpnilvunil",
-              "labelId": "binding-529099a07c4ff8af",
-              "modifiers": [
-                "AVA_BASE_MODIFIER_BTN3"
-              ]
-            },
-            "mfd-rocker-brt-up": {
-              "profile": "tm-mfd-2",
-              "key": "JOY_BTN25",
-              "command": "d3005pnilunilcd32vd1vpnilvunil",
-              "labelId": "binding-6a13d2be24c814cd",
-              "modifiers": [
-                "AVA_BASE_MODIFIER_BTN3"
-              ]
-            },
-            "mfd-rocker-brt-down": {
-              "profile": "tm-mfd-2",
-              "key": "JOY_BTN26",
-              "command": "d3005pnilunilcd32vd0vpnilvunil",
-              "labelId": "binding-2f793d4fe4feea6c",
-              "modifiers": [
-                "AVA_BASE_MODIFIER_BTN3"
-              ]
-            },
-            "mfd-rocker-con-up": {
-              "profile": "tm-mfd-2",
-              "key": "JOY_BTN23",
-              "command": "d3006pnilunilcd32vd1vpnilvunil",
-              "labelId": "binding-801161979a23b72b",
-              "modifiers": [
-                "AVA_BASE_MODIFIER_BTN3"
-              ]
-            },
-            "mfd-rocker-con-down": {
-              "profile": "tm-mfd-2",
-              "key": "JOY_BTN24",
-              "command": "d3006pnilunilcd32vd0vpnilvunil",
-              "labelId": "binding-48931480ddefbfe0",
-              "modifiers": [
-                "AVA_BASE_MODIFIER_BTN3"
-              ]
-            },
-            "mfd-osb-r1-shifted": {
-              "profile": "tm-mfd-2",
-              "key": "JOY_BTN6",
-              "command": "d3003pnilunilcd32vd1vpnilvunil",
-              "labelId": "binding-a1c627d09f78020b",
-              "modifiers": [
-                "AVA_BASE_MODIFIER_BTN3"
-              ]
-            },
-            "mfd-osb-r2-shifted": {
-              "profile": "tm-mfd-2",
-              "key": "JOY_BTN7",
-              "command": "d3003pnilunilcd32vd0vpnilvunil",
-              "labelId": "binding-f35da661aa46ecbc",
-              "modifiers": [
-                "AVA_BASE_MODIFIER_BTN3"
-              ]
-            },
             "mfd-osb-r3-shifted": {
               "profile": "tm-mfd-2",
               "key": "JOY_BTN8",
@@ -1150,51 +1195,6 @@
               "key": "JOY_BTN9",
               "command": "d3021pnilunilcd32vd1vpnilvunil",
               "labelId": "binding-51ac9cd342f2c6eb",
-              "modifiers": [
-                "AVA_BASE_MODIFIER_BTN3"
-              ]
-            },
-            "mfd-osb-r5-shifted": {
-              "profile": "tm-mfd-2",
-              "key": "JOY_BTN10",
-              "command": "d3002pnilunilcd32vd1vpnilvunil",
-              "labelId": "binding-142e4b722fe9ce41",
-              "modifiers": [
-                "AVA_BASE_MODIFIER_BTN3"
-              ]
-            },
-            "mfd-osb-l2-shifted": {
-              "profile": "tm-mfd-2",
-              "key": "JOY_BTN19",
-              "command": "d3008pnilunilcd32vd1vpnilvunil",
-              "labelId": "binding-02a4509cb7eb922e",
-              "modifiers": [
-                "AVA_BASE_MODIFIER_BTN3"
-              ]
-            },
-            "mfd-osb-l3-shifted": {
-              "profile": "tm-mfd-2",
-              "key": "JOY_BTN18",
-              "command": "d3008pnilunilcd32vd0vpnilvunil",
-              "labelId": "binding-d137ea9b6646cc98",
-              "modifiers": [
-                "AVA_BASE_MODIFIER_BTN3"
-              ]
-            },
-            "mfd-osb-l4-shifted": {
-              "profile": "tm-mfd-2",
-              "key": "JOY_BTN17",
-              "command": "d3007pnilunilcd32vd1vpnilvunil",
-              "labelId": "binding-86a2b0d28a9f0eaa",
-              "modifiers": [
-                "AVA_BASE_MODIFIER_BTN3"
-              ]
-            },
-            "mfd-osb-l5-shifted": {
-              "profile": "tm-mfd-2",
-              "key": "JOY_BTN16",
-              "command": "d3007pnilunilcd32vd0vpnilvunil",
-              "labelId": "binding-0cbd5e8e72ad39ce",
               "modifiers": [
                 "AVA_BASE_MODIFIER_BTN3"
               ]
@@ -1214,12 +1214,6 @@
       "_comment": "binding labels are stored once in the root labels dictionary; page labels are reserved for non-binding callouts. keep callout IDs in sync with controls.",
       "modifierCallouts": {},
       "controls": {
-        "tpr-axis-rudder": {
-          "profile": "tm-tpr",
-          "key": "JOY_Z",
-          "command": "a2003cdnil",
-          "labelId": "binding-104d7ccea9dc5a5d"
-        },
         "tpr-axis-left-brake": {
           "profile": "tm-tpr",
           "key": "JOY_Y",
@@ -1231,6 +1225,12 @@
           "key": "JOY_X",
           "command": "a2113cdnil",
           "labelId": "binding-317f2235cfc027ca"
+        },
+        "tpr-axis-rudder": {
+          "profile": "tm-tpr",
+          "key": "JOY_Z",
+          "command": "a2003cdnil",
+          "labelId": "binding-104d7ccea9dc5a5d"
         }
       }
     },
@@ -2279,13 +2279,16 @@
     "binding-1e53c29d8bf25fff": "Roll",
     "binding-7f4ee7c41a127ea6": "TDC X",
     "binding-2e52dcf8a945a937": "TDC Y",
+    "binding-da63326f640ffb2a": "Cmplt RTB",
     "binding-09cecbfc569d5380": "Cmplt",
+    "binding-6e2932b6cc608a80": "Form",
     "binding-47ff1c7509a5103a": "Join",
     "binding-a4550eff8878a6c7": "My",
     "binding-8a0ba3bc7d6bd8a0": "Cvr Me",
     "binding-e63fdaf58ac6e775": "Brief",
     "binding-11bfba8093df15b0": "ReArm",
     "binding-7647eff3562d22ee": "Eng Ban",
+    "binding-7471bd43018dc61e": "Pre Contct",
     "binding-046f762414776f73": "HB",
     "binding-b465bca79dec6c64": "Bgy Dpe",
     "binding-33abe52143410e9c": "01",
@@ -2329,17 +2332,33 @@
     "binding-ae024d25a542f536": "RWR Int+",
     "binding-8ed265bb9086bdc7": "INTERCOM-",
     "binding-f7425552e5031ea0": "INTERCOM+",
-    "binding-7471bd43018dc61e": "Pre Contct",
-    "binding-da63326f640ffb2a": "Cmplt RTB",
-    "binding-6e2932b6cc608a80": "Form",
     "binding-dafd434616898e99": "01",
+    "binding-529099a07c4ff8af": "RWR-",
+    "binding-c4b16c140fc93a98": "RWR+",
     "binding-c4d0e88b1c88b080": "02",
+    "binding-772072f7ee175956": "HNDFF",
+    "binding-142e4b722fe9ce41": "JMR+",
     "binding-17283e42545c0859": "03",
+    "binding-33b310e89c8d0662": "LNCH",
+    "binding-f35da661aa46ecbc": "MWS-",
+    "binding-a1c627d09f78020b": "MWS+",
     "binding-07df75833952df48": "04",
+    "binding-cb9460b71b3c001d": "MDE",
     "binding-f8ad8bff48518050": "05",
+    "binding-c31dad39f3d45b1b": "SHIP",
+    "binding-2f793d4fe4feea6c": "O1-",
+    "binding-6a13d2be24c814cd": "O1+",
     "binding-f45e6c912b64eb61": "06",
+    "binding-f0e0906673c5b709": "TST",
+    "binding-48931480ddefbfe0": "O2-",
+    "binding-801161979a23b72b": "O2+",
     "binding-f050e107a5f171d8": "07",
+    "binding-5e434088af06413b": "T",
+    "binding-0cbd5e8e72ad39ce": "CH-",
+    "binding-86a2b0d28a9f0eaa": "CH+",
     "binding-6b4a6e6b9d9152f3": "08",
+    "binding-d137ea9b6646cc98": "FL-",
+    "binding-02a4509cb7eb922e": "FL+",
     "binding-4e0fa01203649d00": "09",
     "binding-56b5580b7696c2b6": "10",
     "binding-108ad34ddc18c090": "11",
@@ -2352,7 +2371,11 @@
     "binding-10be2d605392e0e6": "18",
     "binding-b497559751fc5dd3": "19",
     "binding-1003a433f177caef": "20",
+    "binding-86c059506430b43a": "PRGRM+",
+    "binding-993e92bbde4d60c2": "PRGRM-",
     "binding-38d3d7ec74e0aed5": "GAIN+",
+    "binding-8a351a662b3e72cc": "MODE+",
+    "binding-51ac9cd342f2c6eb": "MODE-",
     "binding-15a262a638bcd648": "GAIN-",
     "binding-13741dc52a2cca68": "SYM+",
     "binding-8b1297cec345f1ad": "SYM-",
@@ -2360,32 +2383,9 @@
     "binding-f55949395534230f": "CON-",
     "binding-23b6d8ab7299e620": "BRT+",
     "binding-f1032d4e019dc802": "BRT-",
-    "binding-772072f7ee175956": "HNDFF",
-    "binding-33b310e89c8d0662": "LNCH",
-    "binding-cb9460b71b3c001d": "MDE",
-    "binding-f0e0906673c5b709": "TST",
-    "binding-5e434088af06413b": "T",
-    "binding-c31dad39f3d45b1b": "SHIP",
-    "binding-86c059506430b43a": "PRGRM+",
-    "binding-993e92bbde4d60c2": "PRGRM-",
-    "binding-c4b16c140fc93a98": "RWR+",
-    "binding-529099a07c4ff8af": "RWR-",
-    "binding-6a13d2be24c814cd": "O1+",
-    "binding-2f793d4fe4feea6c": "O1-",
-    "binding-801161979a23b72b": "O2+",
-    "binding-48931480ddefbfe0": "O2-",
-    "binding-a1c627d09f78020b": "MWS+",
-    "binding-f35da661aa46ecbc": "MWS-",
-    "binding-8a351a662b3e72cc": "MODE+",
-    "binding-51ac9cd342f2c6eb": "MODE-",
-    "binding-142e4b722fe9ce41": "JMR+",
-    "binding-02a4509cb7eb922e": "FL+",
-    "binding-d137ea9b6646cc98": "FL-",
-    "binding-86a2b0d28a9f0eaa": "CH+",
-    "binding-0cbd5e8e72ad39ce": "CH-",
-    "binding-104d7ccea9dc5a5d": "Rudder",
     "binding-9b5b8b6344e58be4": "Left Wheel Brake",
     "binding-317f2235cfc027ca": "Right Wheel Brake",
+    "binding-104d7ccea9dc5a5d": "Rudder",
     "binding-6571fbc1f0cff2f0": "SIM",
     "binding-d0315f68b6a93a96": "MASTER ARM",
     "binding-296152f5d7569311": "OFF",

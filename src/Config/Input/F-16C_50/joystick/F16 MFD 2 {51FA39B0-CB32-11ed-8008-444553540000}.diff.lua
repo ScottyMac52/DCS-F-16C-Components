@@ -6,11 +6,35 @@ local diff = {
       },
       ["name"] = "Right MFD OSB 1",
     },
+    ["d3001pnilunilcd32vd0vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN22", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "RWR Source Switch - OFF",
+    },
+    ["d3001pnilunilcd32vd1vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN21", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "RWR Source Switch - ON",
+    },
     ["d3002pnilu3002cd25vd1vpnilvu0"] = {
       ["added"] = {
         [1] = { ["key"] = "JOY_BTN2" },
       },
       ["name"] = "Right MFD OSB 2",
+    },
+    ["d3002pnilu3002cd33vd1vpnilvu0"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN1", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "RWR Indicator Control HANDOFF Button",
+    },
+    ["d3002pnilunilcd32vd1vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN10", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "JMR Source Switch - ON",
     },
     ["d3003pnilu3003cd25vd1vpnilvu0"] = {
       ["added"] = {
@@ -18,11 +42,35 @@ local diff = {
       },
       ["name"] = "Right MFD OSB 3",
     },
+    ["d3003pnilu3003cd33vd1vpnilvu0"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN2", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "RWR Indicator Control LAUNCH Button",
+    },
+    ["d3003pnilunilcd32vd0vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN7", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "MWS Source Switch - OFF",
+    },
+    ["d3003pnilunilcd32vd1vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN6", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "MWS Source Switch - ON",
+    },
     ["d3004pnilu3004cd25vd1vpnilvu0"] = {
       ["added"] = {
         [1] = { ["key"] = "JOY_BTN4" },
       },
       ["name"] = "Right MFD OSB 4",
+    },
+    ["d3004pnilu3004cd33vd1vpnilvu0"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN3", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "RWR Indicator Control MODE Button",
     },
     ["d3005pnilu3005cd25vd1vpnilvu0"] = {
       ["added"] = {
@@ -30,11 +78,47 @@ local diff = {
       },
       ["name"] = "Right MFD OSB 5",
     },
+    ["d3005pnilu3005cd33vd1vpnilvu0"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN20", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "RWR Indicator Control UNKNOWN SHIP Button",
+    },
+    ["d3005pnilunilcd32vd0vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN26", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "O1 Expendable Category Switch - OFF",
+    },
+    ["d3005pnilunilcd32vd1vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN25", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "O1 Expendable Category Switch - ON",
+    },
     ["d3006pnilu3006cd25vd1vpnilvu0"] = {
       ["added"] = {
         [1] = { ["key"] = "JOY_BTN6" },
       },
       ["name"] = "Right MFD OSB 6",
+    },
+    ["d3006pnilu3006cd33vd1vpnilvu0"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN4", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "RWR Indicator Control SYS TEST Button",
+    },
+    ["d3006pnilunilcd32vd0vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN24", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "O2 Expendable Category Switch - OFF",
+    },
+    ["d3006pnilunilcd32vd1vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN23", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "O2 Expendable Category Switch - ON",
     },
     ["d3007pnilu3007cd25vd1vpnilvu0"] = {
       ["added"] = {
@@ -42,11 +126,41 @@ local diff = {
       },
       ["name"] = "Right MFD OSB 7",
     },
+    ["d3007pnilu3007cd33vd1vpnilvu0"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN5", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "RWR Indicator Control T Button",
+    },
+    ["d3007pnilunilcd32vd0vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN16", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "CH Expendable Category Switch - OFF",
+    },
+    ["d3007pnilunilcd32vd1vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN17", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "CH Expendable Category Switch - ON",
+    },
     ["d3008pnilu3008cd25vd1vpnilvu0"] = {
       ["added"] = {
         [1] = { ["key"] = "JOY_BTN8" },
       },
       ["name"] = "Right MFD OSB 8",
+    },
+    ["d3008pnilunilcd32vd0vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN18", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "FL Expendable Category Switch - OFF",
+    },
+    ["d3008pnilunilcd32vd1vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN19", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "FL Expendable Category Switch - ON",
     },
     ["d3009pnilu3009cd25vd1vpnilvu0"] = {
       ["added"] = {
@@ -120,11 +234,35 @@ local diff = {
       },
       ["name"] = "Right MFD OSB 20",
     },
+    ["d3020pnilunilcd32vd-1vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN27", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "PROGRAM Knob - CCW",
+    },
+    ["d3020pnilunilcd32vd1vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN28", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "PROGRAM Knob - CW",
+    },
     ["d3021pnilu3021cd25vd1vpnilvu0"] = {
       ["added"] = {
         [1] = { ["key"] = "JOY_BTN27" },
       },
       ["name"] = "Right MFD GAIN Rocker Switch - Up/Increase",
+    },
+    ["d3021pnilunilcd32vd-1vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN8", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "MODE Knob - CCW",
+    },
+    ["d3021pnilunilcd32vd1vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN9", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
+      },
+      ["name"] = "MODE Knob - CW",
     },
     ["d3022pnilu3022cd25vd-1vpnilvu0"] = {
       ["added"] = {
@@ -167,144 +305,6 @@ local diff = {
         [1] = { ["key"] = "JOY_BTN26" },
       },
       ["name"] = "Right MFD BRT Rocker Switch - Down/Decrease",
-    },
-    ["d3002pnilu3002cd33vd1vpnilvu0"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN1", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "RWR Indicator Control HANDOFF Button",
-    },
-    ["d3003pnilu3003cd33vd1vpnilvu0"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN2", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "RWR Indicator Control LAUNCH Button",
-    },
-    ["d3004pnilu3004cd33vd1vpnilvu0"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN3", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "RWR Indicator Control MODE Button",
-    },
-    ["d3006pnilu3006cd33vd1vpnilvu0"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN4", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "RWR Indicator Control SYS TEST Button",
-    },
-    ["d3007pnilu3007cd33vd1vpnilvu0"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN5", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "RWR Indicator Control T Button",
-    },
-    ["d3005pnilu3005cd33vd1vpnilvu0"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN20", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "RWR Indicator Control UNKNOWN SHIP Button",
-    },
-    ["d3020pnilunilcd32vd-1vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN27", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "PROGRAM Knob - CCW",
-    },
-    ["d3020pnilunilcd32vd1vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN28", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "PROGRAM Knob - CW",
-    },
-    ["d3001pnilunilcd32vd1vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN21", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "RWR Source Switch - ON",
-    },
-    ["d3001pnilunilcd32vd0vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN22", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "RWR Source Switch - OFF",
-    },
-    ["d3005pnilunilcd32vd1vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN25", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "O1 Expendable Category Switch - ON",
-    },
-    ["d3005pnilunilcd32vd0vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN26", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "O1 Expendable Category Switch - OFF",
-    },
-    ["d3006pnilunilcd32vd1vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN23", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "O2 Expendable Category Switch - ON",
-    },
-    ["d3006pnilunilcd32vd0vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN24", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "O2 Expendable Category Switch - OFF",
-    },
-    ["d3003pnilunilcd32vd1vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN6", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "MWS Source Switch - ON",
-    },
-    ["d3003pnilunilcd32vd0vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN7", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "MWS Source Switch - OFF",
-    },
-    ["d3021pnilunilcd32vd-1vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN8", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "MODE Knob - CCW",
-    },
-    ["d3021pnilunilcd32vd1vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN9", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "MODE Knob - CW",
-    },
-    ["d3002pnilunilcd32vd1vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN10", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "JMR Source Switch - ON",
-    },
-    ["d3008pnilunilcd32vd1vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN19", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "FL Expendable Category Switch - ON",
-    },
-    ["d3008pnilunilcd32vd0vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN18", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "FL Expendable Category Switch - OFF",
-    },
-    ["d3007pnilunilcd32vd1vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN17", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "CH Expendable Category Switch - ON",
-    },
-    ["d3007pnilunilcd32vd0vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN16", ["reformers"] = { [1] = "AVA_BASE_MODIFIER_BTN3" } },
-      },
-      ["name"] = "CH Expendable Category Switch - OFF",
     },
   },
   ["axisDiffs"] = {
