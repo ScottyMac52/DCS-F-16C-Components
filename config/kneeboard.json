@@ -1204,7 +1204,38 @@
       ]
     },
     {
-      "file": "04-VIPER-TQS-MISSION-PACK",
+      "file": "04-TM-TPR",
+      "profile": "tm-tpr",
+      "includeUiLayer": true,
+      "deviceId": "tm-tpr",
+      "deviceInstance": null,
+      "title": "T-Pendular-Rudder",
+      "kicker": "SCAFFOLD DRAFT",
+      "_comment": "binding labels are stored once in the root labels dictionary; page labels are reserved for non-binding callouts. keep callout IDs in sync with controls.",
+      "modifierCallouts": {},
+      "controls": {
+        "tpr-axis-rudder": {
+          "profile": "tm-tpr",
+          "key": "JOY_Z",
+          "command": "a2003cdnil",
+          "labelId": "binding-104d7ccea9dc5a5d"
+        },
+        "tpr-axis-left-brake": {
+          "profile": "tm-tpr",
+          "key": "JOY_Y",
+          "command": "a2112cdnil",
+          "labelId": "binding-9b5b8b6344e58be4"
+        },
+        "tpr-axis-right-brake": {
+          "profile": "tm-tpr",
+          "key": "JOY_X",
+          "command": "a2113cdnil",
+          "labelId": "binding-317f2235cfc027ca"
+        }
+      }
+    },
+    {
+      "file": "05-VIPER-TQS-MISSION-PACK",
       "profile": "viper-tqs-mission-pack",
       "includeUiLayer": true,
       "deviceId": "viper-tqs-mission-pack",
@@ -1595,7 +1626,7 @@
       }
     },
     {
-      "file": "05-WINCTRL-PTO2",
+      "file": "06-WINCTRL-PTO2",
       "profile": "winctrl-pto2",
       "includeUiLayer": true,
       "deviceId": "winctrl-pto2",
@@ -1728,7 +1759,7 @@
       }
     },
     {
-      "file": "06-WINCTRL-ICP",
+      "file": "07-WINCTRL-ICP",
       "profile": "winctrl-icp",
       "includeUiLayer": true,
       "deviceId": "winctrl-icp",
@@ -1967,7 +1998,7 @@
         },
         {
           "id": "AVA_BASE_MODIFIER_BTN3",
-          "file": "06-WINCTRL-ICP-AVA-BASE-MODIFIER-BTN3",
+          "file": "07-WINCTRL-ICP-AVA-BASE-MODIFIER-BTN3",
           "title": "WINCTRL ViperAce ICP • AVA_BASE_MODIFIER_BTN3",
           "activators": [
             "AVA_BASE_MODIFIER_BTN3"
@@ -2122,37 +2153,6 @@
       ]
     },
     {
-      "file": "07-TM-TPR",
-      "profile": "tm-tpr",
-      "includeUiLayer": true,
-      "deviceId": "tm-tpr",
-      "deviceInstance": null,
-      "title": "T-Pendular-Rudder",
-      "kicker": "SCAFFOLD DRAFT",
-      "_comment": "binding labels are stored once in the root labels dictionary; page labels are reserved for non-binding callouts. keep callout IDs in sync with controls.",
-      "modifierCallouts": {},
-      "controls": {
-        "tpr-axis-rudder": {
-          "profile": "tm-tpr",
-          "key": "JOY_Z",
-          "command": "a2003cdnil",
-          "labelId": "binding-104d7ccea9dc5a5d"
-        },
-        "tpr-axis-left-brake": {
-          "profile": "tm-tpr",
-          "key": "JOY_Y",
-          "command": "a2112cdnil",
-          "labelId": "binding-9b5b8b6344e58be4"
-        },
-        "tpr-axis-right-brake": {
-          "profile": "tm-tpr",
-          "key": "JOY_X",
-          "command": "a2113cdnil",
-          "labelId": "binding-317f2235cfc027ca"
-        }
-      }
-    },
-    {
       "file": "08-ONYOURTWELVE-PDCP",
       "profile": "onyourtwelve-pdcp",
       "includeUiLayer": true,
@@ -2268,9 +2268,13 @@
     "binding-da34f8f1f6153a36": "View Up",
     "binding-62f453646e2443b1": "View Down",
     "binding-c0d0b6478a430a07": "TRIM Left",
+    "binding-f62f35026b47ca13": "Trim left",
     "binding-eaf3742455dc2c94": "TRIM Right",
+    "binding-0091c20808d0017e": "Trim right",
     "binding-9267e60ddc35257f": "TRIM Down",
+    "binding-f67f4475d0edd70f": "Trim up",
     "binding-2b4cf5c2798069fd": "TRIM Up",
+    "binding-922f4e522e5c99a5": "Trim down",
     "binding-9e2a06b12724bacc": "Pitch",
     "binding-1e53c29d8bf25fff": "Roll",
     "binding-7f4ee7c41a127ea6": "TDC X",
@@ -2379,6 +2383,9 @@
     "binding-d137ea9b6646cc98": "FL-",
     "binding-86a2b0d28a9f0eaa": "CH+",
     "binding-0cbd5e8e72ad39ce": "CH-",
+    "binding-104d7ccea9dc5a5d": "Rudder",
+    "binding-9b5b8b6344e58be4": "Left Wheel Brake",
+    "binding-317f2235cfc027ca": "Right Wheel Brake",
     "binding-6571fbc1f0cff2f0": "SIM",
     "binding-d0315f68b6a93a96": "MASTER ARM",
     "binding-296152f5d7569311": "OFF",
@@ -2514,10 +2521,7 @@
     "binding-60a32b4a504f90a2": "HUD Sym Int",
     "binding-ee787646909a0c56": "Ret Depr ",
     "binding-38002a1150b2962a": "Raster Int",
-    "binding-b92acdec57e49608": "Raster Cont",
-    "binding-104d7ccea9dc5a5d": "Rudder",
-    "binding-9b5b8b6344e58be4": "Left Wheel Brake",
-    "binding-317f2235cfc027ca": "Right Wheel Brake"
+    "binding-b92acdec57e49608": "Raster Cont"
   },
   "modifiersFile": "src/Config/Input/F-16C_50/modifiers.lua",
   "modifiers": {
